@@ -1,0 +1,42 @@
+table dim_team
+	lineageTag: 3cad54c7-0276-56c4-8b02-431ae4adc043
+
+	column team_id
+		dataType: string
+		lineageTag: 8e28621a-1301-52d4-91fe-4de6679120e5
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_name
+		dataType: string
+		lineageTag: fc3484c5-1d87-5a85-8694-a7dfd08d5852
+		summarizeBy: none
+		sourceColumn: team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_brighton
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8e3a0018-ca99-5156-ad56-0ffb228d8f92
+		summarizeBy: none
+		sourceColumn: is_brighton
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_team = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("dim_team", {
+				        {"team_id", type text},
+				        {"team_name", type text},
+				        {"is_brighton", type logical}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,212 @@
+table fact_player_season
+	lineageTag: 2b985c47-53ed-586e-a2d6-06bc0edbfd77
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 1df75cd4-fa0b-52e4-93bd-557d7297f9a7
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_key
+		dataType: string
+		isHidden
+		lineageTag: 0f9eff0e-11c0-536d-8d65-11454bf9c986
+		summarizeBy: none
+		sourceColumn: player_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_name
+		dataType: string
+		lineageTag: 8a54bfa9-ef23-5e90-8281-e747f6723832
+		summarizeBy: none
+		sourceColumn: player_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shirt_number
+		dataType: double
+		lineageTag: f30e2b76-1ea5-5d3f-9b2b-cd31dceac479
+		summarizeBy: none
+		sourceColumn: shirt_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: 5b4dad3d-09f0-5f23-bd47-e43a649a41cf
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: e0075afd-834c-58c2-9814-662db00d9316
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_apps
+		dataType: double
+		lineageTag: 9432c4a1-f1f7-5f64-be09-00c384aa0dcb
+		summarizeBy: none
+		sourceColumn: pl_apps
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_starts
+		dataType: double
+		lineageTag: 12fb9284-10ab-5150-b825-46d426573ff7
+		summarizeBy: none
+		sourceColumn: pl_starts
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_subs
+		dataType: double
+		lineageTag: 87ffa46d-2a33-542d-acbc-87702d1b2635
+		summarizeBy: none
+		sourceColumn: pl_subs
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_goals
+		dataType: double
+		lineageTag: a0cf0b31-fa57-58d0-bb56-89bffb4c1897
+		summarizeBy: none
+		sourceColumn: pl_goals
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_apps
+		dataType: double
+		lineageTag: 3ee7f499-850d-5bf4-ade7-905b5b8d711e
+		summarizeBy: none
+		sourceColumn: total_apps
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_goals
+		dataType: double
+		lineageTag: 9e930d4c-a939-5004-9312-8e5e8b4a6631
+		summarizeBy: none
+		sourceColumn: total_goals
+
+		annotation SummarizationSetBy = Automatic
+
+	column left_during_season
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 20f8b01f-7bf4-51bd-b9cc-6fd6d1aceb2d
+		summarizeBy: none
+		sourceColumn: left_during_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_assists
+		dataType: int64
+		formatString: 0
+		lineageTag: b75479f7-6784-5c1b-8d6a-94e82b42e7b5
+		summarizeBy: none
+		sourceColumn: pl_assists
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_assists
+		dataType: int64
+		formatString: 0
+		lineageTag: 1231b205-f3c5-51db-9170-176f9d0a7f7e
+		summarizeBy: none
+		sourceColumn: total_assists
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_yellow
+		dataType: int64
+		formatString: 0
+		lineageTag: 78351962-7c52-5906-815b-184c6db0a7fb
+		summarizeBy: none
+		sourceColumn: pl_yellow
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_second_yellow
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f5f4a15-fe89-58ad-8dfa-277fa4d95803
+		summarizeBy: none
+		sourceColumn: pl_second_yellow
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_red
+		dataType: int64
+		formatString: 0
+		lineageTag: 585bbbc9-9921-5ccd-84d6-abea94aa3936
+		summarizeBy: none
+		sourceColumn: pl_red
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_label
+		dataType: string
+		lineageTag: 149d926f-26a9-5970-8779-1fd7c51e0030
+		summarizeBy: none
+		sourceColumn: season_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column position_group
+		dataType: string
+		lineageTag: fed51c5e-f7b1-58f1-8bd4-add2c677c346
+		summarizeBy: none
+		sourceColumn: position_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column pl_goal_contributions
+		dataType: int64
+		formatString: 0
+		lineageTag: fe4b560c-a9b6-5854-90d7-c43e4d33fded
+		summarizeBy: none
+		sourceColumn: pl_goal_contributions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_player_season = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("fact_player_season", {
+				        {"season", Int64.Type},
+				        {"player_key", type text},
+				        {"player_name", type text},
+				        {"shirt_number", type number},
+				        {"position", type text},
+				        {"nationality", type text},
+				        {"pl_apps", type number},
+				        {"pl_starts", type number},
+				        {"pl_subs", type number},
+				        {"pl_goals", type number},
+				        {"total_apps", type number},
+				        {"total_goals", type number},
+				        {"left_during_season", type logical},
+				        {"pl_assists", Int64.Type},
+				        {"total_assists", Int64.Type},
+				        {"pl_yellow", Int64.Type},
+				        {"pl_second_yellow", Int64.Type},
+				        {"pl_red", Int64.Type},
+				        {"season_label", type text},
+				        {"position_group", type text},
+				        {"pl_goal_contributions", Int64.Type}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

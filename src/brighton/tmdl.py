@@ -151,7 +151,12 @@ def sync_measures(path: Path, spec: dict) -> dict[str, list[str]]:
     new = [m for m in spec["measures"] if m["name"] not in by_name]
     if new:
         blocks = _parse_measures(lines)
-        at = blocks[-1].end if blocks else next(i for i, ln in enumerate(lines) if _LEVEL1.match(ln))
+        if blocks:
+            at = blocks[-1].end
+        else:  # tabela ainda sem medidas: antes da partição (ou no fim)
+            at = next((i for i, ln in enumerate(lines) if ln.startswith("\tpartition ")), len(lines))
+            while at > 0 and not lines[at - 1].strip():
+                at -= 1
         chunk: list[str] = []
         for m in new:
             chunk += [""] + _render(_quote(m["name"]), m, [])
@@ -211,11 +216,22 @@ def _partition_m(table: str, cols: dict[str, str]) -> list[str]:
     return ["let", f'    Fonte = fnCsv("{table}", {{', *pairs.split("\n"), "    })", "in", "    Fonte"]
 
 
-def _column_block(name: str, pq_type: str) -> list[str]:
+def _name(name: str) -> str:
+    return name if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", name) else _quote(name)
+
+
+def _column_block(name: str, pq_type: str, hidden: bool = False, key: bool = False,
+                  sort_by: str | None = None, data_category: str | None = None,
+                  lineage: str | None = None) -> list[str]:
     dtype, extra = _TMDL_TYPES.get(pq_type, ("string", []))
-    out = [f"\tcolumn {_quote(name) if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', name) else name}",
-           f"\t\tdataType: {dtype}", *extra, f"\t\tlineageTag: {uuid.uuid4()}", "\t\tsummarizeBy: none",
-           f"\t\tsourceColumn: {name}", "", "\t\tannotation SummarizationSetBy = Automatic"]
+    out = [f"\tcolumn {_name(name)}", f"\t\tdataType: {dtype}"]
+    out += ["\t\tisHidden"] if hidden else []
+    out += ["\t\tisKey"] if key else []
+    out += [*extra, f"\t\tlineageTag: {lineage or uuid.uuid4()}"]
+    out += [f"\t\tdataCategory: {data_category}"] if data_category else []
+    out += ["\t\tsummarizeBy: none", f"\t\tsourceColumn: {name}"]
+    out += [f"\t\tsortByColumn: {_name(sort_by)}"] if sort_by else []
+    out += ["", "\t\tannotation SummarizationSetBy = Automatic"]
     if pq_type == "type date":
         out.append("")
         out.append("\t\tannotation UnderlyingDateTimeDataType = Date")

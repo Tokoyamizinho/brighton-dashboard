@@ -1,0 +1,123 @@
+table fact_standings
+	lineageTag: c8cbcf01-65cd-5173-9b6d-887cb410543e
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 20a52f91-68f9-5384-a4d9-8aef8692484b
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_id
+		dataType: string
+		isHidden
+		lineageTag: 945c64a1-1325-57b2-8d7d-31cd52ddf8f6
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column round
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d12a739-8359-57a4-9fc2-9f50b8754ebf
+		summarizeBy: none
+		sourceColumn: round
+
+		annotation SummarizationSetBy = Automatic
+
+	column pts_cum
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a92841b-6c33-5520-b24b-b897a1aa495b
+		summarizeBy: none
+		sourceColumn: pts_cum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ppg_cum
+		dataType: double
+		lineageTag: c4e57146-698d-5bbf-bd1b-b0f9a1a61fb8
+		summarizeBy: none
+		sourceColumn: ppg_cum
+
+		annotation SummarizationSetBy = Automatic
+
+	column gf_cum
+		dataType: int64
+		formatString: 0
+		lineageTag: 86ea0149-94ec-5b94-8cf0-187090061083
+		summarizeBy: none
+		sourceColumn: gf_cum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ga_cum
+		dataType: int64
+		formatString: 0
+		lineageTag: d133e689-e990-53aa-a035-c3b6c342f9bc
+		summarizeBy: none
+		sourceColumn: ga_cum
+
+		annotation SummarizationSetBy = Automatic
+
+	column gd_cum
+		dataType: int64
+		formatString: 0
+		lineageTag: 0210ee85-b1de-5dea-b145-5b3d1a0fc09a
+		summarizeBy: none
+		sourceColumn: gd_cum
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: int64
+		formatString: 0
+		lineageTag: 53696508-e5ba-5065-b358-79a95ef654b7
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column table_position
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e1012ae-b8ab-4a20-a560-8f3579789e66
+		summarizeBy: none
+		sourceColumn: table_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_latest
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4dce60d5-413c-4dbd-b17e-2bc71d39f189
+		summarizeBy: none
+		sourceColumn: is_latest
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_standings = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("fact_standings", {
+				        {"season", Int64.Type},
+				        {"team_id", type text},
+				        {"round", Int64.Type},
+				        {"pts_cum", Int64.Type},
+				        {"ppg_cum", type number},
+				        {"gf_cum", Int64.Type},
+				        {"ga_cum", Int64.Type},
+				        {"gd_cum", Int64.Type},
+				        {"position", Int64.Type},
+				        {"table_position", Int64.Type},
+				        {"is_latest", type logical}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

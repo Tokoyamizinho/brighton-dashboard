@@ -6,6 +6,7 @@ Uso:
     python -m brighton transform              # reprocessa a partir de data/raw (offline)
     python -m brighton all --refresh          # ignora o cache local
     python -m brighton powerbi                # regenera os scripts do Power BI (M, DAX, C#)
+    python -m brighton pbip                   # gera/atualiza o projeto powerbi/Brighton.pbip (Power BI FECHADO)
 """
 from __future__ import annotations
 
@@ -93,12 +94,30 @@ def run_powerbi(settings) -> None:
         log.info("artefato do Power BI: %s", p.name)
 
 
+def run_pbip(settings, data_folder: str | None = None) -> None:
+    from .pbip import generate_project
+
+    log.info("Lembrete: o Power BI Desktop precisa estar FECHADO.")
+    r = generate_project(settings.path("processed"), data_folder=data_folder)
+    m = r["modelo"]
+    if m["modo"] == "criado":
+        log.info("modelo criado: %s tabelas, %s medidas", len(m["tabelas"]), m["medidas"])
+    else:
+        med = m["medidas"]
+        log.info("modelo sincronizado: %s medidas atualizadas, %s criadas", len(med["atualizadas"]),
+                 len(med["criadas"]))
+    log.info("%s páginas, %s visuais: %s", len(r["paginas"]), r["visuais"], ", ".join(r["paginas"]))
+    log.info("Abra %s no Power BI Desktop e clique em Atualizar.", r["arquivo"])
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="brighton", description="Pipeline de dados do Brighton Dashboard")
-    parser.add_argument("command", choices=["scrape", "transform", "all", "powerbi"])
+    parser.add_argument("command", choices=["scrape", "transform", "all", "powerbi", "pbip"])
     parser.add_argument("--only", default=",".join(SOURCES), help="fontes separadas por vírgula")
     parser.add_argument("--refresh", action="store_true", help="ignora o cache local")
     parser.add_argument("--config", default=None, help="caminho alternativo para o config.yaml")
+    parser.add_argument("--pasta", default=None,
+                        help="pbip: pasta dos CSVs gravada no parâmetro PastaDados (padrão: data/processed)")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -120,6 +139,8 @@ def main(argv: list[str] | None = None) -> int:
         run_transform(settings)
     if args.command == "powerbi":
         run_powerbi(settings)
+    if args.command == "pbip":
+        run_pbip(settings, args.pasta)
 
     if failures:
         log.warning("Fontes com falha: %s (os CSVs usam o último dado bruto disponível)", ", ".join(failures))

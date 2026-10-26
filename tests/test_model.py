@@ -171,3 +171,26 @@ def test_meta_refresh(raw_project):
     assert meta.loc["pipeline", "last_result_date"] >= dt.date(2026, 10, 18)
     assert t["dim_season"].set_index("season").loc[2026, "data_until"] == dt.date(2026, 10, 18)
     assert meta.loc["openfootball", "last_result_date"] < meta.loc["wikipedia", "last_result_date"]
+
+
+def test_current_table_uses_each_teams_latest_game(raw_project):
+    """Com jogos adiados os times têm números de jogos diferentes. A classificação
+    atual usa o último jogo de CADA time (antes, só os times com mais jogos apareciam)."""
+    _, cfg = raw_project
+    t, _ = _build(cfg)
+    st = t["fact_standings"]
+    for season, g in st.groupby("season"):
+        latest = g[g["is_latest"]]
+        assert latest["team_id"].is_unique and len(latest) == g["team_id"].nunique() == 20, season
+        assert sorted(latest["table_position"]) == list(range(1, 21)), season
+        assert g.loc[~g["is_latest"], "table_position"].isna().all()
+    # simula um jogo adiado: sem a última partida de um time, ele continua na tabela atual
+    from brighton.transform.standings import final_table, standings_by_round
+
+    tm = t["fact_team_match"]
+    tm = tm[~((tm["season"] == 2026) & (tm["team_id"] == "arsenal") & (tm["round"] == tm["round"].max()))]
+    fin = final_table(standings_by_round(tm))
+    assert len(fin[fin["season"] == 2026]) == 20
+    # a final de 2025/26 continua batendo com a realidade: Brighton em 8º
+    bha = st[(st["season"] == 2025) & st["is_latest"] & (st["team_id"] == BHA)]
+    assert bha["table_position"].iloc[0] == 8

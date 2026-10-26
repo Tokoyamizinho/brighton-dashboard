@@ -1,0 +1,95 @@
+table dim_date
+	lineageTag: 5bbfd088-fbfa-56e1-bd62-27b4f7371824
+	dataCategory: Time
+
+	column date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: a1463416-26fb-5349-ac86-4a26ff909b2b
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: dd84018b-59c8-55fa-837a-75f32233aac7
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 161255c5-bab1-5c40-9a13-b8750fce6b63
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: f03dd66d-0f98-52af-8aeb-d80ae1b30da7
+		summarizeBy: none
+		sourceColumn: month_name
+		sortByColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_year
+		dataType: string
+		lineageTag: 8f6bfff8-c709-51d1-9a8d-101adfbbaf44
+		summarizeBy: none
+		sourceColumn: month_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column weekday
+		dataType: string
+		lineageTag: 162c6958-44f8-553d-abc2-473d0441aa51
+		summarizeBy: none
+		sourceColumn: weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: c94c31ca-e792-57ab-94ad-27f3c44903d9
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_label
+		dataType: string
+		lineageTag: 225563d9-cce0-5fbf-91da-99d9a68f7dc6
+		summarizeBy: none
+		sourceColumn: season_label
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("dim_date", {
+				        {"date", type date},
+				        {"year", Int64.Type},
+				        {"month", Int64.Type},
+				        {"month_name", type text},
+				        {"month_year", type text},
+				        {"weekday", type text},
+				        {"season", Int64.Type},
+				        {"season_label", type text}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

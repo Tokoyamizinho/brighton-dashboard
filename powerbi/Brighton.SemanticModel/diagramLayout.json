@@ -1,0 +1,165 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1666.9415120356966,
+            "y": 330.53656549274029
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "410807a7-91e6-50ee-8135-e06cefc693aa",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 51.229241586958693,
+            "y": 110.22634070877723
+          },
+          "nodeIndex": "dim_date",
+          "nodeLineageTag": "5bbfd088-fbfa-56e1-bd62-27b4f7371824",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1432.9415120356966,
+            "y": 179.80097421519656
+          },
+          "nodeIndex": "dim_player",
+          "nodeLineageTag": "c3e7dd85-a67c-5915-ab0d-57901f0f7b19",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 734.90734249750415,
+            "y": 306.30815659230939
+          },
+          "nodeIndex": "dim_season",
+          "nodeLineageTag": "caf42e7c-dad1-5c16-8bcd-7eb4d1777dd9",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 521.44044151760727
+          },
+          "nodeIndex": "dim_team",
+          "nodeLineageTag": "3cad54c7-0276-56c4-8b02-431ae4adc043",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 550.05506718122729,
+            "y": -50
+          },
+          "nodeIndex": "fact_fixtures",
+          "nodeLineageTag": "282cdcf4-680e-575c-a1b1-e79de820e788",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1024.8421272768257,
+            "y": 72.373114982696165
+          },
+          "nodeIndex": "fact_player_season",
+          "nodeLineageTag": "2b985c47-53ed-586e-a2d6-06bc0edbfd77",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 639.41021587108651,
+            "y": 611.07313098548059
+          },
+          "nodeIndex": "fact_standings",
+          "nodeLineageTag": "c8cbcf01-65cd-5173-9b6d-887cb410543e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 338.05015519586948,
+            "y": 307.11839287452381
+          },
+          "nodeIndex": "fact_team_match",
+          "nodeLineageTag": "e956c513-dd5a-5d14-bdfd-93ef2a8a0ad2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1143.0808837879426,
+            "y": 429.576686599219
+          },
+          "nodeIndex": "fact_transfers",
+          "nodeLineageTag": "dbfd5b50-f4ba-54e0-ad7f-9822fd7b86f9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1950.9415120356966,
+            "y": 392.53656549274029
+          },
+          "nodeIndex": "meta_refresh",
+          "nodeLineageTag": "abdc9156-0f9f-5628-9089-d1d0bd2d51e4",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

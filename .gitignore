@@ -16,3 +16,7 @@ data/cache/
 # área local, não versionada
 private/
 *.har
+
+# cache e preferências locais do Power BI Desktop (projeto .pbip)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf

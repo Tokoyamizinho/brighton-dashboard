@@ -1,0 +1,48 @@
+relationship d6af0050-3a8e-5b87-a39c-3c5c10f7c58c
+	fromColumn: fact_team_match.season
+	toColumn: dim_season.season
+
+relationship ef9449b5-c06b-5461-9b74-493d067624c1
+	fromColumn: fact_standings.season
+	toColumn: dim_season.season
+
+relationship d983171f-8a81-53df-9750-9329d005402b
+	fromColumn: fact_player_season.season
+	toColumn: dim_season.season
+
+relationship 2be5ed27-b5dd-5ce2-84ae-f11f69569bf7
+	fromColumn: fact_transfers.season
+	toColumn: dim_season.season
+
+relationship 7fb66fd9-6cbc-59aa-8e9c-6fa3eaa12663
+	fromColumn: fact_fixtures.season
+	toColumn: dim_season.season
+
+relationship 939dd7b1-8818-5c0f-a4b1-b0f7a45b0abd
+	fromColumn: fact_team_match.team_id
+	toColumn: dim_team.team_id
+
+relationship cb43ad9c-cb8f-5fe7-b62a-e5d26e905574
+	fromColumn: fact_standings.team_id
+	toColumn: dim_team.team_id
+
+relationship 9ac79413-0899-57e2-9186-24e913c6a11c
+	fromColumn: fact_fixtures.opponent_id
+	toColumn: dim_team.team_id
+
+relationship a904abb6-0a96-51d6-ae7f-6a9cad28ba5e
+	fromColumn: fact_player_season.player_key
+	toColumn: dim_player.player_key
+
+relationship ea874f84-04bc-55b0-a3a8-5f5d1fe7c3a1
+	fromColumn: fact_transfers.player_key
+	toColumn: dim_player.player_key
+
+relationship 9449e50d-abea-5e66-9872-d46ff9274503
+	fromColumn: fact_team_match.date
+	toColumn: dim_date.date
+
+relationship a9b9c86b-33ce-548a-ba68-5058e88e9199
+	fromColumn: fact_fixtures.date
+	toColumn: dim_date.date
+

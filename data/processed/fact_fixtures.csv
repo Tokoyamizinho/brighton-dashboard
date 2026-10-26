@@ -1,39 +1,39 @@
 season,matchday,kickoff_uk,home_away,opponent,goals_for,goals_against,opponent_id,venue,finished,date,kickoff_brasilia,opponent_position_now,opponent_ppg_now,difficulty,fixture_number,result_pending,is_next,next_n,result_pt
-2026,1,2026-08-23 14:00:00,h,Aston Villa,4,0,aston-villa,Casa,True,2026-08-23,2026-08-23 10:00:00,12,1.1428571428571428,3,1,False,False,,V
-2026,2,2026-08-30 14:00:00,a,Chelsea,3,4,chelsea,Fora,True,2026-08-30,2026-08-30 10:00:00,4,1.8571428571428572,5,2,False,False,,D
-2026,3,2026-09-05 15:00:00,h,Leeds United,1,1,leeds-united,Casa,True,2026-09-05,2026-09-05 11:00:00,7,1.4285714285714286,4,3,False,False,,E
-2026,4,2026-09-13 14:00:00,a,Coventry City,5,0,coventry-city,Fora,True,2026-09-13,2026-09-13 10:00:00,17,0.8571428571428571,1,4,False,False,,V
-2026,5,2026-09-19 15:00:00,h,Arsenal,3,0,arsenal,Casa,True,2026-09-19,2026-09-19 11:00:00,2,2.5714285714285716,5,5,False,False,,V
-2026,6,2026-10-10 15:00:00,a,Sunderland,2,0,sunderland,Fora,True,2026-10-10,2026-10-10 11:00:00,20,0.5714285714285714,1,6,False,False,,V
-2026,7,2026-10-18 14:00:00,h,Crystal Palace,5,0,crystal-palace,Casa,True,2026-10-18,2026-10-18 10:00:00,14,1.0,2,7,False,False,,V
-2026,8,2026-10-25 14:00:00,a,Liverpool,,,liverpool,Fora,False,2026-10-25,2026-10-25 11:00:00,5,1.7142857142857142,4,8,True,False,,
-2026,9,2026-10-31 15:00:00,a,Manchester City,,,manchester-city,Fora,False,2026-10-31,2026-10-31 12:00:00,1,3.0,5,9,False,True,1,
-2026,10,2026-11-07 15:00:00,h,Brentford,,,brentford,Casa,False,2026-11-07,2026-11-07 12:00:00,6,1.4285714285714286,4,10,False,False,2,
-2026,11,2026-11-21 15:00:00,a,Hull City,,,hull-city,Fora,False,2026-11-21,2026-11-21 12:00:00,9,1.2857142857142858,3,11,False,False,3,
-2026,12,2026-11-28 15:00:00,h,Newcastle United,,,newcastle-united,Casa,False,2026-11-28,2026-11-28 12:00:00,11,1.1428571428571428,3,12,False,False,4,
-2026,13,2026-12-02 20:00:00,a,Bournemouth,,,bournemouth,Fora,False,2026-12-02,2026-12-02 17:00:00,15,0.8571428571428571,2,13,False,False,5,
-2026,14,2026-12-05 15:00:00,a,Nottingham Forest,,,nottingham-forest,Fora,False,2026-12-05,2026-12-05 12:00:00,2,0.75,5,14,False,False,6,
-2026,15,2026-12-12 15:00:00,h,Everton,,,everton,Casa,False,2026-12-12,2026-12-12 12:00:00,8,1.4285714285714286,4,15,False,False,7,
-2026,16,2026-12-19 15:00:00,h,Ipswich Town,,,ipswich-town,Casa,False,2026-12-19,2026-12-19 12:00:00,1,1.25,5,16,False,False,8,
-2026,17,2026-12-26 15:00:00,a,Fulham,,,fulham,Fora,False,2026-12-26,2026-12-26 12:00:00,18,0.7142857142857143,1,17,False,False,9,
-2026,18,2026-12-29 19:30:00,a,Tottenham Hotspur,,,tottenham-hotspur,Fora,False,2026-12-29,2026-12-29 16:30:00,16,0.8571428571428571,2,18,False,False,10,
-2026,19,2027-01-02 12:30:00,h,Manchester United,,,manchester-united,Casa,False,2027-01-02,2027-01-02 09:30:00,13,1.0,2,19,False,False,11,
-2026,20,2027-01-05 19:30:00,h,Bournemouth,,,bournemouth,Casa,False,2027-01-05,2027-01-05 16:30:00,15,0.8571428571428571,2,20,False,False,12,
-2026,21,2027-01-16 15:00:00,a,Brentford,,,brentford,Fora,False,2027-01-16,2027-01-16 12:00:00,6,1.4285714285714286,4,21,False,False,13,
-2026,22,2027-01-23 15:00:00,h,Manchester City,,,manchester-city,Casa,False,2027-01-23,2027-01-23 12:00:00,1,3.0,5,22,False,False,14,
-2026,23,2027-01-30 15:00:00,a,Newcastle United,,,newcastle-united,Fora,False,2027-01-30,2027-01-30 12:00:00,11,1.1428571428571428,3,23,False,False,15,
-2026,24,2027-02-06 15:00:00,h,Hull City,,,hull-city,Casa,False,2027-02-06,2027-02-06 12:00:00,9,1.2857142857142858,3,24,False,False,16,
-2026,25,2027-02-10 20:00:00,a,Manchester United,,,manchester-united,Fora,False,2027-02-10,2027-02-10 17:00:00,13,1.0,2,25,False,False,17,
-2026,26,2027-02-20 15:00:00,h,Tottenham Hotspur,,,tottenham-hotspur,Casa,False,2027-02-20,2027-02-20 12:00:00,16,0.8571428571428571,2,26,False,False,18,
-2026,27,2027-02-27 15:00:00,a,Ipswich Town,,,ipswich-town,Fora,False,2027-02-27,2027-02-27 12:00:00,1,1.25,5,27,False,False,19,
-2026,28,2027-03-03 20:00:00,h,Fulham,,,fulham,Casa,False,2027-03-03,2027-03-03 17:00:00,18,0.7142857142857143,1,28,False,False,20,
-2026,29,2027-03-13 15:00:00,a,Leeds United,,,leeds-united,Fora,False,2027-03-13,2027-03-13 12:00:00,7,1.4285714285714286,4,29,False,False,21,
-2026,30,2027-03-20 15:00:00,h,Coventry City,,,coventry-city,Casa,False,2027-03-20,2027-03-20 12:00:00,17,0.8571428571428571,1,30,False,False,22,
-2026,31,2027-04-10 15:00:00,a,Aston Villa,,,aston-villa,Fora,False,2027-04-10,2027-04-10 11:00:00,12,1.1428571428571428,3,31,False,False,23,
-2026,32,2027-04-17 15:00:00,h,Chelsea,,,chelsea,Casa,False,2027-04-17,2027-04-17 11:00:00,4,1.8571428571428572,5,32,False,False,24,
-2026,33,2027-04-24 15:00:00,a,Everton,,,everton,Fora,False,2027-04-24,2027-04-24 11:00:00,8,1.4285714285714286,4,33,False,False,25,
-2026,34,2027-05-01 15:00:00,h,Nottingham Forest,,,nottingham-forest,Casa,False,2027-05-01,2027-05-01 11:00:00,2,0.75,5,34,False,False,26,
-2026,35,2027-05-08 15:00:00,h,Sunderland,,,sunderland,Casa,False,2027-05-08,2027-05-08 11:00:00,20,0.5714285714285714,1,35,False,False,27,
-2026,36,2027-05-15 15:00:00,a,Crystal Palace,,,crystal-palace,Fora,False,2027-05-15,2027-05-15 11:00:00,14,1.0,2,36,False,False,28,
-2026,37,2027-05-23 15:00:00,h,Liverpool,,,liverpool,Casa,False,2027-05-23,2027-05-23 11:00:00,5,1.7142857142857142,4,37,False,False,29,
-2026,38,2027-05-30 16:00:00,a,Arsenal,,,arsenal,Fora,False,2027-05-30,2027-05-30 12:00:00,2,2.5714285714285716,5,38,False,False,30,
+2026,1,2026-08-23 14:00:00,h,Aston Villa,4,0,aston-villa,Casa,True,2026-08-23,2026-08-23 10:00:00,9,1.375,3,1,False,False,,V
+2026,2,2026-08-30 14:00:00,a,Chelsea,3,4,chelsea,Fora,True,2026-08-30,2026-08-30 10:00:00,5,1.625,4,2,False,False,,D
+2026,3,2026-09-05 15:00:00,h,Leeds United,1,1,leeds-united,Casa,True,2026-09-05,2026-09-05 11:00:00,7,1.375,4,3,False,False,,E
+2026,4,2026-09-13 14:00:00,a,Coventry City,5,0,coventry-city,Fora,True,2026-09-13,2026-09-13 10:00:00,19,0.75,1,4,False,False,,V
+2026,5,2026-09-19 15:00:00,h,Arsenal,3,0,arsenal,Casa,True,2026-09-19,2026-09-19 11:00:00,2,2.625,5,5,False,False,,V
+2026,6,2026-10-10 15:00:00,a,Sunderland,2,0,sunderland,Fora,True,2026-10-10,2026-10-10 11:00:00,20,0.625,1,6,False,False,,V
+2026,7,2026-10-18 14:00:00,h,Crystal Palace,5,0,crystal-palace,Casa,True,2026-10-18,2026-10-18 10:00:00,17,0.875,1,7,False,False,,V
+2026,8,2026-10-25 14:00:00,a,Liverpool,0,2,liverpool,Fora,True,2026-10-25,2026-10-25 11:00:00,4,1.875,5,8,False,False,,D
+2026,9,2026-10-31 15:00:00,a,Manchester City,,,manchester-city,Fora,False,2026-10-31,2026-10-31 12:00:00,1,2.625,5,9,False,True,1,
+2026,10,2026-11-07 15:00:00,h,Brentford,,,brentford,Casa,False,2026-11-07,2026-11-07 12:00:00,6,1.375,4,10,False,False,2,
+2026,11,2026-11-21 15:00:00,a,Hull City,,,hull-city,Fora,False,2026-11-21,2026-11-21 12:00:00,10,1.25,3,11,False,False,3,
+2026,12,2026-11-28 15:00:00,h,Newcastle United,,,newcastle-united,Casa,False,2026-11-28,2026-11-28 12:00:00,8,1.375,4,12,False,False,4,
+2026,13,2026-12-02 20:00:00,a,Bournemouth,,,bournemouth,Fora,False,2026-12-02,2026-12-02 17:00:00,13,1.125,2,13,False,False,5,
+2026,14,2026-12-05 15:00:00,a,Nottingham Forest,,,nottingham-forest,Fora,False,2026-12-05,2026-12-05 12:00:00,18,0.75,1,14,False,False,6,
+2026,15,2026-12-12 15:00:00,h,Everton,,,everton,Casa,False,2026-12-12,2026-12-12 12:00:00,11,1.25,3,15,False,False,7,
+2026,16,2026-12-19 15:00:00,h,Ipswich Town,,,ipswich-town,Casa,False,2026-12-19,2026-12-19 12:00:00,12,1.25,3,16,False,False,8,
+2026,17,2026-12-26 15:00:00,a,Fulham,,,fulham,Fora,False,2026-12-26,2026-12-26 12:00:00,15,1.0,2,17,False,False,9,
+2026,18,2026-12-29 19:30:00,a,Tottenham Hotspur,,,tottenham-hotspur,Fora,False,2026-12-29,2026-12-29 16:30:00,14,1.125,2,18,False,False,10,
+2026,19,2027-01-02 12:30:00,h,Manchester United,,,manchester-united,Casa,False,2027-01-02,2027-01-02 09:30:00,16,0.875,2,19,False,False,11,
+2026,20,2027-01-05 19:30:00,h,Bournemouth,,,bournemouth,Casa,False,2027-01-05,2027-01-05 16:30:00,13,1.125,2,20,False,False,12,
+2026,21,2027-01-16 15:00:00,a,Brentford,,,brentford,Fora,False,2027-01-16,2027-01-16 12:00:00,6,1.375,4,21,False,False,13,
+2026,22,2027-01-23 15:00:00,h,Manchester City,,,manchester-city,Casa,False,2027-01-23,2027-01-23 12:00:00,1,2.625,5,22,False,False,14,
+2026,23,2027-01-30 15:00:00,a,Newcastle United,,,newcastle-united,Fora,False,2027-01-30,2027-01-30 12:00:00,8,1.375,4,23,False,False,15,
+2026,24,2027-02-06 15:00:00,h,Hull City,,,hull-city,Casa,False,2027-02-06,2027-02-06 12:00:00,10,1.25,3,24,False,False,16,
+2026,25,2027-02-10 20:00:00,a,Manchester United,,,manchester-united,Fora,False,2027-02-10,2027-02-10 17:00:00,16,0.875,2,25,False,False,17,
+2026,26,2027-02-20 15:00:00,h,Tottenham Hotspur,,,tottenham-hotspur,Casa,False,2027-02-20,2027-02-20 12:00:00,14,1.125,2,26,False,False,18,
+2026,27,2027-02-27 15:00:00,a,Ipswich Town,,,ipswich-town,Fora,False,2027-02-27,2027-02-27 12:00:00,12,1.25,3,27,False,False,19,
+2026,28,2027-03-03 20:00:00,h,Fulham,,,fulham,Casa,False,2027-03-03,2027-03-03 17:00:00,15,1.0,2,28,False,False,20,
+2026,29,2027-03-13 15:00:00,a,Leeds United,,,leeds-united,Fora,False,2027-03-13,2027-03-13 12:00:00,7,1.375,4,29,False,False,21,
+2026,30,2027-03-20 15:00:00,h,Coventry City,,,coventry-city,Casa,False,2027-03-20,2027-03-20 12:00:00,19,0.75,1,30,False,False,22,
+2026,31,2027-04-10 15:00:00,a,Aston Villa,,,aston-villa,Fora,False,2027-04-10,2027-04-10 11:00:00,9,1.375,3,31,False,False,23,
+2026,32,2027-04-17 15:00:00,h,Chelsea,,,chelsea,Casa,False,2027-04-17,2027-04-17 11:00:00,5,1.625,4,32,False,False,24,
+2026,33,2027-04-24 15:00:00,a,Everton,,,everton,Fora,False,2027-04-24,2027-04-24 11:00:00,11,1.25,3,33,False,False,25,
+2026,34,2027-05-01 15:00:00,h,Nottingham Forest,,,nottingham-forest,Casa,False,2027-05-01,2027-05-01 11:00:00,18,0.75,1,34,False,False,26,
+2026,35,2027-05-08 15:00:00,h,Sunderland,,,sunderland,Casa,False,2027-05-08,2027-05-08 11:00:00,20,0.625,1,35,False,False,27,
+2026,36,2027-05-15 15:00:00,a,Crystal Palace,,,crystal-palace,Fora,False,2027-05-15,2027-05-15 11:00:00,17,0.875,1,36,False,False,28,
+2026,37,2027-05-23 15:00:00,h,Liverpool,,,liverpool,Casa,False,2027-05-23,2027-05-23 11:00:00,4,1.875,5,37,False,False,29,
+2026,38,2027-05-30 16:00:00,a,Arsenal,,,arsenal,Fora,False,2027-05-30,2027-05-30 12:00:00,2,2.625,5,38,False,False,30,

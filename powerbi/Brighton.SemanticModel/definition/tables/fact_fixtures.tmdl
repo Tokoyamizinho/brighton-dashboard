@@ -1,0 +1,211 @@
+table fact_fixtures
+	lineageTag: 282cdcf4-680e-575c-a1b1-e79de820e788
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a7e6f97-e080-5d8e-a083-840bb1b24726
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column matchday
+		dataType: int64
+		formatString: 0
+		lineageTag: cb589cad-7402-5e23-9b8d-7febefa3b32a
+		summarizeBy: none
+		sourceColumn: matchday
+
+		annotation SummarizationSetBy = Automatic
+
+	column kickoff_uk
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 88e4dda3-cd6c-54c0-90b4-d6c523776d66
+		summarizeBy: none
+		sourceColumn: kickoff_uk
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_away
+		dataType: string
+		lineageTag: a9fbf0b3-ed20-55cd-973e-90d159ea49b4
+		summarizeBy: none
+		sourceColumn: home_away
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent
+		dataType: string
+		lineageTag: fad813b0-24f4-5306-bf6e-57919a3e272a
+		summarizeBy: none
+		sourceColumn: opponent
+
+		annotation SummarizationSetBy = Automatic
+
+	column goals_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 7754ece8-1f6c-5792-9c27-94753743ea98
+		summarizeBy: none
+		sourceColumn: goals_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column goals_against
+		dataType: int64
+		formatString: 0
+		lineageTag: 80fa16e8-d66f-56a4-9a21-346314cb2d88
+		summarizeBy: none
+		sourceColumn: goals_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent_id
+		dataType: string
+		isHidden
+		lineageTag: 0229fe27-e1c9-58c4-b5c4-c7c0de319288
+		summarizeBy: none
+		sourceColumn: opponent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column venue
+		dataType: string
+		lineageTag: 4ac05c16-ba1b-50d7-a2fc-606bc9965f97
+		summarizeBy: none
+		sourceColumn: venue
+
+		annotation SummarizationSetBy = Automatic
+
+	column finished
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6783c6e2-5aca-5575-8d35-514533da002b
+		summarizeBy: none
+		sourceColumn: finished
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2175ab9e-2716-56b6-a904-79d405130f95
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column kickoff_brasilia
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e8786412-669d-5aac-bd31-a6be29cc8364
+		summarizeBy: none
+		sourceColumn: kickoff_brasilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent_position_now
+		dataType: int64
+		formatString: 0
+		lineageTag: 5aa5361b-e226-596f-bb53-bd29d617f959
+		summarizeBy: none
+		sourceColumn: opponent_position_now
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent_ppg_now
+		dataType: double
+		lineageTag: de8cce67-7072-5e06-bc27-d8e06938d815
+		summarizeBy: none
+		sourceColumn: opponent_ppg_now
+
+		annotation SummarizationSetBy = Automatic
+
+	column difficulty
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c598d98-b1cb-5606-9c24-e398431448c2
+		summarizeBy: none
+		sourceColumn: difficulty
+
+		annotation SummarizationSetBy = Automatic
+
+	column fixture_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 8aee2990-edcb-5c8e-8857-a9d0bdbfd865
+		summarizeBy: none
+		sourceColumn: fixture_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column result_pending
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7d4d93ae-25ba-5dd3-90ff-1ffe26809e20
+		summarizeBy: none
+		sourceColumn: result_pending
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_next
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8f0f3dae-b653-5d50-a959-c9ac90fb58f1
+		summarizeBy: none
+		sourceColumn: is_next
+
+		annotation SummarizationSetBy = Automatic
+
+	column next_n
+		dataType: int64
+		formatString: 0
+		lineageTag: 2613712d-4c58-52c4-9468-9f8822643e0e
+		summarizeBy: none
+		sourceColumn: next_n
+
+		annotation SummarizationSetBy = Automatic
+
+	column result_pt
+		dataType: string
+		lineageTag: c6e0bfed-9c3c-534b-9228-efbd0f5fa967
+		summarizeBy: none
+		sourceColumn: result_pt
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_fixtures = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("fact_fixtures", {
+				        {"season", Int64.Type},
+				        {"matchday", Int64.Type},
+				        {"kickoff_uk", type datetime},
+				        {"home_away", type text},
+				        {"opponent", type text},
+				        {"goals_for", Int64.Type},
+				        {"goals_against", Int64.Type},
+				        {"opponent_id", type text},
+				        {"venue", type text},
+				        {"finished", type logical},
+				        {"date", type date},
+				        {"kickoff_brasilia", type datetime},
+				        {"opponent_position_now", Int64.Type},
+				        {"opponent_ppg_now", type number},
+				        {"difficulty", Int64.Type},
+				        {"fixture_number", Int64.Type},
+				        {"result_pending", type logical},
+				        {"is_next", type logical},
+				        {"next_n", Int64.Type},
+				        {"result_pt", type text}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

@@ -141,7 +141,9 @@ let
         {"gf_cum", Int64.Type},
         {"ga_cum", Int64.Type},
         {"gd_cum", Int64.Type},
-        {"position", Int64.Type}
+        {"position", Int64.Type},
+        {"table_position", Int64.Type},
+        {"is_latest", type logical}
     })
 in
     Fonte

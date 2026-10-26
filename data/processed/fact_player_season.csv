@@ -152,30 +152,30 @@ season,player_key,player_name,shirt_number,position,nationality,pl_apps,pl_start
 2025,wiki:Diego_Coppola,Diego Coppola,42.0,DF,Italy,5.0,2.0,3.0,0.0,9.0,0.0,False,0,2,2,0,0,2025/26,Defensor,0
 2025,name:player-who-featured-but-departed-the-club-permanently-during-the-season,Player who featured but departed the club permanently during the season:,,Player who featured but departed the club permanently during the season:,,,,,,,,False,0,0,0,0,0,2025/26,,
 2025,name:joe-knight,Joe Knight,49.0,MF,England,1.0,0.0,1.0,0.0,1.0,0.0,False,0,0,0,0,0,2025/26,Meio-campo,0
-2026,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,7.0,7.0,0.0,0.0,11.0,0.0,False,0,0,0,0,0,2026/27,Goleiro,0
+2026,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,8.0,8.0,0.0,0.0,12.0,0.0,False,0,0,0,0,0,2026/27,Goleiro,0
 2026,wiki:Jaouen_Hadjam,Jaouen Hadjam,3.0,DF,Algeria,2.0,0.0,2.0,1.0,4.0,1.0,False,0,1,0,0,0,2026/27,Defensor,1
 2026,wiki:Pascal_Struijk,Pascal Struijk,4.0,DF,Netherlands,4.0,2.0,2.0,0.0,6.0,0.0,False,0,0,0,0,1,2026/27,Defensor,0
-2026,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,6.0,5.0,1.0,1.0,8.0,1.0,False,0,0,0,0,0,2026/27,Defensor,1
-2026,wiki:Jack_Hinshelwood,Jack Hinshelwood,8.0,MF,England,2.0,1.0,1.0,3.0,5.0,4.0,False,0,0,0,0,0,2026/27,Meio-campo,3
-2026,wiki:Georginio_Rutter,Georginio Rutter,10.0,FW,France,4.0,1.0,3.0,0.0,8.0,2.0,False,2,3,0,0,0,2026/27,Atacante,2
+2026,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,7.0,6.0,1.0,1.0,9.0,1.0,False,0,0,0,0,0,2026/27,Defensor,1
+2026,wiki:Jack_Hinshelwood,Jack Hinshelwood,8.0,MF,England,3.0,1.0,2.0,3.0,6.0,4.0,False,0,0,0,0,0,2026/27,Meio-campo,3
+2026,wiki:Georginio_Rutter,Georginio Rutter,10.0,FW,France,5.0,1.0,4.0,0.0,9.0,2.0,False,2,3,0,0,0,2026/27,Atacante,2
 2026,wiki:Promise_David,Promise David,12.0,FW,Canada,2.0,0.0,2.0,0.0,4.0,0.0,False,0,0,1,0,0,2026/27,Atacante,0
-2026,wiki:Pascal_Groß,Pascal Groß,13.0,MF,Germany,7.0,7.0,0.0,3.0,12.0,4.0,False,4,4,4,0,0,2026/27,Meio-campo,7
-2026,wiki:Chema_Andrés,Chema Andrés,14.0,MF,Spain,4.0,3.0,1.0,1.0,6.0,1.0,False,1,1,1,0,0,2026/27,Meio-campo,2
+2026,wiki:Pascal_Groß,Pascal Groß,13.0,MF,Germany,8.0,8.0,0.0,3.0,13.0,4.0,False,4,4,4,0,0,2026/27,Meio-campo,7
+2026,wiki:Chema_Andrés,Chema Andrés,14.0,MF,Spain,5.0,4.0,1.0,1.0,7.0,1.0,False,1,1,1,0,0,2026/27,Meio-campo,2
 2026,"wiki:Ibrahim_Osman_(footballer,_born_2004)",Ibrahim Osman,15.0,MF,Ghana,3.0,0.0,3.0,0.0,7.0,0.0,False,0,2,0,0,0,2026/27,Meio-campo,0
-2026,wiki:Charalampos_Kostoulas,Charalampos Kostoulas,19.0,FW,Greece,7.0,6.0,1.0,3.0,10.0,5.0,False,2,3,1,0,0,2026/27,Atacante,5
-2026,"wiki:Costinha_(footballer,_born_2000)",Costinha,20.0,DF,Portugal,6.0,0.0,6.0,0.0,10.0,0.0,False,0,0,1,0,0,2026/27,Defensor,0
-2026,wiki:Olivier_Boscagli,Olivier Boscagli,21.0,DF,France,7.0,7.0,0.0,0.0,12.0,1.0,False,1,1,2,0,0,2026/27,Defensor,1
+2026,wiki:Charalampos_Kostoulas,Charalampos Kostoulas,19.0,FW,Greece,8.0,7.0,1.0,3.0,11.0,5.0,False,2,3,1,0,0,2026/27,Atacante,5
+2026,"wiki:Costinha_(footballer,_born_2000)",Costinha,20.0,DF,Portugal,7.0,0.0,7.0,0.0,11.0,0.0,False,0,0,2,0,0,2026/27,Defensor,0
+2026,wiki:Olivier_Boscagli,Olivier Boscagli,21.0,DF,France,8.0,8.0,0.0,0.0,13.0,1.0,False,1,1,3,0,0,2026/27,Defensor,1
 2026,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,0.0,0.0,0.0,0.0,1.0,0.0,False,0,0,0,0,0,2026/27,Goleiro,0
-2026,wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,24.0,DF,Turkey,6.0,6.0,0.0,0.0,9.0,0.0,False,0,0,1,0,0,2026/27,Defensor,0
-2026,wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,25.0,MF,Paraguay,7.0,7.0,0.0,1.0,10.0,1.0,False,2,2,0,0,0,2026/27,Meio-campo,3
-2026,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,6.0,6.0,0.0,2.0,11.0,2.0,False,0,0,1,0,0,2026/27,Meio-campo,2
+2026,wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,24.0,DF,Turkey,7.0,7.0,0.0,0.0,10.0,0.0,False,0,0,1,0,0,2026/27,Defensor,0
+2026,wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,25.0,MF,Paraguay,8.0,8.0,0.0,1.0,11.0,1.0,False,2,2,0,0,0,2026/27,Meio-campo,3
+2026,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,7.0,7.0,0.0,2.0,12.0,2.0,False,0,0,1,0,0,2026/27,Meio-campo,2
 2026,wiki:Mats_Wieffer,Mats Wieffer,27.0,DF,Netherlands,2.0,2.0,0.0,0.0,4.0,1.0,False,0,0,0,0,0,2026/27,Defensor,0
-2026,wiki:Maxim_De_Cuyper,Maxim De Cuyper,29.0,DF,Belgium,7.0,7.0,0.0,2.0,11.0,4.0,False,2,3,2,0,0,2026/27,Defensor,4
+2026,wiki:Maxim_De_Cuyper,Maxim De Cuyper,29.0,DF,Belgium,8.0,8.0,0.0,2.0,12.0,4.0,False,2,3,2,0,0,2026/27,Defensor,4
 2026,wiki:Michael_Svoboda,Michael Svoboda,30.0,DF,Austria,2.0,0.0,2.0,0.0,4.0,0.0,False,0,0,0,0,0,2026/27,Defensor,0
 2026,wiki:Matt_O'Riley,Matt O'Riley,33.0,MF,Denmark,2.0,0.0,2.0,0.0,6.0,1.0,False,0,0,0,0,0,2026/27,Meio-campo,0
-2026,wiki:Malick_Yalcouyé,Malick Yalcouyé,35.0,MF,Ivory Coast,7.0,3.0,4.0,2.0,12.0,2.0,False,0,0,0,0,0,2026/27,Meio-campo,2
+2026,wiki:Malick_Yalcouyé,Malick Yalcouyé,35.0,MF,Ivory Coast,8.0,3.0,5.0,2.0,13.0,2.0,False,0,0,0,0,0,2026/27,Meio-campo,2
 2026,wiki:Zadok_Yohanna,Zadok Yohanna,36.0,MF,Nigeria,1.0,0.0,1.0,0.0,3.0,0.0,False,0,0,0,0,0,2026/27,Meio-campo,0
-2026,wiki:Luka_Vušković,Luka Vušković,44.0,DF,Croatia,7.0,7.0,0.0,1.0,12.0,1.0,False,0,1,0,0,0,2026/27,Defensor,1
+2026,wiki:Luka_Vušković,Luka Vušković,44.0,DF,Croatia,8.0,8.0,0.0,1.0,13.0,1.0,False,0,1,0,0,0,2026/27,Defensor,1
 2026,wiki:Younes_Ibrahim,Younes Ibrahim,59.0,MF,Egypt,0.0,0.0,0.0,0.0,1.0,0.0,False,0,1,0,0,0,2026/27,Meio-campo,0
 2026,name:player-who-featured-but-departed-the-club-on-loan-during-the-season,Player who featured but departed the club on loan during the season:,,Player who featured but departed the club on loan during the season:,,,,,,,,False,0,0,0,0,0,2026/27,,
 2026,wiki:Amario_Cozier-Duberry,Amario Cozier-Duberry,22.0,MF,England,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2026/27,Meio-campo,0

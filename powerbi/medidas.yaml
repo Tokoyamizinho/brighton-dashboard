@@ -278,6 +278,58 @@ measures:
     format: "0"
     expr: CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )
 
+  # tabela de classificação (todos os times): a última partida de cada time na temporada
+  # (is_latest), já reclassificada no Python; funciona mesmo com jogos adiados
+  - name: Rodada da Tabela
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( MAX ( fact_standings[round] ), REMOVEFILTERS ( dim_team ) )
+
+  - name: Pos. (Tabela)
+    folder: 4. Tabela e Momento
+    format: 0"º"
+    expr: CALCULATE ( MIN ( fact_standings[table_position] ), fact_standings[is_latest] = TRUE () )
+
+  - name: Jogos (Tabela)
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( MAX ( fact_standings[round] ), fact_standings[is_latest] = TRUE () )
+
+  - name: Pts (Tabela)
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_standings[pts_cum] ), fact_standings[is_latest] = TRUE () )
+
+  - name: GP (Tabela)
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_standings[gf_cum] ), fact_standings[is_latest] = TRUE () )
+
+  - name: GC (Tabela)
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_standings[ga_cum] ), fact_standings[is_latest] = TRUE () )
+
+  - name: SG (Tabela)
+    folder: 4. Tabela e Momento
+    format: +0;-0;0
+    expr: "[GP (Tabela)] - [GC (Tabela)]"
+
+  - name: Pontos por Jogo (Tabela)
+    folder: 4. Tabela e Momento
+    format: "0.00"
+    expr: DIVIDE ( [Pts (Tabela)], [Jogos (Tabela)] )
+
+  - name: Cor do Time
+    folder: 7. Textos e Cores
+    description: Barras da classificação (Brighton em destaque).
+    expr: IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#0057B8", "#B7CBE3" )
+
+  - name: Fundo do Time
+    folder: 7. Textos e Cores
+    description: Fundo da linha do Brighton na tabela de classificação.
+    expr: IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#DCEAFB", "#FFFFFF" )
+
   - name: Pontos na Mesma Rodada (Temporada Anterior)
     folder: 4. Tabela e Momento
     format: "0"

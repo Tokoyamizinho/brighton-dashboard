@@ -117,6 +117,26 @@ DEFINE
         CALCULATE ( MIN ( fact_standings[position] ), dim_team[is_brighton] = TRUE () )
     MEASURE '_Medidas'[Pontos Acumulados] =
         CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Rodada da Tabela] =
+        CALCULATE ( MAX ( fact_standings[round] ), REMOVEFILTERS ( dim_team ) )
+    MEASURE '_Medidas'[Pos. (Tabela)] =
+        CALCULATE ( MIN ( fact_standings[table_position] ), fact_standings[is_latest] = TRUE () )
+    MEASURE '_Medidas'[Jogos (Tabela)] =
+        CALCULATE ( MAX ( fact_standings[round] ), fact_standings[is_latest] = TRUE () )
+    MEASURE '_Medidas'[Pts (Tabela)] =
+        CALCULATE ( SUM ( fact_standings[pts_cum] ), fact_standings[is_latest] = TRUE () )
+    MEASURE '_Medidas'[GP (Tabela)] =
+        CALCULATE ( SUM ( fact_standings[gf_cum] ), fact_standings[is_latest] = TRUE () )
+    MEASURE '_Medidas'[GC (Tabela)] =
+        CALCULATE ( SUM ( fact_standings[ga_cum] ), fact_standings[is_latest] = TRUE () )
+    MEASURE '_Medidas'[SG (Tabela)] =
+        [GP (Tabela)] - [GC (Tabela)]
+    MEASURE '_Medidas'[Pontos por Jogo (Tabela)] =
+        DIVIDE ( [Pts (Tabela)], [Jogos (Tabela)] )
+    MEASURE '_Medidas'[Cor do Time] =
+        IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#0057B8", "#B7CBE3" )
+    MEASURE '_Medidas'[Fundo do Time] =
+        IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#DCEAFB", "#FFFFFF" )
     MEASURE '_Medidas'[Pontos na Mesma Rodada (Temporada Anterior)] =
         VAR _s = MAX ( dim_season[season] )
         VAR _r =

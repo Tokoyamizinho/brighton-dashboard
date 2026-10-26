@@ -1,0 +1,53 @@
+table meta_refresh
+	lineageTag: abdc9156-0f9f-5628-9089-d1d0bd2d51e4
+
+	column source
+		dataType: string
+		lineageTag: 4ac81aa1-88e4-5d5a-8f01-1547cf5ce01e
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column files
+		dataType: double
+		lineageTag: b511fc5d-717f-5db4-ac5d-7e610a71827e
+		summarizeBy: none
+		sourceColumn: files
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_refresh_utc
+		dataType: string
+		lineageTag: 3617781e-8e49-5462-9285-ba0a35fe5ea7
+		summarizeBy: none
+		sourceColumn: last_refresh_utc
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_result_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 266de618-a593-5953-81fa-c4106d7a78cd
+		summarizeBy: none
+		sourceColumn: last_result_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition meta_refresh = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("meta_refresh", {
+				        {"source", type text},
+				        {"files", type number},
+				        {"last_refresh_utc", type text},
+				        {"last_result_date", type date}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

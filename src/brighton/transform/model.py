@@ -226,8 +226,14 @@ class ModelBuilder:
         )
 
         st = standings_by_round(tm)
-        self.tables["fact_standings"] = st
         self._final = final_table(st)
+        # classificação atual: a última linha de cada time, reclassificada (com jogos
+        # adiados os times não têm o mesmo número de partidas)
+        latest = self._final.set_index(["season", "team_id", "round"])["final_position"]
+        key = pd.MultiIndex.from_frame(st[["season", "team_id", "round"]])
+        st["table_position"] = pd.array(latest.reindex(key).to_numpy(), dtype="Int64")
+        st["is_latest"] = st["table_position"].notna()
+        self.tables["fact_standings"] = st
 
     # ============================================================= calendário
     def build_fixtures(self) -> None:

@@ -1,0 +1,664 @@
+table _Medidas
+	lineageTag: 410807a7-91e6-50ee-8135-e06cefc693aa
+
+	measure Jogos = CALCULATE ( COUNTROWS ( fact_team_match ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 8c1c4c6d-5442-5c9a-bb58-8ddfa0fe09eb
+
+	measure Vitórias = CALCULATE ( [Jogos], fact_team_match[result] = "W" )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 74d633b1-05a0-5990-b772-bc69ad46f5be
+
+	measure Empates = CALCULATE ( [Jogos], fact_team_match[result] = "D" )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 8c7041ba-e0f6-543e-b795-928bcecdc8cf
+
+	measure Derrotas = CALCULATE ( [Jogos], fact_team_match[result] = "L" )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 03af841e-d6f2-5941-aa21-dc00037d4c3a
+
+	measure Pontos = CALCULATE ( SUM ( fact_team_match[pts] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: f4be8411-aa65-50ee-8f80-ea4a33a5debc
+
+	measure 'Pontos por Jogo' = DIVIDE ( [Pontos], [Jogos] )
+		formatString: 0.00
+		displayFolder: 1. Resultados
+		lineageTag: 2e8f8059-6dcb-5d9a-aa09-5b36a56a6b88
+
+	measure 'Aproveitamento %' = DIVIDE ( [Pontos], [Jogos] * 3 )
+		formatString: 0.0%
+		displayFolder: 1. Resultados
+		lineageTag: 78bc7feb-999c-5518-a827-0bbebf9fb530
+
+	measure 'Gols Pró' = CALCULATE ( SUM ( fact_team_match[goals_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 527fe046-fb52-5735-b5c3-786a1c1ed2eb
+
+	measure 'Gols Contra' = CALCULATE ( SUM ( fact_team_match[goals_against] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: e13ff6bf-80da-5884-9e97-ef7c10c6c745
+
+	measure 'Saldo de Gols' = [Gols Pró] - [Gols Contra]
+		formatString: +0;-0;0
+		displayFolder: 1. Resultados
+		lineageTag: bfd2b170-395d-5525-b274-d00f2abb1cc4
+
+	measure 'Gols Pró por Jogo' = DIVIDE ( [Gols Pró], [Jogos] )
+		formatString: 0.00
+		displayFolder: 1. Resultados
+		lineageTag: b757436d-d0cf-577b-9957-3638e8a7e0cc
+
+	measure 'Gols Contra por Jogo' = DIVIDE ( [Gols Contra], [Jogos] )
+		formatString: 0.00
+		displayFolder: 1. Resultados
+		lineageTag: da8ee6b7-dedd-5c50-961d-a7ab069ebb13
+
+	measure 'Jogos sem Sofrer Gol' = CALCULATE ( [Jogos], fact_team_match[clean_sheet] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 7f7edbd1-442d-55ec-849a-f464e8fd866e
+
+	measure 'Jogos sem Marcar' = CALCULATE ( [Jogos], fact_team_match[failed_to_score] = TRUE () )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: 2817c57d-9aff-5640-ba43-1adc18514b4a
+
+	/// Resultados dos últimos 5 jogos em ordem cronológica (V/E/D).
+	measure 'Forma (Últimos 5)' =
+			VAR _ult5 =
+			    TOPN (
+			        5,
+			        CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+			        fact_team_match[datetime], DESC
+			    )
+			RETURN
+			    CONCATENATEX ( _ult5, fact_team_match[result_pt], "  ", fact_team_match[datetime], ASC )
+		displayFolder: 1. Resultados
+		lineageTag: cbc863cf-0fb0-532b-8168-06c61b9fb47a
+
+	measure 'Pontos nos Últimos 5' =
+			VAR _ult5 =
+			    TOPN (
+			        5,
+			        CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+			        fact_team_match[datetime], DESC
+			    )
+			RETURN
+			    SUMX ( _ult5, fact_team_match[pts] )
+		formatString: 0
+		displayFolder: 1. Resultados
+		lineageTag: de6a596a-3d29-5577-9674-d4f411f5d611
+
+	/// O placar do intervalo vem do openfootball; jogos completados pela Wikipedia não têm.
+	measure 'Jogos com Placar do Intervalo' = CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[ht_state] ) )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: e175a939-2730-5053-a16e-0394610a67ef
+
+	measure 'Gols no 1º Tempo' = CALCULATE ( SUM ( fact_team_match[ht_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: eb80114d-7ea9-5c5f-b422-10c817aa02f3
+
+	measure 'Gols no 2º Tempo' = CALCULATE ( SUM ( fact_team_match[second_half_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: a5a20154-d5e4-52dc-bcab-c75be5973a87
+
+	measure 'Gols Sofridos no 1º Tempo' = CALCULATE ( SUM ( fact_team_match[ht_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 4d1eb92f-bab5-5b25-9770-9e9eff6d7e06
+
+	measure 'Gols Sofridos no 2º Tempo' = CALCULATE ( SUM ( fact_team_match[second_half_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 2deb4ddb-2ad9-566d-a840-aca26c96d3fd
+
+	/// Pontos a mais do que o placar do intervalo daria (viradas e empates arrancados).
+	measure 'Pontos Ganhos após o Intervalo' =
+			CALCULATE (
+			    SUM ( fact_team_match[points_vs_halftime] ),
+			    fact_team_match[is_brighton] = TRUE (),
+			    fact_team_match[points_vs_halftime] > 0
+			)
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 464a2557-42f5-5632-ae20-95ee0c9569c7
+
+	/// Pontos que o placar do intervalo daria e escaparam no 2º tempo.
+	measure 'Pontos Perdidos após o Intervalo' =
+			- CALCULATE (
+			    SUM ( fact_team_match[points_vs_halftime] ),
+			    fact_team_match[is_brighton] = TRUE (),
+			    fact_team_match[points_vs_halftime] < 0
+			)
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 4b20d682-a22c-5de0-aac4-b996d9afcb7a
+
+	measure 'Saldo de Pontos no 2º Tempo' = [Pontos Ganhos após o Intervalo] - [Pontos Perdidos após o Intervalo]
+		formatString: +0;-0;0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 18f33961-d84d-53ac-ba82-f063969b5771
+
+	/// Jogos em que o Brighton perdia no intervalo e venceu.
+	measure Viradas = CALCULATE ( [Jogos], fact_team_match[ht_state] = "Perdendo", fact_team_match[result] = "W" )
+		formatString: 0
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 52afddd9-b69a-5458-834d-124b3f09ffd4
+
+	measure 'Aproveitamento Vencendo no Intervalo %' =
+			VAR _j = CALCULATE ( [Jogos], fact_team_match[ht_state] = "Vencendo" )
+			RETURN
+			    DIVIDE ( CALCULATE ( [Pontos], fact_team_match[ht_state] = "Vencendo" ), _j * 3 )
+		formatString: 0%
+		displayFolder: 2. Primeiro e Segundo Tempo
+		lineageTag: 75481926-3326-5744-8f9d-3a1ae1a4e82a
+
+	/// Requer sources.football_data ligado no config.yaml. Sem a fonte, fica em branco.
+	measure Chutes = CALCULATE ( SUM ( fact_team_match[shots_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 8acfd7a0-7d71-53cb-81f4-3e9e2fd71ab9
+
+	measure 'Chutes no Gol' = CALCULATE ( SUM ( fact_team_match[shots_on_target_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 9a18b0d1-2746-51ee-b20e-5f6c93f30a15
+
+	measure 'Chutes Sofridos' = CALCULATE ( SUM ( fact_team_match[shots_against] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 22cf56d8-0e27-5753-8a87-e8093e1bea57
+
+	measure 'Chutes no Gol Sofridos' = CALCULATE ( SUM ( fact_team_match[shots_on_target_against] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 1af69efe-148b-56a0-bbe6-22d40e3a7a6e
+
+	measure 'Chutes por Jogo' =
+			DIVIDE (
+			    [Chutes],
+			    CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[shots_for] ) )
+			)
+		formatString: 0.0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: d280e017-1614-539f-945e-fcd5b3ff8b23
+
+	measure 'Precisão dos Chutes %' = DIVIDE ( [Chutes no Gol], [Chutes] )
+		formatString: 0%
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 1917fc67-99f3-5d2a-a88b-b2c082ac8f2f
+
+	/// Gols por chute, apenas nos jogos que têm estatística de chutes.
+	measure 'Conversão %' =
+			DIVIDE (
+			    CALCULATE ( [Gols Pró], NOT ISBLANK ( fact_team_match[shots_for] ) ),
+			    [Chutes]
+			)
+		formatString: 0.0%
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: c9294032-0d53-5b57-80ff-d2c61388e898
+
+	measure Escanteios = CALCULATE ( SUM ( fact_team_match[corners_for] ), fact_team_match[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 7f73698f-7e73-5360-abb7-1154b1d1d81c
+
+	/// Participação do Brighton no total de chutes dos jogos (indicador simples de domínio).
+	measure 'Domínio de Chutes %' = DIVIDE ( [Chutes], [Chutes] + [Chutes Sofridos] )
+		formatString: 0%
+		displayFolder: 3. Chutes (football-data)
+		lineageTag: 44b05d92-c515-5c21-8d5d-2da01172284e
+
+	measure 'Rodada Atual' = CALCULATE ( MAX ( fact_standings[round] ), dim_team[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 5ecdc312-d187-5296-9e9f-255d17f48b84
+
+	measure 'Posição Atual' =
+			VAR _r = [Rodada Atual]
+			RETURN
+			    CALCULATE (
+			        MIN ( fact_standings[position] ),
+			        dim_team[is_brighton] = TRUE (),
+			        fact_standings[round] = _r
+			    )
+		formatString: 0"º"
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 4f406d40-b575-5acb-b1e6-cf2d953e28d7
+
+	/// Para o gráfico de evolução (fact_standings[round] no eixo X; inverta o eixo Y).
+	measure 'Posição na Rodada' = CALCULATE ( MIN ( fact_standings[position] ), dim_team[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 7ed2d30c-42ff-5800-94e5-6cc30e028e8a
+
+	measure 'Pontos Acumulados' = CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 86b1b4cb-3519-5da1-9a8b-5189674dc773
+
+	measure 'Rodada da Tabela' = CALCULATE ( MAX ( fact_standings[round] ), REMOVEFILTERS ( dim_team ) )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: bb5fa109-79cb-5cd6-ad74-84a5e66c5b5b
+
+	measure 'Pos. (Tabela)' = CALCULATE ( MIN ( fact_standings[table_position] ), fact_standings[is_latest] = TRUE () )
+		formatString: 0"º"
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 2c56a327-0580-5ed1-a0ed-3e5e2a21219f
+
+	measure 'Pts (Tabela)' = CALCULATE ( SUM ( fact_standings[pts_cum] ), fact_standings[is_latest] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 3e87748e-0941-5751-a58f-c171b5bc23d1
+
+	measure 'GP (Tabela)' = CALCULATE ( SUM ( fact_standings[gf_cum] ), fact_standings[is_latest] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 857ae7b8-b3ae-5fe0-9e9c-e3cb48c178a9
+
+	measure 'GC (Tabela)' = CALCULATE ( SUM ( fact_standings[ga_cum] ), fact_standings[is_latest] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: ccae5fc3-7177-551b-b5e7-46c17e080b87
+
+	measure 'SG (Tabela)' = [GP (Tabela)] - [GC (Tabela)]
+		formatString: +0;-0;0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: bd23ddf8-f9b1-5797-a12b-ebcb56d4976f
+
+	measure 'Pontos por Jogo (Tabela)' = DIVIDE ( [Pts (Tabela)], [Jogos (Tabela)] )
+		formatString: 0.00
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 4f9b2e06-a82f-5f15-a63b-df7fc14da545
+
+	/// Barras da classificação (Brighton em destaque).
+	measure 'Cor do Time' = IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#0057B8", "#B7CBE3" )
+		displayFolder: 7. Textos e Cores
+		lineageTag: 680e503b-d1a1-5603-8e36-e41691182025
+
+	/// Fundo da linha do Brighton na tabela de classificação.
+	measure 'Fundo do Time' = IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), "#DCEAFB", "#FFFFFF" )
+		displayFolder: 7. Textos e Cores
+		lineageTag: 5648a8aa-bdb8-55ee-a1bf-11d23b89d996
+
+	measure 'Pontos na Mesma Rodada (Temporada Anterior)' =
+			VAR _s = MAX ( dim_season[season] )
+			VAR _r =
+			    IF (
+			        ISFILTERED ( fact_standings[round] ),
+			        MAX ( fact_standings[round] ),
+			        [Rodada Atual]
+			    )
+			RETURN
+			    CALCULATE (
+			        MAX ( fact_standings[pts_cum] ),
+			        REMOVEFILTERS ( dim_season ),
+			        dim_team[is_brighton] = TRUE (),
+			        fact_standings[season] = _s - 1,
+			        fact_standings[round] = _r
+			    )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 9e970dbc-1111-5370-b2f2-f69baa314406
+
+	measure 'Pontos vs Temporada Anterior' = [Pontos] - [Pontos na Mesma Rodada (Temporada Anterior)]
+		formatString: +0;-0;0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 08e06a48-02a9-582e-b033-e974ed63ae16
+
+	/// Negativo = pontos que faltam para alcançar o 4º colocado na mesma rodada.
+	measure 'Distância para o 4º' =
+			VAR _r = [Rodada Atual]
+			VAR _tab =
+			    CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+			VAR _quarto = MINX ( TOPN ( 4, _tab, fact_standings[pts_cum], DESC ), fact_standings[pts_cum] )
+			RETURN
+			    [Pontos Acumulados] - _quarto
+		formatString: +0;-0;0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 18e28ec2-60e8-5afc-a84e-c9660d027f08
+
+	/// Pontos de vantagem sobre o 18º colocado na mesma rodada.
+	measure 'Distância para o Rebaixamento' =
+			VAR _r = [Rodada Atual]
+			VAR _tab =
+			    CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+			VAR _z = MAXX ( TOPN ( 3, _tab, fact_standings[pts_cum], ASC ), fact_standings[pts_cum] )
+			RETURN
+			    [Pontos Acumulados] - _z
+		formatString: +0;-0;0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 320e2a59-9722-547a-a529-43d6b70948dd
+
+	/// Primeiro jogo que ainda não terminou (início + 2h), comparado com a hora do computador (NOW). Muda sozinho depois de cada jogo, sem precisar rodar o Python de novo.
+	measure 'Próximo Jogo (Brasília)' =
+			VAR _agora = NOW () - 2 / 24
+			RETURN
+			    CALCULATE (
+			        MIN ( fact_fixtures[kickoff_brasilia] ),
+			        fact_fixtures[kickoff_brasilia] > _agora
+			    )
+		formatString: dd/mm "às" hh:nn
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 7ad724d6-cb9d-5def-bb12-cd310041398b
+
+	measure 'Próximo Adversário' =
+			VAR _k = [Próximo Jogo (Brasília)]
+			RETURN
+			    CALCULATE (
+			        MAXX ( fact_fixtures, fact_fixtures[opponent] & " (" & fact_fixtures[venue] & ")" ),
+			        fact_fixtures[kickoff_brasilia] = _k
+			    )
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 826a2c44-5062-5a2e-91dd-e3dbc5946f6b
+
+	/// 1 para o próximo jogo, 2 para o seguinte... (vazio para jogos já disputados). Use como filtro do visual (entre 1 e 5) na tabela de próximos jogos.
+	measure 'Nº do Próximo Jogo' =
+			VAR _agora = NOW () - 2 / 24
+			VAR _k = MAX ( fact_fixtures[kickoff_brasilia] )
+			RETURN
+			    IF (
+			        HASONEVALUE ( fact_fixtures[kickoff_brasilia] ) && _k > _agora,
+			        CALCULATE (
+			            COUNTROWS ( fact_fixtures ),
+			            REMOVEFILTERS ( fact_fixtures ),
+			            fact_fixtures[kickoff_brasilia] > _agora,
+			            fact_fixtures[kickoff_brasilia] <= _k
+			        )
+			    )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: dbb8acf2-5c8f-56cc-a8fa-19180b9db914
+
+	/// Métrica própria de 1 (fácil) a 5 (difícil) pela posição atual de cada adversário na tabela.
+	measure 'Dificuldade Próximos 5' =
+			VAR _agora = NOW () - 2 / 24
+			VAR _prox =
+			    TOPN (
+			        5,
+			        FILTER ( fact_fixtures, fact_fixtures[kickoff_brasilia] > _agora ),
+			        fact_fixtures[kickoff_brasilia], ASC
+			    )
+			RETURN
+			    AVERAGEX ( _prox, fact_fixtures[difficulty] )
+		formatString: 0.0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 16d98c25-5ab9-5f43-bc3c-3fa18a97a417
+
+	measure 'Jogos Restantes' = CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[finished] = FALSE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 2159a120-307d-59cd-b506-9f96659acd0c
+
+	/// Jogos já disputados cujo placar ainda não chegou às fontes. Mostre como aviso quando > 0.
+	measure 'Resultados Pendentes' = CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[result_pending] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: d71fcd73-0545-55c7-88d6-66cc0ba597f6
+
+	/// Data do último jogo do Brighton com resultado nos dados.
+	measure 'Dados Até' = MAX ( dim_season[data_until] )
+		formatString: dd/mm/yyyy
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 4ff69c00-57a6-56e7-8c86-0b9e081c1c45
+
+	/// Partidas na Premier League (titular + reserva).
+	measure 'Jogos (Jogador)' = SUM ( fact_player_season[pl_apps] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: 4bb103f9-16e2-5758-b97f-52bc22211f12
+
+	measure Titularidades = SUM ( fact_player_season[pl_starts] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: 3a7ecf94-cb6d-5de9-903a-ea46fafb911f
+
+	measure 'Entradas do Banco' = SUM ( fact_player_season[pl_subs] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: dc5d2c8f-4627-5b70-9c35-356ce306766c
+
+	measure 'Titularidade %' = DIVIDE ( [Titularidades], [Jogos (Jogador)] )
+		formatString: 0%
+		displayFolder: 5. Jogadores
+		lineageTag: 0395082c-3502-5158-b48e-3866a6b5c083
+
+	measure 'Gols (Jogador)' = SUM ( fact_player_season[pl_goals] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: 267a8c3b-bd86-5394-ab70-2aca8bd79607
+
+	measure Assistências = SUM ( fact_player_season[pl_assists] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: 6da83864-cb7e-5175-bf49-122decd038b5
+
+	measure G+A = [Gols (Jogador)] + [Assistências]
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: ba56bc1c-5198-5387-9f13-ec56bd9c6492
+
+	measure 'G+A por Jogo' = DIVIDE ( [G+A], [Jogos (Jogador)] )
+		formatString: 0.00
+		displayFolder: 5. Jogadores
+		lineageTag: a6564476-7c7c-5d1f-9a5b-395d0ed66b83
+
+	measure 'Gols em Todas as Competições' = SUM ( fact_player_season[total_goals] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: bae746b8-1e8c-5674-97c6-6a6f6f204878
+
+	measure 'Cartões Amarelos' = SUM ( fact_player_season[pl_yellow] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: df68f93c-868c-5b11-8649-3adc5fe2ce13
+
+	measure 'Cartões Vermelhos' = SUM ( fact_player_season[pl_red] ) + SUM ( fact_player_season[pl_second_yellow] )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: 063bb5c1-98c6-5a35-bbf1-6bc516516e61
+
+	/// Gols + assistências do jogador sobre os gols do time na Premier League.
+	measure 'Participação nos Gols %' = DIVIDE ( [G+A], [Gols Pró] )
+		formatString: 0%
+		displayFolder: 5. Jogadores
+		lineageTag: 080c365d-1fd8-5ef6-a053-2271e5da6443
+
+	measure 'Jogadores Utilizados' = CALCULATE ( DISTINCTCOUNT ( fact_player_season[player_key] ), fact_player_season[pl_apps] > 0 )
+		formatString: 0
+		displayFolder: 5. Jogadores
+		lineageTag: b42217ac-c878-5bf1-aa68-06649c6794dc
+
+	measure Artilheiro =
+			VAR _t =
+			    TOPN (
+			        1,
+			        ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@g", [Gols (Jogador)] ),
+			        [@g], DESC
+			    )
+			RETURN
+			    MAXX ( _t, dim_player[player_name] & " (" & [@g] & ")" )
+		displayFolder: 5. Jogadores
+		lineageTag: 54a3a55a-9f2f-5c70-8995-b079d81975b4
+
+	measure 'Líder em Assistências' =
+			VAR _t =
+			    TOPN (
+			        1,
+			        ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@a", [Assistências] ),
+			        [@a], DESC
+			    )
+			RETURN
+			    MAXX ( _t, dim_player[player_name] & " (" & [@a] & ")" )
+		displayFolder: 5. Jogadores
+		lineageTag: dd49aff1-8c75-5c69-9774-3ce313b4b685
+
+	/// Soma das taxas pagas em libras (valores não divulgados ficam de fora).
+	measure Gasto = CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Chegada" )
+		formatString: "£"#,0;-"£"#,0;"£"0
+		displayFolder: 6. Transferências
+		lineageTag: 70aae2d3-efd8-5c8d-ad38-bdad2449e535
+
+	measure Receita = CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Saída" )
+		formatString: "£"#,0;-"£"#,0;"£"0
+		displayFolder: 6. Transferências
+		lineageTag: d8c91074-60e4-5450-89ec-e531a5905ab9
+
+	/// Receita - Gasto. Positivo = o clube vendeu mais do que comprou.
+	measure 'Saldo de Transferências' = [Receita] - [Gasto]
+		formatString: "£"#,0;-"£"#,0;"£"0
+		displayFolder: 6. Transferências
+		lineageTag: 1d18b242-e530-5f7f-890f-3e065cb4f14e
+
+	measure Chegadas = CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Chegada" )
+		formatString: 0
+		displayFolder: 6. Transferências
+		lineageTag: 25f32004-1cba-51df-871e-8d0ffe4773a9
+
+	measure Saídas = CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Saída" )
+		formatString: 0
+		displayFolder: 6. Transferências
+		lineageTag: a0980e95-559d-5b99-a9d6-6d7b599ad1e2
+
+	measure 'Contratações Pagas' =
+			CALCULATE (
+			    COUNTROWS ( fact_transfers ),
+			    fact_transfers[direction] = "Chegada",
+			    fact_transfers[fee_type] = "Pago"
+			)
+		formatString: 0
+		displayFolder: 6. Transferências
+		lineageTag: 3fcb5147-9a74-52e7-9ae4-d784ccc5b855
+
+	/// Negócios sem valor público; não entram no Gasto nem na Receita.
+	measure 'Valores Não Divulgados' = CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[fee_type] = "Não divulgado" )
+		formatString: 0
+		displayFolder: 6. Transferências
+		lineageTag: 9c2ec3c9-7229-5141-a531-61ca58555be6
+
+	measure 'Empréstimos Cedidos' =
+			CALCULATE (
+			    COUNTROWS ( fact_transfers ),
+			    fact_transfers[direction] = "Saída",
+			    fact_transfers[movement] = "Empréstimo"
+			)
+		formatString: 0
+		displayFolder: 6. Transferências
+		lineageTag: a64a0afe-2bf0-5b07-94a2-dd30526a3210
+
+	measure 'Gasto Médio por Contratação' = DIVIDE ( [Gasto], [Contratações Pagas] )
+		formatString: "£"#,0;-"£"#,0;"£"0
+		displayFolder: 6. Transferências
+		lineageTag: 3afdb5cf-8c72-5213-8fb9-0d1cd0e30190
+
+	measure 'Maior Contratação' =
+			VAR _t =
+			    TOPN (
+			        1,
+			        FILTER ( fact_transfers, fact_transfers[direction] = "Chegada" && fact_transfers[fee_gbp] > 0 ),
+			        fact_transfers[fee_gbp], DESC
+			    )
+			RETURN
+			    MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+		displayFolder: 6. Transferências
+		lineageTag: 34de11a8-c438-5d54-99ae-7602ac874fd9
+
+	measure 'Maior Venda' =
+			VAR _t =
+			    TOPN (
+			        1,
+			        FILTER ( fact_transfers, fact_transfers[direction] = "Saída" && fact_transfers[fee_gbp] > 0 ),
+			        fact_transfers[fee_gbp], DESC
+			    )
+			RETURN
+			    MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+		displayFolder: 6. Transferências
+		lineageTag: 38f8dec3-a318-5a52-b367-4d6cd1139dc6
+
+	measure 'Título da Página' = "Brighton & Hove Albion  •  " & SELECTEDVALUE ( dim_season[season_label], "Várias temporadas" )
+		displayFolder: 7. Textos e Cores
+		lineageTag: 4c828f1b-e4cb-53ba-8e08-857a3f75c38d
+
+	measure 'Subtítulo da Rodada' = "Premier League  •  após " & [Rodada Atual] & " rodadas  •  dados até " & FORMAT ( [Dados Até], "dd/mm/yyyy" )
+		displayFolder: 7. Textos e Cores
+		lineageTag: f37dfe35-feba-5ec7-900d-835dc4b5c714
+
+	measure 'Última Atualização' = "Atualizado em " & CALCULATE ( MAX ( meta_refresh[last_refresh_utc] ), meta_refresh[source] = "pipeline" ) & " (UTC)"
+		displayFolder: 7. Textos e Cores
+		lineageTag: 252011dd-2e12-5361-9720-a31c3e849269
+
+	/// Texto de atribuição exigido pela licença CC BY-SA da Wikipedia. Deixe visível no rodapé.
+	measure 'Fonte dos Dados' = "Dados: Wikipedia (CC BY-SA 4.0) e openfootball (domínio público). Projeto sem afiliação com o clube ou a Premier League."
+		displayFolder: 7. Textos e Cores
+		lineageTag: 9dcfec6f-d20a-5ac3-9bdd-ff9f821a5050
+
+	/// Formatação condicional (Valor do campo) para resultados V/E/D.
+	measure 'Cor do Resultado' =
+			SWITCH (
+			    SELECTEDVALUE ( fact_team_match[result_pt] ),
+			    "V", "#2DA866",
+			    "E", "#D99A00",
+			    "D", "#D64545",
+			    "#8A9AB0"
+			)
+		displayFolder: 7. Textos e Cores
+		lineageTag: 5db4cd5d-c95d-5858-a824-6d084bd0494b
+
+	measure 'Cor da Dificuldade' =
+			SWITCH (
+			    SELECTEDVALUE ( fact_fixtures[difficulty] ),
+			    1, "#1E8E5A",
+			    2, "#2DA866",
+			    3, "#8A9AB0",
+			    4, "#E8743B",
+			    5, "#E53935",
+			    "#8A9AB0"
+			)
+		displayFolder: 7. Textos e Cores
+		lineageTag: e39a3ffb-6a7f-59cd-affc-cc4509b06e42
+
+	measure 'Cor do Saldo de Gols' = IF ( [Saldo de Gols] >= 0, "#2DA866", "#D64545" )
+		displayFolder: 7. Textos e Cores
+		lineageTag: 94bf6cd2-3d29-5abc-8c0e-69ac16a85e6a
+
+	/// Na temporada atual mostra a posição parcial.
+	measure 'Posição Final' =
+			VAR _s = MAX ( dim_season[season] )
+			RETURN
+			    IF (
+			        SELECTEDVALUE ( dim_season[is_current], FALSE () ),
+			        CALCULATE ( [Posição Atual], dim_season[season] = _s ),
+			        MAX ( dim_season[brighton_final_position] )
+			    )
+		formatString: 0"º"
+		displayFolder: 8. Histórico
+		lineageTag: 546796be-a9d4-5fb1-aaa7-d8746ae64031
+
+	measure 'Jogos (Tabela)' = CALCULATE ( MAX ( fact_standings[round] ), fact_standings[is_latest] = TRUE () )
+		formatString: 0
+		displayFolder: 4. Tabela e Momento
+		lineageTag: 967059c2-0e08-4043-b805-e6ba42dbf872
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

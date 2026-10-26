@@ -1,0 +1,98 @@
+table dim_player
+	lineageTag: c3e7dd85-a67c-5915-ab0d-57901f0f7b19
+
+	column player_key
+		dataType: string
+		lineageTag: 266866d3-7d17-5b85-8c62-a8c59bd367d2
+		summarizeBy: none
+		sourceColumn: player_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_name
+		dataType: string
+		lineageTag: b5fe32ea-0681-5dfb-9164-636a854847a4
+		summarizeBy: none
+		sourceColumn: player_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: df0b2b5d-5542-5c18-a69d-44187a58afbc
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: 13abf823-03c3-5d66-b3f3-651398ad06c8
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_season
+		dataType: int64
+		formatString: 0
+		lineageTag: 26a82924-a089-5198-9f63-b2dc9cf08f8e
+		summarizeBy: none
+		sourceColumn: first_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_season
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e6f03f9-cb3b-515e-80ae-1ce6e5815320
+		summarizeBy: none
+		sourceColumn: last_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column position_group
+		dataType: string
+		lineageTag: bc80a11d-eb30-5420-95f9-9d622ef9b7b6
+		summarizeBy: none
+		sourceColumn: position_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column wikipedia_url
+		dataType: string
+		lineageTag: 938d8804-0e53-5394-99d7-6f29456d2f96
+		summarizeBy: none
+		sourceColumn: wikipedia_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column played_for_club
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b0bdfb90-f6d8-55b5-be66-4d743c89fb88
+		summarizeBy: none
+		sourceColumn: played_for_club
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_player = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("dim_player", {
+				        {"player_key", type text},
+				        {"player_name", type text},
+				        {"position", type text},
+				        {"nationality", type text},
+				        {"first_season", Int64.Type},
+				        {"last_season", Int64.Type},
+				        {"position_group", type text},
+				        {"wikipedia_url", type text},
+				        {"played_for_club", type logical}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

@@ -126,6 +126,16 @@ RETURN
     )", @"4. Tabela e Momento", @"0""º""", @"");
 m(@"Posição na Rodada", @"CALCULATE ( MIN ( fact_standings[position] ), dim_team[is_brighton] = TRUE () )", @"4. Tabela e Momento", @"0", @"Para o gráfico de evolução (fact_standings[round] no eixo X; inverta o eixo Y).");
 m(@"Pontos Acumulados", @"CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )", @"4. Tabela e Momento", @"0", @"");
+m(@"Rodada da Tabela", @"CALCULATE ( MAX ( fact_standings[round] ), REMOVEFILTERS ( dim_team ) )", @"4. Tabela e Momento", @"0", @"");
+m(@"Pos. (Tabela)", @"CALCULATE ( MIN ( fact_standings[table_position] ), fact_standings[is_latest] = TRUE () )", @"4. Tabela e Momento", @"0""º""", @"");
+m(@"Jogos (Tabela)", @"CALCULATE ( MAX ( fact_standings[round] ), fact_standings[is_latest] = TRUE () )", @"4. Tabela e Momento", @"0", @"");
+m(@"Pts (Tabela)", @"CALCULATE ( SUM ( fact_standings[pts_cum] ), fact_standings[is_latest] = TRUE () )", @"4. Tabela e Momento", @"0", @"");
+m(@"GP (Tabela)", @"CALCULATE ( SUM ( fact_standings[gf_cum] ), fact_standings[is_latest] = TRUE () )", @"4. Tabela e Momento", @"0", @"");
+m(@"GC (Tabela)", @"CALCULATE ( SUM ( fact_standings[ga_cum] ), fact_standings[is_latest] = TRUE () )", @"4. Tabela e Momento", @"0", @"");
+m(@"SG (Tabela)", @"[GP (Tabela)] - [GC (Tabela)]", @"4. Tabela e Momento", @"+0;-0;0", @"");
+m(@"Pontos por Jogo (Tabela)", @"DIVIDE ( [Pts (Tabela)], [Jogos (Tabela)] )", @"4. Tabela e Momento", @"0.00", @"");
+m(@"Cor do Time", @"IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), ""#0057B8"", ""#B7CBE3"" )", @"7. Textos e Cores", @"", @"Barras da classificação (Brighton em destaque).");
+m(@"Fundo do Time", @"IF ( SELECTEDVALUE ( dim_team[is_brighton] ) = TRUE (), ""#DCEAFB"", ""#FFFFFF"" )", @"7. Textos e Cores", @"", @"Fundo da linha do Brighton na tabela de classificação.");
 m(@"Pontos na Mesma Rodada (Temporada Anterior)", @"VAR _s = MAX ( dim_season[season] )
 VAR _r =
     IF (

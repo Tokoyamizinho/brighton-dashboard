@@ -2,16 +2,17 @@
 
 Pipeline de dados em Python que **coleta, trata e modela** dados do Brighton na Premier League
 a partir de **fontes abertas e de uso permitido**, alimentando um dashboard em **Power BI** com
-7 páginas: visão geral, desempenho, momento da temporada, elenco, confrontos, janela de
-transferências e histórico.
+6 páginas: visão geral, tabela da liga, momento da temporada, jogadores, transferências e
+histórico. O projeto do Power BI (modelo e páginas) também é **gerado por código**.
 
 > Temporada em destaque: **2026/27**, com comparação às quatro temporadas anteriores.
 > Projeto pessoal de portfólio, sem fins comerciais e sem afiliação com o clube ou a Premier League.
 
-<!-- Substitua pelos prints/GIF do seu relatório -->
-| Visão Geral | Momento da Temporada | Transferências |
+| Visão Geral | Tabela da Liga | Momento da Temporada |
 |---|---|---|
-| `docs/img/visao_geral.png` | `docs/img/momento.png` | `docs/img/transferencias.png` |
+| ![Visão Geral](docs/img/visao_geral.png) | ![Tabela da Liga](docs/img/tabela.png) | ![Momento da Temporada](docs/img/momento.png) |
+| **Jogadores** | **Transferências** | **Histórico** |
+| ![Jogadores](docs/img/jogadores.png) | ![Transferências](docs/img/transferencias.png) | ![Histórico](docs/img/historico.png) |
 
 ---
 
@@ -26,8 +27,10 @@ transferências e histórico.
 | Integração de fontes: nomes de clubes padronizados e placares conciliados | `transform/teams.py`, `transform/model.py` |
 | Modelagem dimensional (**esquema estrela**) | `transform/model.py` |
 | Reconstrução da tabela rodada a rodada com critérios de desempate | `transform/standings.py` |
-| Testes automatizados com **dados reais**, sem internet | `tests/` (62 testes) |
-| **Modelo do Power BI como código** (M, DAX e relacionamentos gerados a partir de YAML) | `powerbi.py`, `powerbi/medidas.yaml` |
+| Testes automatizados com **dados reais**, sem internet | `tests/` (73 testes) |
+| **Modelo do Power BI como código**: tabelas, tipos, relacionamentos e ~90 medidas DAX em TMDL, gerados a partir de YAML | `pbip.py`, `tmdl.py`, `powerbi/medidas.yaml` |
+| **Relatório do Power BI como código**: páginas e visuais em PBIR, validados contra os esquemas oficiais da Microsoft | `report.py`, `dashboard.py` |
+| "Próximo jogo" calculado pela hora atual (Python e DAX com `NOW()`), sem depender de reprocessar | `transform/model.py`, medidas da pasta 4 |
 
 ## Arquitetura
 
@@ -110,13 +113,25 @@ python -m brighton scrape --only wikipedia   # coleta só uma fonte
 python -m brighton transform                 # reprocessa a partir de data/raw (offline)
 python -m brighton all --refresh             # ignora o cache local
 python -m brighton powerbi                   # regenera power_query.pq, DAX e script C#
+python -m brighton pbip                      # gera/sincroniza o projeto powerbi/Brighton.pbip
 pytest                                       # roda os testes (sem internet)
 ```
 
 Para ligar as estatísticas de chutes, leia os termos do football-data.co.uk e, se estiver de
 acordo, mude `sources.football_data` para `true` no `config.yaml`.
 
-Depois, siga o **[guia do dashboard](powerbi/GUIA_DASHBOARD.md)** para montar o relatório.
+3. Gere o projeto do Power BI e abra no **Power BI Desktop** (com o Desktop fechado ao rodar):
+
+```bash
+python -m brighton pbip
+```
+
+Abra `powerbi/Brighton.pbip` e clique em **Atualizar**. O parâmetro `PastaDados` aponta para
+`data/processed`; se mover a pasta, rode de novo ou use `--pasta "C:\outro\caminho"`.
+Rodar o comando outra vez **sincroniza** o modelo (colunas e medidas novas entram, o que foi
+criado à mão no Power BI fica) e regrava as páginas geradas.
+
+O [guia do dashboard](powerbi/GUIA_DASHBOARD.md) explica as medidas e como montar visuais à mão.
 
 ## Modelo de dados
 
@@ -176,16 +191,25 @@ brighton-dashboard/
 │   ├── scrapers/                # openfootball.py · wikipedia.py · wikitable.py · footballdata.py
 │   ├── transform/               # model.py · standings.py · teams.py · utils.py
 │   ├── powerbi.py               # gera M, DAX e script C# a partir do medidas.yaml
-│   └── pipeline.py              # CLI: scrape | transform | all | powerbi
+│   ├── tmdl.py                  # lê e atualiza o modelo do Power BI em TMDL
+│   ├── pbip.py                  # gera o projeto .pbip completo (modelo + relatório)
+│   ├── report.py                # biblioteca de visuais PBIR (cartões, gráficos, tabelas, filtros)
+│   ├── dashboard.py             # as 6 páginas do dashboard
+│   └── pipeline.py              # CLI: scrape | transform | all | powerbi | pbip
 ├── powerbi/
-│   ├── medidas.yaml             # ~80 medidas DAX + relacionamentos (fonte da verdade)
+│   ├── Brighton.pbip            # abre no Power BI Desktop (gerado por `python -m brighton pbip`)
+│   ├── Brighton.SemanticModel/  # modelo em TMDL
+│   ├── Brighton.Report/         # páginas em PBIR
+│   ├── medidas.yaml             # ~90 medidas DAX + relacionamentos (fonte da verdade)
 │   ├── power_query.pq           # consultas M geradas
 │   ├── medidas_dax_query_view.dax
 │   ├── criar_modelo_tabular_editor.csx
-│   ├── tema_brighton.json       # tema escuro nas cores do clube
+│   ├── tema_brighton_claro.json # tema nas cores do clube (azul, branco e amarelo)
+│   ├── base/                    # tema base do Power BI usado pelo projeto
 │   └── GUIA_DASHBOARD.md        # layout e passo a passo de cada página
 ├── data/{raw,cache,processed}/
-└── tests/                       # 62 testes; fixtures reais (ver tests/fixtures/NOTICE.md)
+├── docs/img/                    # prints do dashboard
+└── tests/                       # 73 testes; fixtures reais (ver tests/fixtures/NOTICE.md)
 ```
 
 ## Licença

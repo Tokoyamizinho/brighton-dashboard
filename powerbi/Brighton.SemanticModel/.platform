@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Brighton"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "50708183-fba3-532d-9734-e9a6951a3028"
+  }
+}

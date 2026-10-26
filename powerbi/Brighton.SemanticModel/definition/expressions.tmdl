@@ -1,0 +1,23 @@
+expression PastaDados =
+		let
+		    Fonte = "C:\Users\José Eduardo\BRIGHTOn\brighton-dashboard\data\processed" meta [IsParameterQuery = true, IsParameterQueryRequired = true, Type = type text]
+		in
+		    Fonte
+	lineageTag: e9d3ac23-e9ac-5688-a012-42fb2bbb8cac
+
+	annotation PBI_ResultType = Text
+
+expression fnCsv =
+		(nome as text, tipos as list) as table =>
+		let
+		    Caminho = PastaDados & (if Text.EndsWith(PastaDados, "\") then "" else "\") & nome & ".csv",
+		    Fonte = Csv.Document(File.Contents(Caminho), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Cabecalho = Table.PromoteHeaders(Fonte, [PromoteAllScalars = true]),
+		    SemVazios = Table.ReplaceValue(Cabecalho, "", null, Replacer.ReplaceValue, Table.ColumnNames(Cabecalho)),
+		    Tipado = Table.TransformColumnTypes(SemVazios, tipos, "en-US")
+		in
+		    Tipado
+	lineageTag: 0f3ffafb-b419-5c98-920c-781a553b8db3
+
+	annotation PBI_ResultType = Function
+

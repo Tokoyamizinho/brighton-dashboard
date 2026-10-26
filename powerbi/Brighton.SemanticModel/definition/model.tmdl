@@ -1,0 +1,28 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["PastaDados", "fnCsv", "dim_date", "dim_player", "dim_season", "dim_team", "fact_fixtures", "fact_player_season", "fact_standings", "fact_team_match", "fact_transfers", "meta_refresh", "_Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_date
+ref table dim_player
+ref table dim_season
+ref table dim_team
+ref table fact_fixtures
+ref table fact_player_season
+ref table fact_standings
+ref table fact_team_match
+ref table fact_transfers
+ref table meta_refresh
+ref table _Medidas
+
+ref cultureInfo pt-BR
+

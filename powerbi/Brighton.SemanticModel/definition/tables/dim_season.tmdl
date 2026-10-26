@@ -1,0 +1,86 @@
+table dim_season
+	lineageTag: caf42e7c-dad1-5c16-8bcd-7eb4d1777dd9
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bf6a639-33f5-5312-afa4-b95fd3875fbb
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_label
+		dataType: string
+		lineageTag: 74209a78-8130-5e4d-bc33-5bff4e5bf12b
+		summarizeBy: none
+		sourceColumn: season_label
+		sortByColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_current
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0c388b6f-cb0b-5097-b103-1cc7801eeead
+		summarizeBy: none
+		sourceColumn: is_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column brighton_matches_played
+		dataType: int64
+		formatString: 0
+		lineageTag: 2540b3dd-f25f-5757-90f3-82e33cea7d52
+		summarizeBy: none
+		sourceColumn: brighton_matches_played
+
+		annotation SummarizationSetBy = Automatic
+
+	column brighton_final_position
+		dataType: int64
+		formatString: 0
+		lineageTag: bf741b6d-4b02-5c5e-ab02-c72aa24c8743
+		summarizeBy: none
+		sourceColumn: brighton_final_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column brighton_points
+		dataType: int64
+		formatString: 0
+		lineageTag: 23c78f40-e6b2-5b12-8903-f3a63756f702
+		summarizeBy: none
+		sourceColumn: brighton_points
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_until
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: d8931538-6cf9-578e-80bf-317431f182b2
+		summarizeBy: none
+		sourceColumn: data_until
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition dim_season = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("dim_season", {
+				        {"season", Int64.Type},
+				        {"season_label", type text},
+				        {"is_current", type logical},
+				        {"brighton_matches_played", Int64.Type},
+				        {"brighton_final_position", Int64.Type},
+				        {"brighton_points", Int64.Type},
+				        {"data_until", type date}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

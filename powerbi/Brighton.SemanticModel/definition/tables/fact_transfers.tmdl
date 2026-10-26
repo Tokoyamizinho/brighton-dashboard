@@ -1,0 +1,201 @@
+table fact_transfers
+	lineageTag: dbfd5b50-f4ba-54e0-ad7f-9822fd7b86f9
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: b3c039bc-7198-5ac5-af8e-7f260921b2a8
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0ef18c6c-6af1-5110-8e91-86889719c5f2
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column window
+		dataType: string
+		lineageTag: 11aa6e24-560d-54b9-ae63-d20d69408c11
+		summarizeBy: none
+		sourceColumn: window
+
+		annotation SummarizationSetBy = Automatic
+
+	column direction
+		dataType: string
+		lineageTag: 26c000ac-c7f7-5dbd-9b1f-46ddad91361d
+		summarizeBy: none
+		sourceColumn: direction
+
+		annotation SummarizationSetBy = Automatic
+
+	column movement
+		dataType: string
+		lineageTag: 5336cb19-5103-5d29-94b1-8ac3e5418d73
+		summarizeBy: none
+		sourceColumn: movement
+
+		annotation SummarizationSetBy = Automatic
+
+	column squad_group
+		dataType: string
+		lineageTag: 7f6fa1dd-418c-5aff-88b8-524c9269ee66
+		summarizeBy: none
+		sourceColumn: squad_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_name
+		dataType: string
+		lineageTag: 8c0784b3-7ded-580f-953f-be6d8af6c566
+		summarizeBy: none
+		sourceColumn: player_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_key
+		dataType: string
+		isHidden
+		lineageTag: 903be158-31b3-5d28-b6ef-9cb3e596dc2e
+		summarizeBy: none
+		sourceColumn: player_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: 8d5e9e4e-e945-56af-8b0c-e7081e672993
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: 4d4e1b55-8688-51fb-a4ea-0ab568aabb48
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_club
+		dataType: string
+		lineageTag: e71e2fae-9997-5ea7-9a6a-786243056427
+		summarizeBy: none
+		sourceColumn: other_club
+
+		annotation SummarizationSetBy = Automatic
+
+	column retired
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 32649555-2919-54c8-806b-e501e055097f
+		summarizeBy: none
+		sourceColumn: retired
+
+		annotation SummarizationSetBy = Automatic
+
+	column loan_until
+		dataType: string
+		lineageTag: 170b2448-c436-53ec-ad13-adf4177400c6
+		summarizeBy: none
+		sourceColumn: loan_until
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_text
+		dataType: string
+		lineageTag: 0a91b624-ce08-5b6d-86e3-b6b9c3dcdd84
+		summarizeBy: none
+		sourceColumn: fee_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_type
+		dataType: string
+		lineageTag: a0349873-3a2c-55f4-a629-8ebd8fcfc077
+		summarizeBy: none
+		sourceColumn: fee_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_gbp
+		dataType: double
+		lineageTag: 67e6df6c-effc-572a-adf5-fdadef4a1104
+		summarizeBy: none
+		sourceColumn: fee_gbp
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_label
+		dataType: string
+		lineageTag: 6588582c-45a4-58ee-b249-ce347bde876f
+		summarizeBy: none
+		sourceColumn: season_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column position_group
+		dataType: string
+		lineageTag: 00641d5a-854c-5441-b8ae-ee9487e823f6
+		summarizeBy: none
+		sourceColumn: position_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_gbp_signed
+		dataType: double
+		lineageTag: 765963b4-1e49-53c1-aa2a-cc1225b405e4
+		summarizeBy: none
+		sourceColumn: fee_gbp_signed
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_first_team
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2e26f500-c8c3-522d-bd27-05daf73b01c9
+		summarizeBy: none
+		sourceColumn: is_first_team
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_transfers = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("fact_transfers", {
+				        {"season", Int64.Type},
+				        {"date", type date},
+				        {"window", type text},
+				        {"direction", type text},
+				        {"movement", type text},
+				        {"squad_group", type text},
+				        {"player_name", type text},
+				        {"player_key", type text},
+				        {"position", type text},
+				        {"nationality", type text},
+				        {"other_club", type text},
+				        {"retired", type logical},
+				        {"loan_until", type text},
+				        {"fee_text", type text},
+				        {"fee_type", type text},
+				        {"fee_gbp", type number},
+				        {"season_label", type text},
+				        {"position_group", type text},
+				        {"fee_gbp_signed", type number},
+				        {"is_first_team", type logical}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+

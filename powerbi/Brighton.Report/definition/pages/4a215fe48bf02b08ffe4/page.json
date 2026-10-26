@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "4a215fe48bf02b08ffe4",
+  "displayName": "Transferências",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "0a8016c351bb92a1ff7e",
+      "target": "78288ab21f716abf7ba2",
+      "type": "NoFilter"
+    }
+  ]
+}

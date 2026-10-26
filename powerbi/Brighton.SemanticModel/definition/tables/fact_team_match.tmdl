@@ -1,0 +1,451 @@
+table fact_team_match
+	lineageTag: e956c513-dd5a-5d14-bdfd-93ef2a8a0ad2
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 6227a5bb-80d4-5500-8aa4-eb906c466c2a
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column match_id
+		dataType: string
+		isHidden
+		lineageTag: bedd59eb-d9b5-5628-9bd1-5aad87234afe
+		summarizeBy: none
+		sourceColumn: match_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column matchday
+		dataType: int64
+		formatString: 0
+		lineageTag: eae58d2a-2c86-52bc-a1ae-df705774cd03
+		summarizeBy: none
+		sourceColumn: matchday
+
+		annotation SummarizationSetBy = Automatic
+
+	column datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 37237f37-3b2a-5fc8-bc63-0f5424f7a7d9
+		summarizeBy: none
+		sourceColumn: datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column team
+		dataType: string
+		lineageTag: 933118a4-ea84-53ea-bb18-e7ae1feef81b
+		summarizeBy: none
+		sourceColumn: team
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent
+		dataType: string
+		lineageTag: 6495cc55-3a1b-5804-b582-4b5d52250c35
+		summarizeBy: none
+		sourceColumn: opponent
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_away
+		dataType: string
+		lineageTag: 5abc290e-a345-5eb7-b8bc-a138386907ca
+		summarizeBy: none
+		sourceColumn: home_away
+
+		annotation SummarizationSetBy = Automatic
+
+	column goals_for
+		dataType: int64
+		formatString: 0
+		lineageTag: ff220396-c714-526c-ac21-84fb21a88771
+		summarizeBy: none
+		sourceColumn: goals_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column goals_against
+		dataType: int64
+		formatString: 0
+		lineageTag: d5d212ac-48b5-5342-a85e-b5ae48d60393
+		summarizeBy: none
+		sourceColumn: goals_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column ht_goals_for
+		dataType: int64
+		formatString: 0
+		lineageTag: de5c45d4-2fc0-5b06-b1c8-7acae21fe019
+		summarizeBy: none
+		sourceColumn: ht_goals_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column ht_goals_against
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c916c80-9d28-57ed-b2f8-be20adfe44de
+		summarizeBy: none
+		sourceColumn: ht_goals_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column score_source
+		dataType: string
+		lineageTag: e643cd72-3cc1-5ab5-8015-bd1be147527d
+		summarizeBy: none
+		sourceColumn: score_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column shots_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 584147e9-03b2-5a53-9d7d-9bcd8bcdc5e9
+		summarizeBy: none
+		sourceColumn: shots_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column shots_against
+		dataType: int64
+		formatString: 0
+		lineageTag: af725b00-c206-507a-aaf3-6b7835e936cd
+		summarizeBy: none
+		sourceColumn: shots_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column shots_on_target_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 9223be96-3689-552e-9b28-b20bd04f77fe
+		summarizeBy: none
+		sourceColumn: shots_on_target_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column shots_on_target_against
+		dataType: int64
+		formatString: 0
+		lineageTag: 5673628d-5f7a-5418-b44e-80a68673b79f
+		summarizeBy: none
+		sourceColumn: shots_on_target_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column corners_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 206b7d98-075c-599a-94d1-8c38397c51c1
+		summarizeBy: none
+		sourceColumn: corners_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column corners_against
+		dataType: int64
+		formatString: 0
+		lineageTag: ae67ec5a-9cac-544e-80be-c8a8c9dbf306
+		summarizeBy: none
+		sourceColumn: corners_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column fouls_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 343e6cfe-ff66-5f45-af64-f5d1ab05aed6
+		summarizeBy: none
+		sourceColumn: fouls_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column fouls_against
+		dataType: int64
+		formatString: 0
+		lineageTag: 01e4e380-9ec6-554c-a506-4ac94d7efdf5
+		summarizeBy: none
+		sourceColumn: fouls_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column yellow_for
+		dataType: int64
+		formatString: 0
+		lineageTag: a147ed86-cee5-5908-a29a-56cc7e92a667
+		summarizeBy: none
+		sourceColumn: yellow_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column yellow_against
+		dataType: int64
+		formatString: 0
+		lineageTag: 4930f415-62c9-53e5-bca0-ed6319166fd3
+		summarizeBy: none
+		sourceColumn: yellow_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column red_for
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b9e9c18-dd73-5790-914a-ca07e2a8f3b2
+		summarizeBy: none
+		sourceColumn: red_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column red_against
+		dataType: int64
+		formatString: 0
+		lineageTag: a89533a7-73d2-5171-8dae-c7ba275d3c47
+		summarizeBy: none
+		sourceColumn: red_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column referee
+		dataType: string
+		lineageTag: 871d9c11-6847-515a-9a71-f4c5dd8bd183
+		summarizeBy: none
+		sourceColumn: referee
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_id
+		dataType: string
+		isHidden
+		lineageTag: 7efc8f22-8723-5cf5-91bb-ce3ad04d8474
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column opponent_id
+		dataType: string
+		isHidden
+		lineageTag: 170880ad-1232-5153-9b96-c19cecb621ff
+		summarizeBy: none
+		sourceColumn: opponent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 50745488-dc9d-535d-8843-df99d097d268
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column result
+		dataType: string
+		lineageTag: 8e68c920-283d-5aba-8e01-9ca25ff45790
+		summarizeBy: none
+		sourceColumn: result
+
+		annotation SummarizationSetBy = Automatic
+
+	column result_pt
+		dataType: string
+		lineageTag: 0dea2927-3792-5b7c-896d-2589004eaba4
+		summarizeBy: none
+		sourceColumn: result_pt
+
+		annotation SummarizationSetBy = Automatic
+
+	column result_label
+		dataType: string
+		lineageTag: f5fe70b2-40b8-5369-ad97-efb43a13c584
+		summarizeBy: none
+		sourceColumn: result_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column pts
+		dataType: int64
+		formatString: 0
+		lineageTag: 71772aed-26a1-51cb-ae6a-613d7b1457b3
+		summarizeBy: none
+		sourceColumn: pts
+
+		annotation SummarizationSetBy = Automatic
+
+	column goal_diff
+		dataType: int64
+		formatString: 0
+		lineageTag: ff607434-941f-5770-af4a-702ba6a6352c
+		summarizeBy: none
+		sourceColumn: goal_diff
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_home
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5c3c316c-c0ee-536d-87ff-ae1932f6fe58
+		summarizeBy: none
+		sourceColumn: is_home
+
+		annotation SummarizationSetBy = Automatic
+
+	column venue
+		dataType: string
+		lineageTag: 2b3f514f-cf50-55cb-a71f-a8c70906e0b7
+		summarizeBy: none
+		sourceColumn: venue
+
+		annotation SummarizationSetBy = Automatic
+
+	column clean_sheet
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00d31004-9ed8-50f5-af10-310f8ffe273b
+		summarizeBy: none
+		sourceColumn: clean_sheet
+
+		annotation SummarizationSetBy = Automatic
+
+	column failed_to_score
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9f09620f-e2e6-508d-b4b7-ae393cba23a0
+		summarizeBy: none
+		sourceColumn: failed_to_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column ht_state
+		dataType: string
+		lineageTag: 0734f8cc-d0a2-53eb-85f7-ba24120594bc
+		summarizeBy: none
+		sourceColumn: ht_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column points_vs_halftime
+		dataType: double
+		lineageTag: 9a67ddef-53b7-5f0e-a1fe-0ac713858e8a
+		summarizeBy: none
+		sourceColumn: points_vs_halftime
+
+		annotation SummarizationSetBy = Automatic
+
+	column second_half_goals_for
+		dataType: double
+		lineageTag: cb17ea20-3c29-598a-a928-b07b5f81e469
+		summarizeBy: none
+		sourceColumn: second_half_goals_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column second_half_goals_against
+		dataType: double
+		lineageTag: ce083078-b4c4-50f1-8246-eb0ba542d6fc
+		summarizeBy: none
+		sourceColumn: second_half_goals_against
+
+		annotation SummarizationSetBy = Automatic
+
+	column round
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c9c6d62-d21a-54a9-b546-4f2b21ae21f1
+		summarizeBy: none
+		sourceColumn: round
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_brighton
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9f05a461-962f-5b6b-816e-845f49a7747b
+		summarizeBy: none
+		sourceColumn: is_brighton
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_label
+		dataType: string
+		lineageTag: 249e7729-6a0a-5727-9eb0-85741697bdeb
+		summarizeBy: none
+		sourceColumn: season_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column match_label
+		dataType: string
+		lineageTag: af0879ac-64c9-587a-a767-5fef193dc6e3
+		summarizeBy: none
+		sourceColumn: match_label
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_team_match = m
+		mode: import
+		source =
+				let
+				    Fonte = fnCsv("fact_team_match", {
+				        {"season", Int64.Type},
+				        {"match_id", type text},
+				        {"matchday", Int64.Type},
+				        {"datetime", type datetime},
+				        {"team", type text},
+				        {"opponent", type text},
+				        {"home_away", type text},
+				        {"goals_for", Int64.Type},
+				        {"goals_against", Int64.Type},
+				        {"ht_goals_for", Int64.Type},
+				        {"ht_goals_against", Int64.Type},
+				        {"score_source", type text},
+				        {"shots_for", Int64.Type},
+				        {"shots_against", Int64.Type},
+				        {"shots_on_target_for", Int64.Type},
+				        {"shots_on_target_against", Int64.Type},
+				        {"corners_for", Int64.Type},
+				        {"corners_against", Int64.Type},
+				        {"fouls_for", Int64.Type},
+				        {"fouls_against", Int64.Type},
+				        {"yellow_for", Int64.Type},
+				        {"yellow_against", Int64.Type},
+				        {"red_for", Int64.Type},
+				        {"red_against", Int64.Type},
+				        {"referee", type text},
+				        {"team_id", type text},
+				        {"opponent_id", type text},
+				        {"date", type date},
+				        {"result", type text},
+				        {"result_pt", type text},
+				        {"result_label", type text},
+				        {"pts", Int64.Type},
+				        {"goal_diff", Int64.Type},
+				        {"is_home", type logical},
+				        {"venue", type text},
+				        {"clean_sheet", type logical},
+				        {"failed_to_score", type logical},
+				        {"ht_state", type text},
+				        {"points_vs_halftime", type number},
+				        {"second_half_goals_for", type number},
+				        {"second_half_goals_against", type number},
+				        {"round", Int64.Type},
+				        {"is_brighton", type logical},
+				        {"season_label", type text},
+				        {"match_label", type text}
+				    })
+				in
+				    Fonte
+
+	annotation PBI_ResultType = Table
+
