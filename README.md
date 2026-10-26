@@ -66,9 +66,7 @@ erDiagram
 | `fact_player_season` | jogador × temporada: jogos, titularidades, gols, assistências e cartões na Premier League |
 | `fact_transfers` | chegadas e saídas por janela, com tipo (pago, empréstimo, grátis, não divulgado) |
 
-**Validação com a realidade:** a tabela reconstruída a partir dos 380 jogos de cada temporada
-bate com as classificações oficiais do Brighton: 6º em 2022/23, 11º em 2023/24, 8º em 2024/25
-e 8º em 2025/26.
+
 
 **Chave dos jogadores:** o link do artigo da Wikipedia (`wiki:Kaoru_Mitoma`) identifica o
 mesmo jogador em todas as temporadas e tabelas. Jogadores sem artigo usam o nome normalizado.
