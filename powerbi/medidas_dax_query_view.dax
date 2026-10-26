@@ -1,0 +1,321 @@
+// Cole no Power BI Desktop > Exibição de consulta DAX e clique em
+// "Atualizar modelo: adicionar N novas medidas" acima do DEFINE.
+// Antes: crie a tabela '_Medidas' (Página Inicial > Inserir dados > Carregar).
+// Formatos e pastas NÃO são aplicados por aqui; use o script do Tabular Editor para isso.
+DEFINE
+    MEASURE '_Medidas'[Jogos] =
+        CALCULATE ( COUNTROWS ( fact_team_match ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Vitórias] =
+        CALCULATE ( [Jogos], fact_team_match[result] = "W" )
+    MEASURE '_Medidas'[Empates] =
+        CALCULATE ( [Jogos], fact_team_match[result] = "D" )
+    MEASURE '_Medidas'[Derrotas] =
+        CALCULATE ( [Jogos], fact_team_match[result] = "L" )
+    MEASURE '_Medidas'[Pontos] =
+        CALCULATE ( SUM ( fact_team_match[pts] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Pontos por Jogo] =
+        DIVIDE ( [Pontos], [Jogos] )
+    MEASURE '_Medidas'[Aproveitamento %] =
+        DIVIDE ( [Pontos], [Jogos] * 3 )
+    MEASURE '_Medidas'[Gols Pró] =
+        CALCULATE ( SUM ( fact_team_match[goals_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Gols Contra] =
+        CALCULATE ( SUM ( fact_team_match[goals_against] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Saldo de Gols] =
+        [Gols Pró] - [Gols Contra]
+    MEASURE '_Medidas'[Gols Pró por Jogo] =
+        DIVIDE ( [Gols Pró], [Jogos] )
+    MEASURE '_Medidas'[Gols Contra por Jogo] =
+        DIVIDE ( [Gols Contra], [Jogos] )
+    MEASURE '_Medidas'[Jogos sem Sofrer Gol] =
+        CALCULATE ( [Jogos], fact_team_match[clean_sheet] = TRUE () )
+    MEASURE '_Medidas'[Jogos sem Marcar] =
+        CALCULATE ( [Jogos], fact_team_match[failed_to_score] = TRUE () )
+    MEASURE '_Medidas'[Forma (Últimos 5)] =
+        VAR _ult5 =
+            TOPN (
+                5,
+                CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+                fact_team_match[datetime], DESC
+            )
+        RETURN
+            CONCATENATEX ( _ult5, fact_team_match[result_pt], "  ", fact_team_match[datetime], ASC )
+    MEASURE '_Medidas'[Pontos nos Últimos 5] =
+        VAR _ult5 =
+            TOPN (
+                5,
+                CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+                fact_team_match[datetime], DESC
+            )
+        RETURN
+            SUMX ( _ult5, fact_team_match[pts] )
+    MEASURE '_Medidas'[Jogos com Placar do Intervalo] =
+        CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[ht_state] ) )
+    MEASURE '_Medidas'[Gols no 1º Tempo] =
+        CALCULATE ( SUM ( fact_team_match[ht_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Gols no 2º Tempo] =
+        CALCULATE ( SUM ( fact_team_match[second_half_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Gols Sofridos no 1º Tempo] =
+        CALCULATE ( SUM ( fact_team_match[ht_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Gols Sofridos no 2º Tempo] =
+        CALCULATE ( SUM ( fact_team_match[second_half_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Pontos Ganhos após o Intervalo] =
+        CALCULATE (
+            SUM ( fact_team_match[points_vs_halftime] ),
+            fact_team_match[is_brighton] = TRUE (),
+            fact_team_match[points_vs_halftime] > 0
+        )
+    MEASURE '_Medidas'[Pontos Perdidos após o Intervalo] =
+        - CALCULATE (
+            SUM ( fact_team_match[points_vs_halftime] ),
+            fact_team_match[is_brighton] = TRUE (),
+            fact_team_match[points_vs_halftime] < 0
+        )
+    MEASURE '_Medidas'[Saldo de Pontos no 2º Tempo] =
+        [Pontos Ganhos após o Intervalo] - [Pontos Perdidos após o Intervalo]
+    MEASURE '_Medidas'[Viradas] =
+        CALCULATE ( [Jogos], fact_team_match[ht_state] = "Perdendo", fact_team_match[result] = "W" )
+    MEASURE '_Medidas'[Aproveitamento Vencendo no Intervalo %] =
+        VAR _j = CALCULATE ( [Jogos], fact_team_match[ht_state] = "Vencendo" )
+        RETURN
+            DIVIDE ( CALCULATE ( [Pontos], fact_team_match[ht_state] = "Vencendo" ), _j * 3 )
+    MEASURE '_Medidas'[Chutes] =
+        CALCULATE ( SUM ( fact_team_match[shots_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Chutes no Gol] =
+        CALCULATE ( SUM ( fact_team_match[shots_on_target_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Chutes Sofridos] =
+        CALCULATE ( SUM ( fact_team_match[shots_against] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Chutes no Gol Sofridos] =
+        CALCULATE ( SUM ( fact_team_match[shots_on_target_against] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Chutes por Jogo] =
+        DIVIDE (
+            [Chutes],
+            CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[shots_for] ) )
+        )
+    MEASURE '_Medidas'[Precisão dos Chutes %] =
+        DIVIDE ( [Chutes no Gol], [Chutes] )
+    MEASURE '_Medidas'[Conversão %] =
+        DIVIDE (
+            CALCULATE ( [Gols Pró], NOT ISBLANK ( fact_team_match[shots_for] ) ),
+            [Chutes]
+        )
+    MEASURE '_Medidas'[Escanteios] =
+        CALCULATE ( SUM ( fact_team_match[corners_for] ), fact_team_match[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Domínio de Chutes %] =
+        DIVIDE ( [Chutes], [Chutes] + [Chutes Sofridos] )
+    MEASURE '_Medidas'[Rodada Atual] =
+        CALCULATE ( MAX ( fact_standings[round] ), dim_team[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Posição Atual] =
+        VAR _r = [Rodada Atual]
+        RETURN
+            CALCULATE (
+                MIN ( fact_standings[position] ),
+                dim_team[is_brighton] = TRUE (),
+                fact_standings[round] = _r
+            )
+    MEASURE '_Medidas'[Posição na Rodada] =
+        CALCULATE ( MIN ( fact_standings[position] ), dim_team[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Pontos Acumulados] =
+        CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )
+    MEASURE '_Medidas'[Pontos na Mesma Rodada (Temporada Anterior)] =
+        VAR _s = MAX ( dim_season[season] )
+        VAR _r =
+            IF (
+                ISFILTERED ( fact_standings[round] ),
+                MAX ( fact_standings[round] ),
+                [Rodada Atual]
+            )
+        RETURN
+            CALCULATE (
+                MAX ( fact_standings[pts_cum] ),
+                REMOVEFILTERS ( dim_season ),
+                dim_team[is_brighton] = TRUE (),
+                fact_standings[season] = _s - 1,
+                fact_standings[round] = _r
+            )
+    MEASURE '_Medidas'[Pontos vs Temporada Anterior] =
+        [Pontos] - [Pontos na Mesma Rodada (Temporada Anterior)]
+    MEASURE '_Medidas'[Distância para o 4º] =
+        VAR _r = [Rodada Atual]
+        VAR _tab =
+            CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+        VAR _quarto = MINX ( TOPN ( 4, _tab, fact_standings[pts_cum], DESC ), fact_standings[pts_cum] )
+        RETURN
+            [Pontos Acumulados] - _quarto
+    MEASURE '_Medidas'[Distância para o Rebaixamento] =
+        VAR _r = [Rodada Atual]
+        VAR _tab =
+            CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+        VAR _z = MAXX ( TOPN ( 3, _tab, fact_standings[pts_cum], ASC ), fact_standings[pts_cum] )
+        RETURN
+            [Pontos Acumulados] - _z
+    MEASURE '_Medidas'[Próximo Jogo (Brasília)] =
+        VAR _agora = NOW () - 2 / 24
+        RETURN
+            CALCULATE (
+                MIN ( fact_fixtures[kickoff_brasilia] ),
+                fact_fixtures[kickoff_brasilia] > _agora
+            )
+    MEASURE '_Medidas'[Próximo Adversário] =
+        VAR _k = [Próximo Jogo (Brasília)]
+        RETURN
+            CALCULATE (
+                MAXX ( fact_fixtures, fact_fixtures[opponent] & " (" & fact_fixtures[venue] & ")" ),
+                fact_fixtures[kickoff_brasilia] = _k
+            )
+    MEASURE '_Medidas'[Nº do Próximo Jogo] =
+        VAR _agora = NOW () - 2 / 24
+        VAR _k = MAX ( fact_fixtures[kickoff_brasilia] )
+        RETURN
+            IF (
+                HASONEVALUE ( fact_fixtures[kickoff_brasilia] ) && _k > _agora,
+                CALCULATE (
+                    COUNTROWS ( fact_fixtures ),
+                    REMOVEFILTERS ( fact_fixtures ),
+                    fact_fixtures[kickoff_brasilia] > _agora,
+                    fact_fixtures[kickoff_brasilia] <= _k
+                )
+            )
+    MEASURE '_Medidas'[Dificuldade Próximos 5] =
+        VAR _agora = NOW () - 2 / 24
+        VAR _prox =
+            TOPN (
+                5,
+                FILTER ( fact_fixtures, fact_fixtures[kickoff_brasilia] > _agora ),
+                fact_fixtures[kickoff_brasilia], ASC
+            )
+        RETURN
+            AVERAGEX ( _prox, fact_fixtures[difficulty] )
+    MEASURE '_Medidas'[Jogos Restantes] =
+        CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[finished] = FALSE () )
+    MEASURE '_Medidas'[Resultados Pendentes] =
+        CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[result_pending] = TRUE () )
+    MEASURE '_Medidas'[Dados Até] =
+        MAX ( dim_season[data_until] )
+    MEASURE '_Medidas'[Jogos (Jogador)] =
+        SUM ( fact_player_season[pl_apps] )
+    MEASURE '_Medidas'[Titularidades] =
+        SUM ( fact_player_season[pl_starts] )
+    MEASURE '_Medidas'[Entradas do Banco] =
+        SUM ( fact_player_season[pl_subs] )
+    MEASURE '_Medidas'[Titularidade %] =
+        DIVIDE ( [Titularidades], [Jogos (Jogador)] )
+    MEASURE '_Medidas'[Gols (Jogador)] =
+        SUM ( fact_player_season[pl_goals] )
+    MEASURE '_Medidas'[Assistências] =
+        SUM ( fact_player_season[pl_assists] )
+    MEASURE '_Medidas'[G+A] =
+        [Gols (Jogador)] + [Assistências]
+    MEASURE '_Medidas'[G+A por Jogo] =
+        DIVIDE ( [G+A], [Jogos (Jogador)] )
+    MEASURE '_Medidas'[Gols em Todas as Competições] =
+        SUM ( fact_player_season[total_goals] )
+    MEASURE '_Medidas'[Cartões Amarelos] =
+        SUM ( fact_player_season[pl_yellow] )
+    MEASURE '_Medidas'[Cartões Vermelhos] =
+        SUM ( fact_player_season[pl_red] ) + SUM ( fact_player_season[pl_second_yellow] )
+    MEASURE '_Medidas'[Participação nos Gols %] =
+        DIVIDE ( [G+A], [Gols Pró] )
+    MEASURE '_Medidas'[Jogadores Utilizados] =
+        CALCULATE ( DISTINCTCOUNT ( fact_player_season[player_key] ), fact_player_season[pl_apps] > 0 )
+    MEASURE '_Medidas'[Artilheiro] =
+        VAR _t =
+            TOPN (
+                1,
+                ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@g", [Gols (Jogador)] ),
+                [@g], DESC
+            )
+        RETURN
+            MAXX ( _t, dim_player[player_name] & " (" & [@g] & ")" )
+    MEASURE '_Medidas'[Líder em Assistências] =
+        VAR _t =
+            TOPN (
+                1,
+                ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@a", [Assistências] ),
+                [@a], DESC
+            )
+        RETURN
+            MAXX ( _t, dim_player[player_name] & " (" & [@a] & ")" )
+    MEASURE '_Medidas'[Gasto] =
+        CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Chegada" )
+    MEASURE '_Medidas'[Receita] =
+        CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Saída" )
+    MEASURE '_Medidas'[Saldo de Transferências] =
+        [Receita] - [Gasto]
+    MEASURE '_Medidas'[Chegadas] =
+        CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Chegada" )
+    MEASURE '_Medidas'[Saídas] =
+        CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Saída" )
+    MEASURE '_Medidas'[Contratações Pagas] =
+        CALCULATE (
+            COUNTROWS ( fact_transfers ),
+            fact_transfers[direction] = "Chegada",
+            fact_transfers[fee_type] = "Pago"
+        )
+    MEASURE '_Medidas'[Valores Não Divulgados] =
+        CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[fee_type] = "Não divulgado" )
+    MEASURE '_Medidas'[Empréstimos Cedidos] =
+        CALCULATE (
+            COUNTROWS ( fact_transfers ),
+            fact_transfers[direction] = "Saída",
+            fact_transfers[movement] = "Empréstimo"
+        )
+    MEASURE '_Medidas'[Gasto Médio por Contratação] =
+        DIVIDE ( [Gasto], [Contratações Pagas] )
+    MEASURE '_Medidas'[Maior Contratação] =
+        VAR _t =
+            TOPN (
+                1,
+                FILTER ( fact_transfers, fact_transfers[direction] = "Chegada" && fact_transfers[fee_gbp] > 0 ),
+                fact_transfers[fee_gbp], DESC
+            )
+        RETURN
+            MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+    MEASURE '_Medidas'[Maior Venda] =
+        VAR _t =
+            TOPN (
+                1,
+                FILTER ( fact_transfers, fact_transfers[direction] = "Saída" && fact_transfers[fee_gbp] > 0 ),
+                fact_transfers[fee_gbp], DESC
+            )
+        RETURN
+            MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+    MEASURE '_Medidas'[Título da Página] =
+        "Brighton & Hove Albion  •  " & SELECTEDVALUE ( dim_season[season_label], "Várias temporadas" )
+    MEASURE '_Medidas'[Subtítulo da Rodada] =
+        "Premier League  •  após " & [Rodada Atual] & " rodadas  •  dados até " & FORMAT ( [Dados Até], "dd/mm/yyyy" )
+    MEASURE '_Medidas'[Última Atualização] =
+        "Atualizado em " & CALCULATE ( MAX ( meta_refresh[last_refresh_utc] ), meta_refresh[source] = "pipeline" ) & " (UTC)"
+    MEASURE '_Medidas'[Fonte dos Dados] =
+        "Dados: Wikipedia (CC BY-SA 4.0) e openfootball (domínio público). Projeto sem afiliação com o clube ou a Premier League."
+    MEASURE '_Medidas'[Cor do Resultado] =
+        SWITCH (
+            SELECTEDVALUE ( fact_team_match[result_pt] ),
+            "V", "#2DA866",
+            "E", "#D99A00",
+            "D", "#D64545",
+            "#8A9AB0"
+        )
+    MEASURE '_Medidas'[Cor da Dificuldade] =
+        SWITCH (
+            SELECTEDVALUE ( fact_fixtures[difficulty] ),
+            1, "#1E8E5A",
+            2, "#2DA866",
+            3, "#8A9AB0",
+            4, "#E8743B",
+            5, "#E53935",
+            "#8A9AB0"
+        )
+    MEASURE '_Medidas'[Cor do Saldo de Gols] =
+        IF ( [Saldo de Gols] >= 0, "#2DA866", "#D64545" )
+    MEASURE '_Medidas'[Posição Final] =
+        VAR _s = MAX ( dim_season[season] )
+        RETURN
+            IF (
+                SELECTEDVALUE ( dim_season[is_current], FALSE () ),
+                CALCULATE ( [Posição Atual], dim_season[season] = _s ),
+                MAX ( dim_season[brighton_final_position] )
+            )
+
+EVALUATE
+    ROW ( "Pontos", [Pontos], "Posição Atual", [Posição Atual], "Saldo de Gols", [Saldo de Gols] )

@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# dados brutos e cache (regeneráveis com `python -m brighton scrape`)
+data/raw/
+data/cache/
+
+# arquivos temporários do Power BI
+*.pbix.bak
+~$*
+
+# área local, não versionada
+private/
+*.har

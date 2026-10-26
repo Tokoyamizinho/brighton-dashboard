@@ -1,0 +1,100 @@
+{
+  "name": "Brighton Seagulls (escuro)",
+  "dataColors": [
+    "#4DA3FF",
+    "#FFCD00",
+    "#E8EEF7",
+    "#5CD6A0",
+    "#FF6B6B",
+    "#8FA3BF",
+    "#0057B8",
+    "#B39DDB",
+    "#FF8A65",
+    "#26C6DA"
+  ],
+  "background": "#12284A",
+  "foreground": "#E8EEF7",
+  "tableAccent": "#4DA3FF",
+  "good": "#5CD6A0",
+  "neutral": "#FFCD00",
+  "bad": "#FF6B6B",
+  "maximum": "#4DA3FF",
+  "center": "#FFCD00",
+  "minimum": "#FF6B6B",
+  "null": "#8FA3BF",
+  "textClasses": {
+    "callout": { "fontSize": 30, "fontFace": "Segoe UI Semibold", "color": "#FFFFFF" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#E8EEF7" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#E8EEF7" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#B7C4D8" },
+    "smallLabel": { "fontSize": 9, "fontFace": "Segoe UI", "color": "#8FA3BF" },
+    "largeTitle": { "fontSize": 20, "fontFace": "Segoe UI Bold", "color": "#FFFFFF" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#12284A" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#1E3A66" } }, "radius": 10 }],
+        "dropShadow": [{ "show": false }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#E8EEF7" } }, "fontSize": 12 }],
+        "visualHeader": [{
+          "background": { "solid": { "color": "#12284A" } },
+          "foreground": { "solid": { "color": "#B7C4D8" } },
+          "transparency": 0
+        }],
+        "categoryAxis": [{
+          "labelColor": { "solid": { "color": "#B7C4D8" } },
+          "titleColor": { "solid": { "color": "#B7C4D8" } },
+          "gridlineColor": { "solid": { "color": "#1E3A66" } },
+          "showAxisTitle": false
+        }],
+        "valueAxis": [{
+          "labelColor": { "solid": { "color": "#B7C4D8" } },
+          "titleColor": { "solid": { "color": "#B7C4D8" } },
+          "gridlineColor": { "solid": { "color": "#1E3A66" } },
+          "gridlineStyle": "dotted"
+        }],
+        "legend": [{ "labelColor": { "solid": { "color": "#B7C4D8" } }, "position": "Top" }],
+        "labels": [{ "color": { "solid": { "color": "#E8EEF7" } } }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#0B1D3A" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#081429" } }, "transparency": 0 }]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [{ "color": { "solid": { "color": "#FFFFFF" } }, "fontSize": 28 }],
+        "categoryLabels": [{ "color": { "solid": { "color": "#8FA3BF" } }, "fontSize": 10 }]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "grid": [{
+          "gridHorizontal": true,
+          "gridHorizontalColor": { "solid": { "color": "#1E3A66" } },
+          "gridVertical": false,
+          "rowPadding": 4
+        }],
+        "columnHeaders": [{
+          "fontColor": { "solid": { "color": "#E8EEF7" } },
+          "backColor": { "solid": { "color": "#0B1D3A" } }
+        }],
+        "values": [{
+          "fontColorPrimary": { "solid": { "color": "#E8EEF7" } },
+          "backColorPrimary": { "solid": { "color": "#12284A" } },
+          "fontColorSecondary": { "solid": { "color": "#E8EEF7" } },
+          "backColorSecondary": { "solid": { "color": "#152F57" } }
+        }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [{ "fontColor": { "solid": { "color": "#E8EEF7" } }, "background": { "solid": { "color": "#12284A" } } }],
+        "header": [{ "fontColor": { "solid": { "color": "#8FA3BF" } } }]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+team_id,team_name,is_brighton
+arsenal,Arsenal,False
+aston-villa,Aston Villa,False
+bournemouth,Bournemouth,False
+brentford,Brentford,False
+brighton-hove-albion,Brighton & Hove Albion,True
+burnley,Burnley,False
+chelsea,Chelsea,False
+coventry-city,Coventry City,False
+crystal-palace,Crystal Palace,False
+everton,Everton,False
+fulham,Fulham,False
+hull-city,Hull City,False
+ipswich-town,Ipswich Town,False
+leeds-united,Leeds United,False
+leicester-city,Leicester City,False
+liverpool,Liverpool,False
+luton-town,Luton Town,False
+manchester-city,Manchester City,False
+manchester-united,Manchester United,False
+newcastle-united,Newcastle United,False
+nottingham-forest,Nottingham Forest,False
+sheffield-united,Sheffield United,False
+southampton,Southampton,False
+sunderland,Sunderland,False
+tottenham-hotspur,Tottenham Hotspur,False
+west-ham-united,West Ham United,False
+wolverhampton-wanderers,Wolverhampton Wanderers,False

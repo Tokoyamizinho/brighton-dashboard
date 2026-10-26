@@ -1,0 +1,640 @@
+# Fonte única de verdade das medidas DAX e dos relacionamentos do modelo.
+# `python -m brighton powerbi` gera a partir deste arquivo:
+#   - medidas_dax_query_view.dax      (colar no "Exibição de consulta DAX" do Power BI Desktop)
+#   - criar_modelo_tabular_editor.csx (script C# para o Tabular Editor: medidas + formatos + relacionamentos)
+#
+# Formatos: "£M" é atalho para valores em milhões de libras.
+
+measure_table: _Medidas
+
+relationships:
+  # dimensão (lado 1)          ->  fato (lado muitos)
+  - [dim_season.season, fact_team_match.season]
+  - [dim_season.season, fact_standings.season]
+  - [dim_season.season, fact_player_season.season]
+  - [dim_season.season, fact_transfers.season]
+  - [dim_season.season, fact_fixtures.season]
+  - [dim_team.team_id, fact_team_match.team_id]
+  - [dim_team.team_id, fact_standings.team_id]
+  - [dim_team.team_id, fact_fixtures.opponent_id]
+  - [dim_player.player_key, fact_player_season.player_key]
+  - [dim_player.player_key, fact_transfers.player_key]
+  - [dim_date.date, fact_team_match.date]
+  - [dim_date.date, fact_fixtures.date]
+
+sort_by:
+  - [dim_date.month_name, dim_date.month]
+  - [dim_season.season_label, dim_season.season]
+
+measures:
+  # ------------------------------------------------------------------ Resultados
+  - name: Jogos
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( COUNTROWS ( fact_team_match ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Vitórias
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( [Jogos], fact_team_match[result] = "W" )
+
+  - name: Empates
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( [Jogos], fact_team_match[result] = "D" )
+
+  - name: Derrotas
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( [Jogos], fact_team_match[result] = "L" )
+
+  - name: Pontos
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[pts] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Pontos por Jogo
+    folder: 1. Resultados
+    format: "0.00"
+    expr: DIVIDE ( [Pontos], [Jogos] )
+
+  - name: Aproveitamento %
+    folder: 1. Resultados
+    format: "0.0%"
+    expr: DIVIDE ( [Pontos], [Jogos] * 3 )
+
+  - name: Gols Pró
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[goals_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Gols Contra
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[goals_against] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Saldo de Gols
+    folder: 1. Resultados
+    format: "+0;-0;0"
+    expr: "[Gols Pró] - [Gols Contra]"
+
+  - name: Gols Pró por Jogo
+    folder: 1. Resultados
+    format: "0.00"
+    expr: DIVIDE ( [Gols Pró], [Jogos] )
+
+  - name: Gols Contra por Jogo
+    folder: 1. Resultados
+    format: "0.00"
+    expr: DIVIDE ( [Gols Contra], [Jogos] )
+
+  - name: Jogos sem Sofrer Gol
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( [Jogos], fact_team_match[clean_sheet] = TRUE () )
+
+  - name: Jogos sem Marcar
+    folder: 1. Resultados
+    format: "0"
+    expr: CALCULATE ( [Jogos], fact_team_match[failed_to_score] = TRUE () )
+
+  - name: Forma (Últimos 5)
+    folder: 1. Resultados
+    description: Resultados dos últimos 5 jogos em ordem cronológica (V/E/D).
+    expr: |
+      VAR _ult5 =
+          TOPN (
+              5,
+              CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+              fact_team_match[datetime], DESC
+          )
+      RETURN
+          CONCATENATEX ( _ult5, fact_team_match[result_pt], "  ", fact_team_match[datetime], ASC )
+
+  - name: Pontos nos Últimos 5
+    folder: 1. Resultados
+    format: "0"
+    expr: |
+      VAR _ult5 =
+          TOPN (
+              5,
+              CALCULATETABLE ( fact_team_match, fact_team_match[is_brighton] = TRUE () ),
+              fact_team_match[datetime], DESC
+          )
+      RETURN
+          SUMX ( _ult5, fact_team_match[pts] )
+
+  # --------------------------------------------------------- Desempenho por tempo
+  - name: Jogos com Placar do Intervalo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    description: O placar do intervalo vem do openfootball; jogos completados pela Wikipedia não têm.
+    expr: CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[ht_state] ) )
+
+  - name: Gols no 1º Tempo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[ht_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Gols no 2º Tempo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[second_half_goals_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Gols Sofridos no 1º Tempo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[ht_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Gols Sofridos no 2º Tempo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[second_half_goals_against] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Pontos Ganhos após o Intervalo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    description: Pontos a mais do que o placar do intervalo daria (viradas e empates arrancados).
+    expr: |
+      CALCULATE (
+          SUM ( fact_team_match[points_vs_halftime] ),
+          fact_team_match[is_brighton] = TRUE (),
+          fact_team_match[points_vs_halftime] > 0
+      )
+
+  - name: Pontos Perdidos após o Intervalo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    description: Pontos que o placar do intervalo daria e escaparam no 2º tempo.
+    expr: |
+      - CALCULATE (
+          SUM ( fact_team_match[points_vs_halftime] ),
+          fact_team_match[is_brighton] = TRUE (),
+          fact_team_match[points_vs_halftime] < 0
+      )
+
+  - name: Saldo de Pontos no 2º Tempo
+    folder: 2. Primeiro e Segundo Tempo
+    format: "+0;-0;0"
+    expr: "[Pontos Ganhos após o Intervalo] - [Pontos Perdidos após o Intervalo]"
+
+  - name: Viradas
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0"
+    description: Jogos em que o Brighton perdia no intervalo e venceu.
+    expr: CALCULATE ( [Jogos], fact_team_match[ht_state] = "Perdendo", fact_team_match[result] = "W" )
+
+  - name: Aproveitamento Vencendo no Intervalo %
+    folder: 2. Primeiro e Segundo Tempo
+    format: "0%"
+    expr: |
+      VAR _j = CALCULATE ( [Jogos], fact_team_match[ht_state] = "Vencendo" )
+      RETURN
+          DIVIDE ( CALCULATE ( [Pontos], fact_team_match[ht_state] = "Vencendo" ), _j * 3 )
+
+  # -------------------------------------------- Chutes (fonte opcional football-data)
+  - name: Chutes
+    folder: 3. Chutes (football-data)
+    format: "0"
+    description: Requer sources.football_data ligado no config.yaml. Sem a fonte, fica em branco.
+    expr: CALCULATE ( SUM ( fact_team_match[shots_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Chutes no Gol
+    folder: 3. Chutes (football-data)
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[shots_on_target_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Chutes Sofridos
+    folder: 3. Chutes (football-data)
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[shots_against] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Chutes no Gol Sofridos
+    folder: 3. Chutes (football-data)
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[shots_on_target_against] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Chutes por Jogo
+    folder: 3. Chutes (football-data)
+    format: "0.0"
+    expr: |
+      DIVIDE (
+          [Chutes],
+          CALCULATE ( [Jogos], NOT ISBLANK ( fact_team_match[shots_for] ) )
+      )
+
+  - name: Precisão dos Chutes %
+    folder: 3. Chutes (football-data)
+    format: "0%"
+    expr: DIVIDE ( [Chutes no Gol], [Chutes] )
+
+  - name: Conversão %
+    folder: 3. Chutes (football-data)
+    format: "0.0%"
+    description: Gols por chute, apenas nos jogos que têm estatística de chutes.
+    expr: |
+      DIVIDE (
+          CALCULATE ( [Gols Pró], NOT ISBLANK ( fact_team_match[shots_for] ) ),
+          [Chutes]
+      )
+
+  - name: Escanteios
+    folder: 3. Chutes (football-data)
+    format: "0"
+    expr: CALCULATE ( SUM ( fact_team_match[corners_for] ), fact_team_match[is_brighton] = TRUE () )
+
+  - name: Domínio de Chutes %
+    folder: 3. Chutes (football-data)
+    format: "0%"
+    description: Participação do Brighton no total de chutes dos jogos (indicador simples de domínio).
+    expr: DIVIDE ( [Chutes], [Chutes] + [Chutes Sofridos] )
+
+  # --------------------------------------------------------- Tabela e momento
+  - name: Rodada Atual
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( MAX ( fact_standings[round] ), dim_team[is_brighton] = TRUE () )
+
+  - name: Posição Atual
+    folder: 4. Tabela e Momento
+    format: 0"º"
+    expr: |
+      VAR _r = [Rodada Atual]
+      RETURN
+          CALCULATE (
+              MIN ( fact_standings[position] ),
+              dim_team[is_brighton] = TRUE (),
+              fact_standings[round] = _r
+          )
+
+  - name: Posição na Rodada
+    folder: 4. Tabela e Momento
+    format: "0"
+    description: Para o gráfico de evolução (fact_standings[round] no eixo X; inverta o eixo Y).
+    expr: CALCULATE ( MIN ( fact_standings[position] ), dim_team[is_brighton] = TRUE () )
+
+  - name: Pontos Acumulados
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( MAX ( fact_standings[pts_cum] ), dim_team[is_brighton] = TRUE () )
+
+  - name: Pontos na Mesma Rodada (Temporada Anterior)
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: |
+      VAR _s = MAX ( dim_season[season] )
+      VAR _r =
+          IF (
+              ISFILTERED ( fact_standings[round] ),
+              MAX ( fact_standings[round] ),
+              [Rodada Atual]
+          )
+      RETURN
+          CALCULATE (
+              MAX ( fact_standings[pts_cum] ),
+              REMOVEFILTERS ( dim_season ),
+              dim_team[is_brighton] = TRUE (),
+              fact_standings[season] = _s - 1,
+              fact_standings[round] = _r
+          )
+
+  - name: Pontos vs Temporada Anterior
+    folder: 4. Tabela e Momento
+    format: "+0;-0;0"
+    expr: "[Pontos] - [Pontos na Mesma Rodada (Temporada Anterior)]"
+
+  - name: Distância para o 4º
+    folder: 4. Tabela e Momento
+    format: "+0;-0;0"
+    description: Negativo = pontos que faltam para alcançar o 4º colocado na mesma rodada.
+    expr: |
+      VAR _r = [Rodada Atual]
+      VAR _tab =
+          CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+      VAR _quarto = MINX ( TOPN ( 4, _tab, fact_standings[pts_cum], DESC ), fact_standings[pts_cum] )
+      RETURN
+          [Pontos Acumulados] - _quarto
+
+  - name: Distância para o Rebaixamento
+    folder: 4. Tabela e Momento
+    format: "+0;-0;0"
+    description: Pontos de vantagem sobre o 18º colocado na mesma rodada.
+    expr: |
+      VAR _r = [Rodada Atual]
+      VAR _tab =
+          CALCULATETABLE ( fact_standings, fact_standings[round] = _r, REMOVEFILTERS ( dim_team ) )
+      VAR _z = MAXX ( TOPN ( 3, _tab, fact_standings[pts_cum], ASC ), fact_standings[pts_cum] )
+      RETURN
+          [Pontos Acumulados] - _z
+
+  - name: Próximo Jogo (Brasília)
+    folder: 4. Tabela e Momento
+    format: dd/mm "às" hh:nn
+    description: >-
+      Primeiro jogo que ainda não terminou (início + 2h), comparado com a hora do computador
+      (NOW). Muda sozinho depois de cada jogo, sem precisar rodar o Python de novo.
+    expr: |
+      VAR _agora = NOW () - 2 / 24
+      RETURN
+          CALCULATE (
+              MIN ( fact_fixtures[kickoff_brasilia] ),
+              fact_fixtures[kickoff_brasilia] > _agora
+          )
+
+  - name: Próximo Adversário
+    folder: 4. Tabela e Momento
+    expr: |
+      VAR _k = [Próximo Jogo (Brasília)]
+      RETURN
+          CALCULATE (
+              MAXX ( fact_fixtures, fact_fixtures[opponent] & " (" & fact_fixtures[venue] & ")" ),
+              fact_fixtures[kickoff_brasilia] = _k
+          )
+
+  - name: Nº do Próximo Jogo
+    folder: 4. Tabela e Momento
+    format: "0"
+    description: >-
+      1 para o próximo jogo, 2 para o seguinte... (vazio para jogos já disputados).
+      Use como filtro do visual (entre 1 e 5) na tabela de próximos jogos.
+    expr: |
+      VAR _agora = NOW () - 2 / 24
+      VAR _k = MAX ( fact_fixtures[kickoff_brasilia] )
+      RETURN
+          IF (
+              HASONEVALUE ( fact_fixtures[kickoff_brasilia] ) && _k > _agora,
+              CALCULATE (
+                  COUNTROWS ( fact_fixtures ),
+                  REMOVEFILTERS ( fact_fixtures ),
+                  fact_fixtures[kickoff_brasilia] > _agora,
+                  fact_fixtures[kickoff_brasilia] <= _k
+              )
+          )
+
+  - name: Dificuldade Próximos 5
+    folder: 4. Tabela e Momento
+    format: "0.0"
+    description: Métrica própria de 1 (fácil) a 5 (difícil) pela posição atual de cada adversário na tabela.
+    expr: |
+      VAR _agora = NOW () - 2 / 24
+      VAR _prox =
+          TOPN (
+              5,
+              FILTER ( fact_fixtures, fact_fixtures[kickoff_brasilia] > _agora ),
+              fact_fixtures[kickoff_brasilia], ASC
+          )
+      RETURN
+          AVERAGEX ( _prox, fact_fixtures[difficulty] )
+
+  - name: Jogos Restantes
+    folder: 4. Tabela e Momento
+    format: "0"
+    expr: CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[finished] = FALSE () )
+
+  - name: Resultados Pendentes
+    folder: 4. Tabela e Momento
+    format: "0"
+    description: Jogos já disputados cujo placar ainda não chegou às fontes. Mostre como aviso quando > 0.
+    expr: CALCULATE ( COUNTROWS ( fact_fixtures ), fact_fixtures[result_pending] = TRUE () )
+
+  - name: Dados Até
+    folder: 4. Tabela e Momento
+    format: dd/mm/yyyy
+    description: Data do último jogo do Brighton com resultado nos dados.
+    expr: MAX ( dim_season[data_until] )
+
+  # --------------------------------------------------------------- Jogadores
+  - name: Jogos (Jogador)
+    folder: 5. Jogadores
+    format: "0"
+    description: Partidas na Premier League (titular + reserva).
+    expr: SUM ( fact_player_season[pl_apps] )
+
+  - name: Titularidades
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_starts] )
+
+  - name: Entradas do Banco
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_subs] )
+
+  - name: Titularidade %
+    folder: 5. Jogadores
+    format: "0%"
+    expr: DIVIDE ( [Titularidades], [Jogos (Jogador)] )
+
+  - name: Gols (Jogador)
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_goals] )
+
+  - name: Assistências
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_assists] )
+
+  - name: G+A
+    folder: 5. Jogadores
+    format: "0"
+    expr: "[Gols (Jogador)] + [Assistências]"
+
+  - name: G+A por Jogo
+    folder: 5. Jogadores
+    format: "0.00"
+    expr: DIVIDE ( [G+A], [Jogos (Jogador)] )
+
+  - name: Gols em Todas as Competições
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[total_goals] )
+
+  - name: Cartões Amarelos
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_yellow] )
+
+  - name: Cartões Vermelhos
+    folder: 5. Jogadores
+    format: "0"
+    expr: SUM ( fact_player_season[pl_red] ) + SUM ( fact_player_season[pl_second_yellow] )
+
+  - name: Participação nos Gols %
+    folder: 5. Jogadores
+    format: "0%"
+    description: Gols + assistências do jogador sobre os gols do time na Premier League.
+    expr: DIVIDE ( [G+A], [Gols Pró] )
+
+  - name: Jogadores Utilizados
+    folder: 5. Jogadores
+    format: "0"
+    expr: CALCULATE ( DISTINCTCOUNT ( fact_player_season[player_key] ), fact_player_season[pl_apps] > 0 )
+
+  - name: Artilheiro
+    folder: 5. Jogadores
+    expr: |
+      VAR _t =
+          TOPN (
+              1,
+              ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@g", [Gols (Jogador)] ),
+              [@g], DESC
+          )
+      RETURN
+          MAXX ( _t, dim_player[player_name] & " (" & [@g] & ")" )
+
+  - name: Líder em Assistências
+    folder: 5. Jogadores
+    expr: |
+      VAR _t =
+          TOPN (
+              1,
+              ADDCOLUMNS ( VALUES ( dim_player[player_name] ), "@a", [Assistências] ),
+              [@a], DESC
+          )
+      RETURN
+          MAXX ( _t, dim_player[player_name] & " (" & [@a] & ")" )
+
+  # ---------------------------------------------------------- Transferências
+  - name: Gasto
+    folder: 6. Transferências
+    format: £M
+    description: Soma das taxas pagas em libras (valores não divulgados ficam de fora).
+    expr: CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Chegada" )
+
+  - name: Receita
+    folder: 6. Transferências
+    format: £M
+    expr: CALCULATE ( SUM ( fact_transfers[fee_gbp] ), fact_transfers[direction] = "Saída" )
+
+  - name: Saldo de Transferências
+    folder: 6. Transferências
+    format: £M
+    description: Receita - Gasto. Positivo = o clube vendeu mais do que comprou.
+    expr: "[Receita] - [Gasto]"
+
+  - name: Chegadas
+    folder: 6. Transferências
+    format: "0"
+    expr: CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Chegada" )
+
+  - name: Saídas
+    folder: 6. Transferências
+    format: "0"
+    expr: CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[direction] = "Saída" )
+
+  - name: Contratações Pagas
+    folder: 6. Transferências
+    format: "0"
+    expr: |
+      CALCULATE (
+          COUNTROWS ( fact_transfers ),
+          fact_transfers[direction] = "Chegada",
+          fact_transfers[fee_type] = "Pago"
+      )
+
+  - name: Valores Não Divulgados
+    folder: 6. Transferências
+    format: "0"
+    description: Negócios sem valor público; não entram no Gasto nem na Receita.
+    expr: CALCULATE ( COUNTROWS ( fact_transfers ), fact_transfers[fee_type] = "Não divulgado" )
+
+  - name: Empréstimos Cedidos
+    folder: 6. Transferências
+    format: "0"
+    expr: |
+      CALCULATE (
+          COUNTROWS ( fact_transfers ),
+          fact_transfers[direction] = "Saída",
+          fact_transfers[movement] = "Empréstimo"
+      )
+
+  - name: Gasto Médio por Contratação
+    folder: 6. Transferências
+    format: £M
+    expr: DIVIDE ( [Gasto], [Contratações Pagas] )
+
+  - name: Maior Contratação
+    folder: 6. Transferências
+    expr: |
+      VAR _t =
+          TOPN (
+              1,
+              FILTER ( fact_transfers, fact_transfers[direction] = "Chegada" && fact_transfers[fee_gbp] > 0 ),
+              fact_transfers[fee_gbp], DESC
+          )
+      RETURN
+          MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+
+  - name: Maior Venda
+    folder: 6. Transferências
+    expr: |
+      VAR _t =
+          TOPN (
+              1,
+              FILTER ( fact_transfers, fact_transfers[direction] = "Saída" && fact_transfers[fee_gbp] > 0 ),
+              fact_transfers[fee_gbp], DESC
+          )
+      RETURN
+          MAXX ( _t, fact_transfers[player_name] & " • £" & FORMAT ( fact_transfers[fee_gbp] / 1000000, "0.0" ) & "M" )
+
+  # ------------------------------------------------------------ Textos e cores
+  - name: Título da Página
+    folder: 7. Textos e Cores
+    expr: '"Brighton & Hove Albion  •  " & SELECTEDVALUE ( dim_season[season_label], "Várias temporadas" )'
+
+  - name: Subtítulo da Rodada
+    folder: 7. Textos e Cores
+    expr: '"Premier League  •  após " & [Rodada Atual] & " rodadas  •  dados até " & FORMAT ( [Dados Até], "dd/mm/yyyy" )'
+
+  - name: Última Atualização
+    folder: 7. Textos e Cores
+    expr: '"Atualizado em " & CALCULATE ( MAX ( meta_refresh[last_refresh_utc] ), meta_refresh[source] = "pipeline" ) & " (UTC)"'
+
+  - name: Fonte dos Dados
+    folder: 7. Textos e Cores
+    description: Texto de atribuição exigido pela licença CC BY-SA da Wikipedia. Deixe visível no rodapé.
+    expr: '"Dados: Wikipedia (CC BY-SA 4.0) e openfootball (domínio público). Projeto sem afiliação com o clube ou a Premier League."'
+
+  - name: Cor do Resultado
+    folder: 7. Textos e Cores
+    description: Formatação condicional (Valor do campo) para resultados V/E/D.
+    expr: |
+      SWITCH (
+          SELECTEDVALUE ( fact_team_match[result_pt] ),
+          "V", "#2DA866",
+          "E", "#D99A00",
+          "D", "#D64545",
+          "#8A9AB0"
+      )
+
+  - name: Cor da Dificuldade
+    folder: 7. Textos e Cores
+    expr: |
+      SWITCH (
+          SELECTEDVALUE ( fact_fixtures[difficulty] ),
+          1, "#1E8E5A",
+          2, "#2DA866",
+          3, "#8A9AB0",
+          4, "#E8743B",
+          5, "#E53935",
+          "#8A9AB0"
+      )
+
+  - name: Cor do Saldo de Gols
+    folder: 7. Textos e Cores
+    expr: IF ( [Saldo de Gols] >= 0, "#2DA866", "#D64545" )
+
+  # --------------------------------------------------------------- Histórico
+  - name: Posição Final
+    folder: 8. Histórico
+    format: 0"º"
+    description: Na temporada atual mostra a posição parcial.
+    expr: |
+      VAR _s = MAX ( dim_season[season] )
+      RETURN
+          IF (
+              SELECTEDVALUE ( dim_season[is_current], FALSE () ),
+              CALCULATE ( [Posição Atual], dim_season[season] = _s ),
+              MAX ( dim_season[brighton_final_position] )
+          )

@@ -1,0 +1,189 @@
+player_key,player_name,position,nationality,first_season,last_season,position_group,wikipedia_url,played_for_club
+name:adam-desbois,Adam Desbois,GK,England,2022,2022,Goleiro,,False
+name:alfie-mansell,Alfie Mansell,GK,England,2025,2025,Goleiro,,False
+name:anton-palmer,Anton Palmer,MF,England,2025,2025,Meio-campo,,False
+name:ayo-tanimowo,Ayo Tanimowo,RB,England,2022,2022,Defensor,,False
+name:bailey-palmer,Bailey Palmer,MF,England,2025,2025,Meio-campo,,False
+name:bailey-smith,Bailey Smith,MF,England,2023,2024,Meio-campo,,False
+name:ben-jackson,Ben Jackson,DF,England,2023,2023,Defensor,,True
+name:ben-wilson,Ben Wilson,MF,Northern Ireland,2023,2023,Meio-campo,,False
+name:billie-clark,Billie Clark,MF,England,2023,2023,Meio-campo,,False
+name:billy-ray-cullinane,Billy-Ray Cullinane,LB,England,2026,2026,Defensor,,False
+name:brody-peart,Brody Peart,RW,England,2023,2024,Atacante,,False
+name:casey-shann,Casey Shann,DF,Slovakia,2023,2023,Defensor,,False
+name:charlie-penman,Charlie Penman,CB,England,2025,2026,Defensor,,False
+name:charlie-wilson-papps,Charlie Wilson-Papps,GK,England,2024,2024,Goleiro,,False
+name:eliot-jenks,Eliot Jenks,MF,England,2023,2023,Meio-campo,,False
+name:finley-taylor,Finley Taylor,GK,England,2026,2026,Goleiro,,False
+name:fynn-talley,Fynn Talley,GK,England,2022,2023,Goleiro,,False
+name:george-munday,George Munday,CF,England,2026,2026,Atacante,,False
+name:harry-lee,Harry Lee,DF,England,2025,2025,Defensor,,False
+name:harry-mills,Harry Mills,LWB,Cyprus,2026,2026,Defensor,,False
+name:hugo-fisher,Hugo Fisher,GK,England,2025,2025,Goleiro,,False
+name:jaami-qureshi,Jaami Qureshi,LW,England,2022,2022,Atacante,,False
+name:jacob-slater,Jacob Slater,LB,England,2023,2023,Defensor,,False
+name:jake-gee,Jake Gee,MF,England,2023,2023,Meio-campo,,False
+name:jaydon-fuller,Jaydon Fuller,MF,Wales,2024,2024,Meio-campo,,False
+name:joe-belmont,Joe Belmont,CF,Wales,2023,2026,Atacante,,False
+name:joe-knight,Joe Knight,MF,England,2025,2025,Meio-campo,,True
+name:joe-winstanley,Joe Winstanley,DF,England,2023,2023,Defensor,,False
+name:john-lucero,John Lucero,RB,England,2022,2022,Defensor,,False
+name:josh-robertson,Josh Robertson,CM,England,2023,2026,Meio-campo,,False
+name:killian-cahill,Killian Cahill,GK,Republic of Ireland,2022,2022,Goleiro,,False
+name:louis-flower,Louis Flower,FW,England,2023,2024,Atacante,,False
+name:marcus-ifill,Marcus Ifill,FW,England,2024,2024,Atacante,,False
+name:matt-everitt,Matt Everitt,MF,England,2023,2023,Meio-campo,,False
+name:matthew-hayden,Matthew Hayden,RB,England,2026,2026,Defensor,,False
+name:michael-dike,Michael Dike,GK,Republic of Ireland,2025,2026,Goleiro,,False
+name:oliver-mayer,Oliver Mayer,GK,England,2026,2026,Goleiro,,False
+name:player-s-who-featured-but-departed-the-club-on-loan-during-the-season,Player(s) who featured but departed the club on loan during the season:,Player(s) who featured but departed the club on loan during the season:,,2025,2025,,,True
+name:player-s-who-featured-but-departed-the-club-permanently-during-the-season,Player(s) who featured but departed the club permanently during the season:,Player(s) who featured but departed the club permanently during the season:,,2024,2024,,,True
+name:player-who-featured-but-departed-the-club-on-loan-during-the-season,Player who featured but departed the club on loan during the season:,Player who featured but departed the club on loan during the season:,,2026,2026,,,True
+name:player-who-featured-but-departed-the-club-permanently-during-the-season,Player who featured but departed the club permanently during the season:,Player who featured but departed the club permanently during the season:,,2025,2025,,,True
+name:remerio-moulton,Remerio Moulton,MF,England,2025,2025,Meio-campo,,False
+name:ronnie-gorman,Ronnie Gorman,MF,Republic of Ireland,2025,2025,Meio-campo,,False
+name:sahil-bashir,Sahil Bashir,MF,Pakistan,2025,2025,Meio-campo,,False
+name:sam-packham,Sam Packham,DF,England,2023,2023,Defensor,,False
+name:samy-chouchane,Samy Chouchane,MF,Tunisia,2023,2023,Meio-campo,,True
+name:sean-keogh,Sean Keogh,LB,Republic of Ireland,2025,2026,Defensor,,False
+name:sebastian-jensen,Sebastian Jensen,GK,Denmark,2024,2026,Goleiro,,False
+name:toby-bull,Toby Bull,GK,England,2023,2023,Goleiro,,False
+name:tommy-reid,Tommy Reid,GK,England,2024,2024,Goleiro,,False
+name:valentin-joseph,Valentin Joseph,CF,England,2026,2026,Atacante,,False
+name:will-rutter,Will Rutter,GK,England,2026,2026,Goleiro,,False
+name:yussif-owusu,Yussif Owusu,CDM,Ghana,2026,2026,Meio-campo,,False
+name:zane-albarus,Zane Albarus,CM,England,2026,2026,Meio-campo,,False
+wiki:Aaron_Connolly_(Irish_footballer),Aaron Connolly,FW,Republic of Ireland,2022,2023,Atacante,https://en.wikipedia.org/wiki/Aaron_Connolly_(Irish_footballer),False
+wiki:Abdallah_Sima,Abdallah Sima,RW,Senegal,2022,2025,Atacante,https://en.wikipedia.org/wiki/Abdallah_Sima,False
+wiki:Adam_Lallana,Adam Lallana,AM,England,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Adam_Lallana,True
+"wiki:Adam_Webster_(footballer,_born_1995)",Adam Webster,CB,England,2022,2026,Defensor,"https://en.wikipedia.org/wiki/Adam_Webster_(footballer,_born_1995)",True
+wiki:Adrian_Mazilu,Adrian Mazilu,MF,Romania,2023,2025,Meio-campo,https://en.wikipedia.org/wiki/Adrian_Mazilu,False
+wiki:Alex_Cochrane_(footballer),Alex Cochrane,LB,England,2022,2022,Defensor,https://en.wikipedia.org/wiki/Alex_Cochrane_(footballer),False
+wiki:Alexis_Mac_Allister,Alexis Mac Allister,CM,Argentina,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Alexis_Mac_Allister,True
+wiki:Amario_Cozier-Duberry,Amario Cozier-Duberry,MF,England,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Amario_Cozier-Duberry,True
+wiki:Andi_Zeqiri,Andi Zeqiri,CF,Switzerland,2022,2023,Atacante,https://en.wikipedia.org/wiki/Andi_Zeqiri,False
+wiki:Andrew_Moran,Andrew Moran,CAM,Republic of Ireland,2022,2025,Meio-campo,https://en.wikipedia.org/wiki/Andrew_Moran,True
+wiki:Ansu_Fati,Ansu Fati,LW,Spain,2023,2023,Atacante,https://en.wikipedia.org/wiki/Ansu_Fati,True
+wiki:Antef_Tsoungui,Antef Tsoungui,CB,Belgium,2022,2023,Defensor,https://en.wikipedia.org/wiki/Antef_Tsoungui,True
+wiki:Bart_Verbruggen,Bart Verbruggen,GK,Netherlands,2023,2026,Goleiro,https://en.wikipedia.org/wiki/Bart_Verbruggen,True
+wiki:Ben_Barclay,Ben Barclay,CB,England,2025,2025,Defensor,https://en.wikipedia.org/wiki/Ben_Barclay,False
+"wiki:Ben_Jackson_(footballer,_born_2003)",Ben Jackson,CB,England,2024,2025,Defensor,"https://en.wikipedia.org/wiki/Ben_Jackson_(footballer,_born_2003)",False
+wiki:Benicio_Baker-Boaitey,Benicio Baker-Boaitey,RW,England,2022,2024,Atacante,https://en.wikipedia.org/wiki/Benicio_Baker-Boaitey,True
+wiki:Billy_Gilmour,Billy Gilmour,CM,Scotland,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Billy_Gilmour,True
+wiki:Brajan_Gruda,Brajan Gruda,CAM,Germany,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Brajan_Gruda,True
+wiki:Cameron_Peupion,Cameron Peupion,AM,Australia,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Cameron_Peupion,True
+wiki:Carl_Rushworth,Carl Rushworth,GK,England,2022,2026,Goleiro,https://en.wikipedia.org/wiki/Carl_Rushworth,False
+wiki:Carlos_Baleba,Carlos Baleba,DM,Cameroon,2023,2026,Meio-campo,https://en.wikipedia.org/wiki/Carlos_Baleba,True
+wiki:Casper_Nilsson,Casper Nilsson,DF,Sweden,2024,2024,Defensor,https://en.wikipedia.org/wiki/Casper_Nilsson,False
+wiki:Caylan_Vickers,Caylan Vickers,LW,England,2023,2026,Atacante,https://en.wikipedia.org/wiki/Caylan_Vickers,False
+wiki:Charalampos_Kostoulas,Charalampos Kostoulas,FW,Greece,2025,2026,Atacante,https://en.wikipedia.org/wiki/Charalampos_Kostoulas,True
+wiki:Charlie_Tasker,Charlie Tasker,RB,England,2025,2026,Defensor,https://en.wikipedia.org/wiki/Charlie_Tasker,True
+wiki:Chema_Andrés,Chema Andrés,DM,Spain,2026,2026,Meio-campo,https://en.wikipedia.org/wiki/Chema_Andrés,True
+"wiki:Costinha_(footballer,_born_2000)",Costinha,DF,Portugal,2026,2026,Defensor,"https://en.wikipedia.org/wiki/Costinha_(footballer,_born_2000)",True
+wiki:Danny_Welbeck,Danny Welbeck,CF,England,2022,2026,Atacante,https://en.wikipedia.org/wiki/Danny_Welbeck,True
+wiki:Deniz_Undav,Deniz Undav,FW,Germany,2022,2024,Atacante,https://en.wikipedia.org/wiki/Deniz_Undav,True
+wiki:Diego_Coppola,Diego Coppola,CB,Italy,2025,2026,Defensor,https://en.wikipedia.org/wiki/Diego_Coppola,True
+wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,MF,Paraguay,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Diego_Gómez_(Paraguayan_footballer),True
+wiki:Ed_Turns,Ed Turns,CB,Wales,2022,2024,Defensor,https://en.wikipedia.org/wiki/Ed_Turns,True
+wiki:Eiran_Cashin,Eiran Cashin,CB,Republic of Ireland,2024,2026,Defensor,https://en.wikipedia.org/wiki/Eiran_Cashin,True
+wiki:Enock_Mwepu,Enock Mwepu,MF,Zambia,2022,2022,Meio-campo,https://en.wikipedia.org/wiki/Enock_Mwepu,True
+wiki:Evan_Ferguson,Evan Ferguson,CF,Republic of Ireland,2022,2025,Atacante,https://en.wikipedia.org/wiki/Evan_Ferguson,True
+wiki:Facundo_Buonanotte,Facundo Buonanotte,CAM,Argentina,2022,2026,Meio-campo,https://en.wikipedia.org/wiki/Facundo_Buonanotte,True
+wiki:Femi_Azeez,Femi Azeez,RW,Nigeria,2026,2026,Atacante,https://en.wikipedia.org/wiki/Femi_Azeez,False
+wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,DF,Turkey,2024,2026,Defensor,https://en.wikipedia.org/wiki/Ferdi_Kadıoğlu,True
+wiki:Florin_Andone,Florin Andone,CF,Romania,2022,2022,Atacante,https://en.wikipedia.org/wiki/Florin_Andone,True
+wiki:Freddie_Simmonds,Freddie Simmonds,CB,England,2026,2026,Defensor,https://en.wikipedia.org/wiki/Freddie_Simmonds,False
+wiki:Georginio_Rutter,Georginio Rutter,FW,France,2024,2026,Atacante,https://en.wikipedia.org/wiki/Georginio_Rutter,True
+wiki:Harry_Howell_(footballer),Harry Howell,AM,England,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Harry_Howell_(footballer),True
+wiki:Haydon_Roberts,Haydon Roberts,LB,England,2022,2023,Defensor,https://en.wikipedia.org/wiki/Haydon_Roberts,False
+"wiki:Ibrahim_Osman_(footballer,_born_2004)",Ibrahim Osman,MF,Ghana,2024,2026,Meio-campo,"https://en.wikipedia.org/wiki/Ibrahim_Osman_(footballer,_born_2004)",True
+wiki:Igor_Julio,Igor Julio,CB,Brazil,2023,2026,Defensor,https://en.wikipedia.org/wiki/Igor_Julio,True
+wiki:Imari_Samuels,Imari Samuels,LB,England,2022,2024,Defensor,https://en.wikipedia.org/wiki/Imari_Samuels,True
+wiki:Jack_Hinchy,Jack Hinchy,MF,England,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Jack_Hinchy,True
+wiki:Jack_Hinshelwood,Jack Hinshelwood,MF,England,2022,2026,Meio-campo,https://en.wikipedia.org/wiki/Jack_Hinshelwood,True
+wiki:Jack_Spong_(footballer),Jack Spong,MF,England,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Jack_Spong_(footballer),True
+wiki:Jacob_Slater,Jacob Slater,LB,Republic of Ireland,2025,2026,Defensor,https://en.wikipedia.org/wiki/Jacob_Slater,False
+wiki:Jakub_Moder,Jakub Moder,CM,Poland,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Jakub_Moder,True
+wiki:James_Beadle,James Beadle,GK,England,2022,2026,Goleiro,https://en.wikipedia.org/wiki/James_Beadle,False
+wiki:James_Furlong,James Furlong,LB,Republic of Ireland,2022,2023,Defensor,https://en.wikipedia.org/wiki/James_Furlong,True
+wiki:James_Milner,James Milner,CM,England,2023,2026,Meio-campo,https://en.wikipedia.org/wiki/James_Milner,True
+wiki:Jamie_Mullins,Jamie Mullins,MF,Republic of Ireland,2022,2025,Meio-campo,https://en.wikipedia.org/wiki/Jamie_Mullins,False
+wiki:Jan_Paul_van_Hecke,Jan Paul van Hecke,CB,Netherlands,2022,2026,Defensor,https://en.wikipedia.org/wiki/Jan_Paul_van_Hecke,True
+wiki:Jaouen_Hadjam,Jaouen Hadjam,DF,Algeria,2026,2026,Defensor,https://en.wikipedia.org/wiki/Jaouen_Hadjam,True
+wiki:Jason_Steele_(footballer),Jason Steele,GK,England,2022,2026,Goleiro,https://en.wikipedia.org/wiki/Jason_Steele_(footballer),True
+wiki:Jayson_Molumby,Jayson Molumby,CM,Republic of Ireland,2022,2022,Meio-campo,https://en.wikipedia.org/wiki/Jayson_Molumby,False
+wiki:Jensen_Weir,Jensen Weir,MF,England,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Jensen_Weir,True
+wiki:Jeremy_Sarmiento,Jeremy Sarmiento,LW,Ecuador,2022,2026,Atacante,https://en.wikipedia.org/wiki/Jeremy_Sarmiento,True
+wiki:Joshua_Duffus,Joshua Duffus,FW,Jamaica,2023,2025,Atacante,https://en.wikipedia.org/wiki/Joshua_Duffus,True
+"wiki:João_Pedro_(footballer,_born_2001)",João Pedro,CF,Brazil,2023,2025,Atacante,"https://en.wikipedia.org/wiki/João_Pedro_(footballer,_born_2001)",True
+wiki:Joël_Veltman,Joël Veltman,RB,Netherlands,2022,2026,Defensor,https://en.wikipedia.org/wiki/Joël_Veltman,True
+"wiki:Julio_Enciso_(footballer,_born_2004)",Julio Enciso,CAM,Paraguay,2022,2025,Meio-campo,"https://en.wikipedia.org/wiki/Julio_Enciso_(footballer,_born_2004)",True
+wiki:Kacper_Kozłowski_(footballer),Kacper Kozłowski,CM,Poland,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Kacper_Kozłowski_(footballer),False
+wiki:Kamari_Doyle,Kamari Doyle,AM,England,2023,2026,Meio-campo,https://en.wikipedia.org/wiki/Kamari_Doyle,False
+wiki:Kaoru_Mitoma,Kaoru Mitoma,MF,Japan,2022,2025,Meio-campo,https://en.wikipedia.org/wiki/Kaoru_Mitoma,True
+wiki:Killian_Cahill,Killian Cahill,GK,Republic of Ireland,2025,2025,Goleiro,https://en.wikipedia.org/wiki/Killian_Cahill,False
+wiki:Kjell_Scherpen,Kjell Scherpen,GK,Netherlands,2022,2025,Goleiro,https://en.wikipedia.org/wiki/Kjell_Scherpen,True
+wiki:Kofi_Shaw,Kofi Shaw,CAM,England,2025,2025,Meio-campo,https://en.wikipedia.org/wiki/Kofi_Shaw,False
+wiki:Lars_Dendoncker,Lars Dendoncker,CB,Belgium,2022,2022,Defensor,https://en.wikipedia.org/wiki/Lars_Dendoncker,False
+wiki:Leandro_Trossard,Leandro Trossard,FW,Belgium,2022,2022,Atacante,https://en.wikipedia.org/wiki/Leandro_Trossard,True
+wiki:Leigh_Kavanagh,Leigh Kavanagh,DF,Republic of Ireland,2022,2024,Defensor,https://en.wikipedia.org/wiki/Leigh_Kavanagh,True
+wiki:Leo_Skiri_Østigård,Leo Skiri Østigård,CB,Norway,2022,2022,Defensor,https://en.wikipedia.org/wiki/Leo_Skiri_Østigård,False
+wiki:Levi_Colwill,Levi Colwill,CB,England,2022,2022,Defensor,https://en.wikipedia.org/wiki/Levi_Colwill,True
+wiki:Lewis_Dunk,Lewis Dunk,DF,England,2022,2026,Defensor,https://en.wikipedia.org/wiki/Lewis_Dunk,True
+wiki:Lorent_Tolaj,Lorent Tolaj,FW,Switzerland,2022,2023,Atacante,https://en.wikipedia.org/wiki/Lorent_Tolaj,False
+wiki:Louis_Flower,Louis Flower,FW,England,2025,2025,Atacante,https://en.wikipedia.org/wiki/Louis_Flower,False
+wiki:Luca_Barrington,Luca Barrington,AM,England,2022,2025,Meio-campo,https://en.wikipedia.org/wiki/Luca_Barrington,True
+wiki:Luka_Vušković,Luka Vušković,DF,Croatia,2026,2026,Defensor,https://en.wikipedia.org/wiki/Luka_Vušković,True
+wiki:Mahmoud_Dahoud,Mahmoud Dahoud,CM,Syria,2023,2024,Meio-campo,https://en.wikipedia.org/wiki/Mahmoud_Dahoud,True
+wiki:Malick_Yalcouyé,Malick Yalcouyé,MF,Ivory Coast,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Malick_Yalcouyé,True
+wiki:Marc_Cucurella,Marc Cucurella,LB,Spain,2022,2022,Defensor,https://en.wikipedia.org/wiki/Marc_Cucurella,False
+wiki:Marc_Leonard,Marc Leonard,CM,Scotland,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Marc_Leonard,False
+wiki:Mark_O'Mahony,Mark O'Mahony,CF,Republic of Ireland,2022,2026,Atacante,https://en.wikipedia.org/wiki/Mark_O'Mahony,True
+wiki:Mats_Wieffer,Mats Wieffer,DF,Netherlands,2024,2026,Defensor,https://en.wikipedia.org/wiki/Mats_Wieffer,True
+wiki:Matt_O'Riley,Matt O'Riley,MF,Denmark,2024,2026,Meio-campo,https://en.wikipedia.org/wiki/Matt_O'Riley,True
+"wiki:Matthew_Clarke_(footballer,_born_1996)",Matthew Clarke,CB,England,2022,2022,Defensor,"https://en.wikipedia.org/wiki/Matthew_Clarke_(footballer,_born_1996)",True
+wiki:Matías_Orozco,Matías Orozco,DM,Colombia,2026,2026,Meio-campo,https://en.wikipedia.org/wiki/Matías_Orozco,False
+wiki:Maxim_De_Cuyper,Maxim De Cuyper,DF,Belgium,2025,2026,Defensor,https://en.wikipedia.org/wiki/Maxim_De_Cuyper,True
+wiki:Michael_Svoboda,Michael Svoboda,DF,Austria,2026,2026,Defensor,https://en.wikipedia.org/wiki/Michael_Svoboda,True
+wiki:Michał_Karbownik,Michał Karbownik,LB,Poland,2022,2023,Defensor,https://en.wikipedia.org/wiki/Michał_Karbownik,False
+wiki:Moisés_Caicedo,Moisés Caicedo,DM,Ecuador,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Moisés_Caicedo,True
+wiki:Neal_Maupay,Neal Maupay,CF,France,2022,2022,Atacante,https://en.wikipedia.org/wiki/Neal_Maupay,True
+wiki:Nehemiah_Oriola,Nehemiah Oriola,MF,Nigeria,2025,2025,Meio-campo,https://en.wikipedia.org/wiki/Nehemiah_Oriola,True
+wiki:Nils_Ramming,Nils Ramming,GK,Sweden,2025,2026,Goleiro,https://en.wikipedia.org/wiki/Nils_Ramming,False
+wiki:Noël_Atom,Noël Atom,CB,Germany,2023,2026,Defensor,https://en.wikipedia.org/wiki/Noël_Atom,True
+wiki:Odel_Offiah,Odel Offiah,DF,England,2024,2024,Defensor,https://en.wikipedia.org/wiki/Odel_Offiah,True
+wiki:Odeluga_Offiah,Odeluga Offiah,RB,England,2022,2025,Defensor,https://en.wikipedia.org/wiki/Odeluga_Offiah,True
+wiki:Olivier_Boscagli,Olivier Boscagli,DF,France,2025,2026,Defensor,https://en.wikipedia.org/wiki/Olivier_Boscagli,True
+wiki:Pascal_Groß,Pascal Groß,MF,Germany,2022,2026,Meio-campo,https://en.wikipedia.org/wiki/Pascal_Groß,True
+wiki:Pascal_Struijk,Pascal Struijk,DF,Netherlands,2026,2026,Defensor,https://en.wikipedia.org/wiki/Pascal_Struijk,True
+wiki:Pervis_Estupiñán,Pervis Estupiñán,LB,Ecuador,2022,2025,Defensor,https://en.wikipedia.org/wiki/Pervis_Estupiñán,True
+wiki:Promise_David,Promise David,FW,Canada,2026,2026,Atacante,https://en.wikipedia.org/wiki/Promise_David,True
+wiki:Reda_Khadra,Reda Khadra,MF,Germany,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Reda_Khadra,False
+wiki:Robert_Sánchez,Robert Sánchez,GK,Spain,2022,2023,Goleiro,https://en.wikipedia.org/wiki/Robert_Sánchez,True
+"wiki:Rodrigo_Rêgo_(footballer,_born_2005)",Rodrigo Rêgo,RW,Portugal,2026,2026,Atacante,"https://en.wikipedia.org/wiki/Rodrigo_Rêgo_(footballer,_born_2005)",False
+wiki:Ruairi_McConville,Ruairi McConville,CB,Northern Ireland,2024,2024,Defensor,https://en.wikipedia.org/wiki/Ruairi_McConville,True
+wiki:Samy_Chouchane,Samy Chouchane,MF,Tunisia,2024,2025,Meio-campo,https://en.wikipedia.org/wiki/Samy_Chouchane,False
+wiki:Shane_Duffy,Shane Duffy,CB,Republic of Ireland,2022,2022,Defensor,https://en.wikipedia.org/wiki/Shane_Duffy,True
+wiki:Simon_Adingra,Simon Adingra,LW,Ivory Coast,2022,2025,Atacante,https://en.wikipedia.org/wiki/Simon_Adingra,True
+wiki:Solly_March,Solly March,RW,England,2022,2026,Atacante,https://en.wikipedia.org/wiki/Solly_March,True
+wiki:Stefanos_Tzimas,Stefanos Tzimas,FW,Greece,2024,2025,Atacante,https://en.wikipedia.org/wiki/Stefanos_Tzimas,True
+wiki:Steven_Alzate,Steven Alzate,CM,Colombia,2022,2024,Meio-campo,https://en.wikipedia.org/wiki/Steven_Alzate,True
+wiki:Steven_Hall_(soccer),Steven Hall,GK,Australia,2023,2023,Goleiro,https://en.wikipedia.org/wiki/Steven_Hall_(soccer),False
+wiki:Tariq_Lamptey,Tariq Lamptey,RB,Ghana,2022,2025,Defensor,https://en.wikipedia.org/wiki/Tariq_Lamptey,True
+wiki:Taylor_Richards,Taylor Richards,CM,England,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Taylor_Richards,False
+wiki:Teddy_Jenks,Teddy Jenks,MF,England,2022,2023,Meio-campo,https://en.wikipedia.org/wiki/Teddy_Jenks,False
+wiki:Todd_Miller_(footballer),Todd Miller,RW,England,2022,2023,Atacante,https://en.wikipedia.org/wiki/Todd_Miller_(footballer),False
+wiki:Tom_McGill,Tom McGill,GK,Canada,2022,2024,Goleiro,https://en.wikipedia.org/wiki/Tom_McGill,True
+"wiki:Tom_Watson_(footballer,_born_2006)",Tom Watson,MF,England,2025,2025,Meio-campo,"https://en.wikipedia.org/wiki/Tom_Watson_(footballer,_born_2006)",True
+"wiki:Tommy_Watson_(footballer,_born_2006)",Tommy Watson,LW,England,2026,2026,Atacante,"https://en.wikipedia.org/wiki/Tommy_Watson_(footballer,_born_2006)",False
+wiki:Tudor_Băluță,Tudor Băluță,DM,Romania,2022,2022,Meio-campo,https://en.wikipedia.org/wiki/Tudor_Băluță,False
+wiki:Ulrick_Eneme_Ella,Ulrick Eneme Ella,CF,Gabon,2022,2022,Atacante,https://en.wikipedia.org/wiki/Ulrick_Eneme_Ella,False
+wiki:Valentín_Barco,Valentín Barco,LB,Argentina,2023,2025,Defensor,https://en.wikipedia.org/wiki/Valentín_Barco,True
+wiki:Yankuba_Minteh,Yankuba Minteh,MF,The Gambia,2024,2025,Meio-campo,https://en.wikipedia.org/wiki/Yankuba_Minteh,True
+wiki:Yasin_Ayari,Yasin Ayari,MF,Sweden,2022,2026,Meio-campo,https://en.wikipedia.org/wiki/Yasin_Ayari,True
+wiki:Yoon_Do-young,Yoon Do-young,RW,South Korea,2025,2026,Atacante,https://en.wikipedia.org/wiki/Yoon_Do-young,False
+wiki:Younes_Ibrahim,Younes Ibrahim,MF,Egypt,2026,2026,Meio-campo,https://en.wikipedia.org/wiki/Younes_Ibrahim,True
+wiki:Yves_Bissouma,Yves Bissouma,DM,Mali,2022,2022,Meio-campo,https://en.wikipedia.org/wiki/Yves_Bissouma,False
+wiki:Zadok_Yohanna,Zadok Yohanna,MF,Nigeria,2026,2026,Meio-campo,https://en.wikipedia.org/wiki/Zadok_Yohanna,True
+wiki:Zak_Emmerson,Zak Emmerson,CF,England,2022,2022,Atacante,https://en.wikipedia.org/wiki/Zak_Emmerson,False
+wiki:Zak_Sturge,Zak Sturge,LB,England,2022,2022,Defensor,https://en.wikipedia.org/wiki/Zak_Sturge,False

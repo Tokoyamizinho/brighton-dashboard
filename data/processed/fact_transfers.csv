@@ -1,0 +1,317 @@
+season,date,window,direction,movement,squad_group,player_name,player_key,position,nationality,other_club,retired,loan_until,fee_text,fee_type,fee_gbp,season_label,position_group,fee_gbp_signed,is_first_team
+2022,2022-06-17,Verão,Chegada,Transferência,First Team,Julio Enciso,"wiki:Julio_Enciso_(footballer,_born_2004)",CF,Paraguay,Libertad,False,,"£9,500,000",Pago,9500000.0,2022/23,Atacante,-9500000.0,True
+2022,2022-06-20,Verão,Chegada,Transferência,U21s,Benicio Baker-Boaitey,wiki:Benicio_Baker-Boaitey,LW,England,FC Porto,False,,Undisclosed,Não divulgado,,2022/23,Atacante,,False
+2022,2022-06-24,Verão,Chegada,Transferência,U21s,Simon Adingra,wiki:Simon_Adingra,LW,Ivory Coast,FC Nordsjælland,False,,"£6,900,000",Pago,6900000.0,2022/23,Atacante,-6900000.0,False
+2022,2022-08-05,Verão,Chegada,Transferência,U21s,Imari Samuels,wiki:Imari_Samuels,LB,England,Reading,False,,Free Transfer,Grátis,0.0,2022/23,Defensor,-0.0,False
+2022,2022-08-12,Verão,Chegada,Transferência,U18s,Luca Barrington,wiki:Luca_Barrington,MF,England,Manchester City,False,,Undisclosed,Não divulgado,,2022/23,Meio-campo,,True
+2022,2022-08-16,Verão,Chegada,Transferência,First Team,Pervis Estupiñán,wiki:Pervis_Estupiñán,LB,Ecuador,Villarreal,False,,"£14,900,000",Pago,14900000.0,2022/23,Defensor,-14900000.0,True
+2022,2022-09-01,Verão,Chegada,Transferência,First Team,Billy Gilmour,wiki:Billy_Gilmour,MF,Scotland,Chelsea,False,,"£9,000,000",Pago,9000000.0,2022/23,Meio-campo,-9000000.0,True
+2022,2023-01-04,Inverno,Chegada,Transferência,U21s,Jamie Mullins,wiki:Jamie_Mullins,AM,Republic of Ireland,Bohemian,False,,Undisclosed,Não divulgado,,2022/23,Meio-campo,,False
+2022,2023-01-13,Inverno,Chegada,Transferência,U21s,Facundo Buonanotte,wiki:Facundo_Buonanotte,AM,Argentina,Rosario Central,False,,"£5,300,000",Pago,5300000.0,2022/23,Meio-campo,-5300000.0,False
+2022,2023-01-26,Inverno,Chegada,Transferência,U21s,Mark O'Mahony,wiki:Mark_O'Mahony,CF,Republic of Ireland,Cork City,False,,Free Transfer,Grátis,0.0,2022/23,Atacante,-0.0,False
+2022,2023-01-30,Inverno,Chegada,Transferência,First Team,Yasin Ayari,wiki:Yasin_Ayari,MF,Sweden,AIK,False,,"£3,500,000",Pago,3500000.0,2022/23,Meio-campo,-3500000.0,True
+2022,2022-06-10,Verão,Saída,Transferência,First Team,Jayson Molumby,wiki:Jayson_Molumby,CM,Republic of Ireland,West Bromwich Albion,False,,"£900,000",Pago,900000.0,2022/23,Meio-campo,900000.0,True
+2022,2022-06-17,Verão,Saída,Transferência,First Team,Yves Bissouma,wiki:Yves_Bissouma,DM,Mali,Tottenham Hotspur,False,,"£25,000,000",Pago,25000000.0,2022/23,Meio-campo,25000000.0,True
+2022,2022-06-25,Verão,Saída,Transferência,U21s,Alex Cochrane,wiki:Alex_Cochrane_(footballer),LB,England,Heart of Midlothian,False,,Undisclosed,Não divulgado,,2022/23,Defensor,,False
+2022,2022-06-30,Verão,Saída,Transferência,U21s,Tudor Băluță,wiki:Tudor_Băluță,DM,Romania,Farul Constanța,False,,Released,Fim de contrato,0.0,2022/23,Meio-campo,0.0,False
+2022,2022-06-30,Verão,Saída,Transferência,U21s,Lars Dendoncker,wiki:Lars_Dendoncker,CB,Belgium,Unattached,False,,Released,Fim de contrato,0.0,2022/23,Defensor,0.0,False
+2022,2022-06-30,Verão,Saída,Transferência,U21s,Adam Desbois,name:adam-desbois,GK,England,Hartley Wintney,False,,Released,Fim de contrato,0.0,2022/23,Goleiro,0.0,False
+2022,2022-06-30,Verão,Saída,Transferência,U21s,Ulrick Eneme Ella,wiki:Ulrick_Eneme_Ella,CF,Gabon,Angers,False,,Released,Fim de contrato,0.0,2022/23,Atacante,0.0,False
+2022,2022-06-30,Verão,Saída,Transferência,U18s,John Lucero,name:john-lucero,RB,England,Worthing,False,,Released,Fim de contrato,0.0,2022/23,Defensor,0.0,True
+2022,2022-06-30,Verão,Saída,Transferência,U18s,Jaami Qureshi,name:jaami-qureshi,LW,England,Unattached,False,,Released,Fim de contrato,0.0,2022/23,Atacante,0.0,True
+2022,2022-06-30,Verão,Saída,Transferência,U21s,Ayo Tanimowo,name:ayo-tanimowo,RB,England,Unattached,False,,Released,Fim de contrato,0.0,2022/23,Defensor,0.0,False
+2022,2022-07-18,Verão,Saída,Transferência,First Team,Leo Skiri Østigård,wiki:Leo_Skiri_Østigård,CB,Norway,Napoli,False,,"£4,200,000",Pago,4200000.0,2022/23,Defensor,4200000.0,True
+2022,2022-08-04,Verão,Saída,Transferência,U21s,Zak Sturge,wiki:Zak_Sturge,LB,England,Chelsea,False,,Undisclosed,Não divulgado,,2022/23,Defensor,,False
+2022,2022-08-05,Verão,Saída,Transferência,First Team,Marc Cucurella,wiki:Marc_Cucurella,LB,Spain,Chelsea,False,,"£56,000,000",Pago,56000000.0,2022/23,Defensor,56000000.0,True
+2022,2022-08-25,Verão,Saída,Transferência,First Team,Matthew Clarke,"wiki:Matthew_Clarke_(footballer,_born_1996)",CB,England,Middlesbrough,False,,"£3,500,000",Pago,3500000.0,2022/23,Defensor,3500000.0,True
+2022,2022-08-26,Verão,Saída,Transferência,First Team,Neal Maupay,wiki:Neal_Maupay,CF,France,Everton,False,,"£15,000,000",Pago,15000000.0,2022/23,Atacante,15000000.0,True
+2022,2022-09-01,Verão,Saída,Transferência,First Team,Florin Andone,wiki:Florin_Andone,CF,Romania,UD Las Palmas,False,,Released,Fim de contrato,0.0,2022/23,Atacante,0.0,True
+2022,2022-09-01,Verão,Saída,Transferência,U18s,Zak Emmerson,wiki:Zak_Emmerson,CF,England,Blackpool,False,,Undisclosed,Não divulgado,,2022/23,Atacante,,True
+2022,2022-10-10,Fora da janela,Saída,Transferência,First Team,Enock Mwepu,wiki:Enock_Mwepu,MF,Zambia,,True,,Retired,Fim de contrato,0.0,2022/23,Meio-campo,0.0,True
+2022,2023-01-20,Inverno,Saída,Transferência,First Team,Leandro Trossard,wiki:Leandro_Trossard,MF,Belgium,Arsenal,False,,"£21,000,000",Pago,21000000.0,2022/23,Meio-campo,21000000.0,True
+2022,2023-01-31,Inverno,Saída,Transferência,First Team,Shane Duffy,wiki:Shane_Duffy,CB,Republic of Ireland,Fulham,False,,Undisclosed,Não divulgado,,2022/23,Defensor,,True
+2022,2022-08-05,Verão,Chegada,Empréstimo,First Team,Levi Colwill,wiki:Levi_Colwill,CB,England,Chelsea,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,-0.0,True
+2022,2022-06-13,Verão,Saída,Empréstimo,U21s,Fynn Talley,name:fynn-talley,GK,England,Cliftonville,False,End of Season,Loan,Empréstimo,0.0,2022/23,Goleiro,0.0,False
+2022,2022-07-04,Verão,Saída,Empréstimo,U21s,Simon Adingra,wiki:Simon_Adingra,LW,Ivory Coast,Royale Union Saint-Gilloise,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2022-07-08,Verão,Saída,Empréstimo,U21s,Carl Rushworth,wiki:Carl_Rushworth,GK,England,Lincoln City,False,End of Season,Loan,Empréstimo,0.0,2022/23,Goleiro,0.0,False
+2022,2022-07-09,Verão,Saída,Empréstimo,U21s,Haydon Roberts,wiki:Haydon_Roberts,CB,England,Derby County,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,False
+2022,2022-07-13,Verão,Saída,Empréstimo,U21s,Abdallah Sima,wiki:Abdallah_Sima,RW,Senegal,Angers,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2022-07-14,Verão,Saída,Empréstimo,First Team,Aaron Connolly,wiki:Aaron_Connolly_(Irish_footballer),CF,Republic of Ireland,Venezia,False,6 January 2023,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,True
+2022,2022-07-22,Verão,Saída,Empréstimo,First Team,Taylor Richards,wiki:Taylor_Richards,AM,England,Queens Park Rangers,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,True
+2022,2022-07-25,Verão,Saída,Empréstimo,U21s,Marc Leonard,wiki:Marc_Leonard,CM,Scotland,Northampton Town,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2022-07-25,Verão,Saída,Empréstimo,U21s,Jensen Weir,wiki:Jensen_Weir,DM,England,Morecambe,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2022-07-26,Verão,Saída,Empréstimo,U21s,Reda Khadra,wiki:Reda_Khadra,SS,Germany,Sheffield United,False,10 January 2023,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2022-07-29,Verão,Saída,Empréstimo,U21s,Teddy Jenks,wiki:Teddy_Jenks,AM,England,Crawley Town,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2022-08-02,Verão,Saída,Empréstimo,First Team,Andi Zeqiri,wiki:Andi_Zeqiri,CF,Switzerland,Basel,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,True
+2022,2022-08-04,Verão,Saída,Empréstimo,First Team,Michał Karbownik,wiki:Michał_Karbownik,RB,Poland,Fortuna Düsseldorf,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,True
+2022,2022-08-05,Verão,Saída,Empréstimo,First Team,Shane Duffy,wiki:Shane_Duffy,CB,Republic of Ireland,Fulham,False,31 January 2023,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,True
+2022,2022-08-16,Verão,Saída,Empréstimo,First Team,Kjell Scherpen,wiki:Kjell_Scherpen,GK,Netherlands,Vitesse,False,End of Season,Loan,Empréstimo,0.0,2022/23,Goleiro,0.0,True
+2022,2022-08-23,Verão,Saída,Empréstimo,U21s,Lorent Tolaj,wiki:Lorent_Tolaj,CF,Switzerland,Salford City,False,31 January 2023,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2022-08-25,Verão,Saída,Empréstimo,U21s,Kacper Kozłowski,wiki:Kacper_Kozłowski_(footballer),CM,Poland,Vitesse,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2022-09-01,Verão,Saída,Empréstimo,U21s,Leigh Kavanagh,wiki:Leigh_Kavanagh,LB,Republic of Ireland,Derby County,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,False
+2022,2022-09-09,Verão,Saída,Empréstimo,First Team,Steven Alzate,wiki:Steven_Alzate,DM,Colombia,Standard Liège,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,True
+2022,2023-01-02,Inverno,Saída,Empréstimo,U21s,Killian Cahill,name:killian-cahill,GK,Republic of Ireland,Bognor Regis Town,False,End of Season,Loan,Empréstimo,0.0,2022/23,Goleiro,0.0,False
+2022,2023-01-06,Inverno,Saída,Empréstimo,First Team,Aaron Connolly,wiki:Aaron_Connolly_(Irish_footballer),CF,Republic of Ireland,Hull City,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,True
+2022,2023-01-10,Inverno,Saída,Empréstimo,U21s,Reda Khadra,wiki:Reda_Khadra,AM,Germany,Birmingham City,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2023-01-13,Inverno,Saída,Empréstimo,U21s,Todd Miller,wiki:Todd_Miller_(footballer),RW,England,Doncaster Rovers,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2023-01-13,Inverno,Saída,Empréstimo,U21s,Ed Turns,wiki:Ed_Turns,CB,Wales,Leyton Orient,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,False
+2022,2023-01-18,Inverno,Saída,Empréstimo,U21s,James Beadle,wiki:James_Beadle,GK,England,Crewe Alexandra,False,End of season,Loan,Empréstimo,0.0,2022/23,Goleiro,0.0,False
+2022,2023-01-31,Inverno,Saída,Empréstimo,U21s,James Furlong,wiki:James_Furlong,LB,Republic of Ireland,Motherwell,False,End of Season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,False
+2022,2023-01-31,Inverno,Saída,Empréstimo,U21s,Jack Spong,wiki:Jack_Spong_(footballer),CM,England,Crawley Town,False,End of Season,Loan,Empréstimo,0.0,2022/23,Meio-campo,0.0,False
+2022,2023-01-31,Inverno,Saída,Empréstimo,U21s,Lorent Tolaj,wiki:Lorent_Tolaj,CF,Switzerland,Dundee,False,End of Season,Loan,Empréstimo,0.0,2022/23,Atacante,0.0,False
+2022,2023-01-31,Inverno,Saída,Empréstimo,U21s,Antef Tsoungui,wiki:Antef_Tsoungui,CB,Belgium,Lommel,False,End of season,Loan,Empréstimo,0.0,2022/23,Defensor,0.0,False
+2023,2023-06-14,Verão,Chegada,Transferência,First team,João Pedro,"wiki:João_Pedro_(footballer,_born_2001)",CF,Brazil,Watford,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,True
+2023,2023-07-01,Verão,Chegada,Transferência,First team,Mahmoud Dahoud,wiki:Mahmoud_Dahoud,CM,Germany,Borussia Dortmund,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,-0.0,True
+2023,2023-07-01,Verão,Chegada,Transferência,First team,James Milner,wiki:James_Milner,CM,England,Liverpool,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,-0.0,True
+2023,2023-07-03,Verão,Chegada,Transferência,First team,Bart Verbruggen,wiki:Bart_Verbruggen,GK,Netherlands,Anderlecht,False,,"£16,300,000",Pago,16300000.0,2023/24,Goleiro,-16300000.0,True
+2023,2023-07-05,Verão,Chegada,Transferência,Under-18s,Joe Belmont,name:joe-belmont,FW,Wales,Liverpool U18s,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,False
+2023,2023-07-21,Verão,Chegada,Transferência,Under-21s,Brody Peart,name:brody-peart,FW,England,Basingstoke Town,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,False
+2023,2023-07-26,Verão,Chegada,Transferência,First Team,Igor Julio,wiki:Igor_Julio,CB,Brazil,Fiorentina,False,,Undisclosed,Não divulgado,,2023/24,Defensor,,True
+2023,2023-07-29,Verão,Chegada,Transferência,Under-21s,Jacob Slater,name:jacob-slater,LB,England,Preston North End,False,,Undisclosed,Não divulgado,,2023/24,Defensor,,False
+2023,2023-08-11,Verão,Chegada,Transferência,Under-21s,Noël Atom,wiki:Noël_Atom,CB,Germany,RB Leipzig,False,,Undisclosed,Não divulgado,,2023/24,Defensor,,False
+2023,2023-08-29,Verão,Chegada,Transferência,First Team,Carlos Baleba,wiki:Carlos_Baleba,CM,Cameroon,Lille,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,True
+2023,2023-09-01,Verão,Chegada,Transferência,Under-21s,Louis Flower,name:louis-flower,FW,England,Chelsea,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,False
+2023,2024-01-20,Inverno,Chegada,Transferência,First Team,Valentín Barco,wiki:Valentín_Barco,LB,Argentina,Boca Juniors,False,,"£7,870,000",Pago,7870000.0,2023/24,Defensor,-7870000.0,True
+2023,2024-01-26,Inverno,Chegada,Transferência,Under-21s,Steven Hall,wiki:Steven_Hall_(soccer),GK,Australia,Adelaide United,False,,Undisclosed,Não divulgado,,2023/24,Goleiro,,False
+2023,2024-01-26,Inverno,Chegada,Transferência,Under-21s,Kamari Doyle,wiki:Kamari_Doyle,MF,England,Southampton,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,False
+2023,2024-02-01,Inverno,Chegada,Transferência,Under-21s,Josh Robertson,name:josh-robertson,AM,England,Sunderland,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,False
+2023,2024-02-01,Inverno,Chegada,Transferência,Under-21s,Caylan Vickers,wiki:Caylan_Vickers,AM,England,Reading,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,False
+2023,2023-06-14,Verão,Saída,Transferência,First team,Alexis Mac Allister,wiki:Alexis_Mac_Allister,CM,Argentina,Liverpool,False,,"£55,000,000",Pago,55000000.0,2023/24,Meio-campo,55000000.0,True
+2023,2023-06-14,Verão,Saída,Transferência,Under-21s,Taylor Richards,wiki:Taylor_Richards,CM,England,Queens Park Rangers,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Toby Bull,name:toby-bull,GK,England,Eastbourne Town,False,,Free transfer,Grátis,0.0,2023/24,Goleiro,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Billie Clark,name:billie-clark,MF,England,Reading,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Matt Everitt,name:matt-everitt,MF,England,Dorking Wanderers,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-18s,Jake Gee,name:jake-gee,MF,England,,False,,Released,Fim de contrato,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-18s,Eliot Jenks,name:eliot-jenks,MF,England,Lancing,False,,Released,Fim de contrato,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Teddy Jenks,wiki:Teddy_Jenks,MF,England,Forest Green Rovers,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Todd Miller,wiki:Todd_Miller_(footballer),RW,England,Bromley,False,,Free transfer,Grátis,0.0,2023/24,Atacante,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Sam Packham,name:sam-packham,DF,England,,False,,Released,Fim de contrato,0.0,2023/24,Defensor,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Haydon Roberts,wiki:Haydon_Roberts,LB,England,Bristol City,False,,Free transfer,Grátis,0.0,2023/24,Defensor,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Casey Shann,name:casey-shann,DF,Slovakia,Queens Park Rangers,False,,Released,Fim de contrato,0.0,2023/24,Defensor,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Jack Spong,wiki:Jack_Spong_(footballer),MF,England,Queens Park,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Fynn Talley,name:fynn-talley,GK,England,Peterborough United,False,,Free transfer,Grátis,0.0,2023/24,Goleiro,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Lorent Tolaj,wiki:Lorent_Tolaj,FW,Switzerland,Aldershot Town,False,,Free transfer,Grátis,0.0,2023/24,Atacante,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Antef Tsoungui,wiki:Antef_Tsoungui,CB,Belgium,Feyenoord,False,,Free transfer,Grátis,0.0,2023/24,Defensor,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-21s,Ben Wilson,name:ben-wilson,MF,Northern Ireland,Cliftonville,False,,Free transfer,Grátis,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-06-30,Verão,Saída,Transferência,Under-18s,Joe Winstanley,name:joe-winstanley,DF,England,,False,,Released,Fim de contrato,0.0,2023/24,Defensor,0.0,False
+2023,2023-07-21,Verão,Saída,Transferência,Under-21s,Reda Khadra,wiki:Reda_Khadra,MF,Germany,Reims,False,,Undisclosed,Não divulgado,,2023/24,Meio-campo,,False
+2023,2023-08-02,Verão,Saída,Transferência,First Team,Aaron Connolly,wiki:Aaron_Connolly_(Irish_footballer),FW,Republic of Ireland,Hull City,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,True
+2023,2023-08-05,Verão,Saída,Transferência,First Team,Robert Sánchez,wiki:Robert_Sánchez,GK,Spain,Chelsea,False,,"£25,000,000+",Pago,25000000.0,2023/24,Goleiro,25000000.0,True
+2023,2023-08-08,Verão,Saída,Transferência,First Team,Michał Karbownik,wiki:Michał_Karbownik,LB,Poland,Hertha BSC,False,,Undisclosed,Não divulgado,,2023/24,Defensor,,True
+2023,2023-08-14,Verão,Saída,Transferência,First Team,Moisés Caicedo,wiki:Moisés_Caicedo,DM,Ecuador,Chelsea,False,,"£100,000,000+",Pago,100000000.0,2023/24,Meio-campo,100000000.0,True
+2023,2023-09-01,Verão,Saída,Transferência,Under-21s,James Furlong,wiki:James_Furlong,LB,Republic of Ireland,Hull City,False,,Undisclosed,Não divulgado,,2023/24,Defensor,,False
+2023,2023-09-05,Verão,Saída,Transferência,First Team,Andi Zeqiri,wiki:Andi_Zeqiri,CF,Switzerland,Genk,False,,Undisclosed,Não divulgado,,2023/24,Atacante,,True
+2023,2023-09-01,Verão,Chegada,Empréstimo,First Team,Ansu Fati,wiki:Ansu_Fati,LW,Spain,Barcelona,False,,Loan,Empréstimo,0.0,2023/24,Atacante,-0.0,True
+2023,2023-07-01,Verão,Saída,Empréstimo,Under-21s,James Beadle,wiki:James_Beadle,GK,England,Oxford United,False,,Loan,Empréstimo,0.0,2023/24,Goleiro,0.0,False
+2023,2023-07-01,Verão,Saída,Empréstimo,Under-21s,Abdallah Sima,wiki:Abdallah_Sima,RW,Senegal,Rangers,False,,Loan,Empréstimo,0.0,2023/24,Atacante,0.0,False
+2023,2023-07-06,Verão,Saída,Empréstimo,First Team,Kjell Scherpen,wiki:Kjell_Scherpen,GK,Netherlands,Sturm Graz,False,,Loan,Empréstimo,0.0,2023/24,Goleiro,0.0,True
+2023,2023-07-18,Verão,Saída,Empréstimo,First team,Kacper Kozłowski,wiki:Kacper_Kozłowski_(footballer),CM,Poland,Vitesse,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2023-07-25,Verão,Saída,Empréstimo,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,AM,Ecuador,West Bromwich Albion,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2023-07-29,Verão,Saída,Empréstimo,Under-21s,Marc Leonard,wiki:Marc_Leonard,CM,Scotland,Northampton Town,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-07-31,Verão,Saída,Empréstimo,Under-21s,Carl Rushworth,wiki:Carl_Rushworth,GK,England,Swansea City,False,,Loan,Empréstimo,0.0,2023/24,Goleiro,0.0,False
+2023,2023-08-01,Verão,Saída,Empréstimo,Under-21s,Ed Turns,wiki:Ed_Turns,CB,Wales,Leyton Orient,False,,Loan,Empréstimo,0.0,2023/24,Defensor,0.0,False
+2023,2023-08-02,Verão,Saída,Empréstimo,First team,Deniz Undav,wiki:Deniz_Undav,CF,Germany,Stuttgart,False,,Loan,Empréstimo,0.0,2023/24,Atacante,0.0,True
+2023,2023-08-11,Verão,Saída,Empréstimo,Under-21s,Jensen Weir,wiki:Jensen_Weir,CM,England,Blackpool,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-08-18,Verão,Saída,Empréstimo,Under-21s,Odeluga Offiah,wiki:Odeluga_Offiah,CB,England,Heart of Midlothian,False,,Loan,Empréstimo,0.0,2023/24,Defensor,0.0,False
+2023,2023-08-21,Verão,Saída,Empréstimo,First team,Yasin Ayari,wiki:Yasin_Ayari,CM,Sweden,Coventry City,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2023-08-26,Verão,Saída,Empréstimo,Under-21s,Andrew Moran,wiki:Andrew_Moran,AM,Republic of Ireland,Blackburn Rovers,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-08-29,Verão,Saída,Empréstimo,Under-21s,Cameron Peupion,wiki:Cameron_Peupion,AM,Australia,Cheltenham Town,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2023-09-01,Verão,Saída,Empréstimo,Under-18s,Bailey Smith,name:bailey-smith,FW,England,Worthing,False,,Loan,Empréstimo,0.0,2023/24,Atacante,0.0,False
+2023,2023-09-06,Verão,Saída,Empréstimo,First team,Steven Alzate,wiki:Steven_Alzate,CM,Colombia,Standard Liège,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2024-01-03,Inverno,Saída,Empréstimo,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,AM,Ecuador,Ipswich Town,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2024-01-05,Inverno,Saída,Empréstimo,First team,Yasin Ayari,wiki:Yasin_Ayari,CM,Sweden,Blackburn Rovers,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2024-01-08,Inverno,Saída,Empréstimo,Under-21s,James Beadle,wiki:James_Beadle,GK,England,Sheffield Wednesday,False,,Loan,Empréstimo,0.0,2023/24,Goleiro,0.0,False
+2023,2024-01-09,Inverno,Saída,Empréstimo,Under-21s,Jensen Weir,wiki:Jensen_Weir,CM,England,Port Vale,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2024-01-22,Inverno,Saída,Empréstimo,Under-21s,Adrian Mazilu,wiki:Adrian_Mazilu,RW,Romania,Vitesse,False,,Loan,Empréstimo,0.0,2023/24,Atacante,0.0,False
+2023,2024-02-01,Inverno,Saída,Empréstimo,First team,Mahmoud Dahoud,wiki:Mahmoud_Dahoud,CM,Germany,Stuttgart,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,True
+2023,2024-02-01,Inverno,Saída,Empréstimo,Under-21s,Jack Hinchy,wiki:Jack_Hinchy,CM,England,Shrewsbury Town,False,,Loan,Empréstimo,0.0,2023/24,Meio-campo,0.0,False
+2023,2024-02-01,Inverno,Saída,Empréstimo,Under-21s,Imari Samuels,wiki:Imari_Samuels,LB,England,Fleetwood Town,False,,Loan,Empréstimo,0.0,2023/24,Defensor,0.0,False
+2023,2024-02-01,Inverno,Saída,Empréstimo,Under-21s,Ed Turns,wiki:Ed_Turns,CB,Wales,Crewe Alexandra,False,,Loan,Empréstimo,0.0,2023/24,Defensor,0.0,False
+2024,2024-06-14,Verão,Chegada,Transferência,First team,Ibrahim Osman,"wiki:Ibrahim_Osman_(footballer,_born_2004)",LW,Ghana,Nordsjælland,False,,Undisclosed,Não divulgado,,2024/25,Atacante,,True
+2024,2024-07-01,Verão,Chegada,Transferência,First team,Yankuba Minteh,wiki:Yankuba_Minteh,RW,The Gambia,Newcastle United,False,,"£30,000,000",Pago,30000000.0,2024/25,Atacante,-30000000.0,True
+2024,2024-07-05,Verão,Chegada,Transferência,First team,Mats Wieffer,wiki:Mats_Wieffer,DM,Netherlands,Feyenoord,False,,"£25,400,000",Pago,25400000.0,2024/25,Meio-campo,-25400000.0,True
+2024,2024-07-07,Verão,Chegada,Transferência,Under-21s,Amario Cozier-Duberry,wiki:Amario_Cozier-Duberry,AM,England,Arsenal,False,,Free transfer,Grátis,0.0,2024/25,Meio-campo,-0.0,False
+2024,2024-07-12,Verão,Chegada,Transferência,Under-21s,Malick Yalcouyé,wiki:Malick_Yalcouyé,CM,Ivory Coast,IFK Göteborg,False,,"£6,000,000",Pago,6000000.0,2024/25,Meio-campo,-6000000.0,False
+2024,2024-08-14,Verão,Chegada,Transferência,First team,Brajan Gruda,wiki:Brajan_Gruda,AM,Germany,Mainz 05,False,,"£25,000,000",Pago,25000000.0,2024/25,Meio-campo,-25000000.0,True
+2024,2024-08-19,Verão,Chegada,Transferência,First team,Georginio Rutter,wiki:Georginio_Rutter,CF,France,Leeds United,False,,"£40,000,000",Pago,40000000.0,2024/25,Atacante,-40000000.0,True
+2024,2024-08-26,Verão,Chegada,Transferência,First team,Matt O'Riley,wiki:Matt_O'Riley,CM,Denmark,Celtic,False,,"£25,000,000",Pago,25000000.0,2024/25,Meio-campo,-25000000.0,True
+2024,2024-08-27,Verão,Chegada,Transferência,First team,Ferdi Kadıoğlu,wiki:Ferdi_Kadıoğlu,LB,Turkey,Fenerbahçe,False,,"£25,000,000",Pago,25000000.0,2024/25,Defensor,-25000000.0,True
+2024,2025-01-01,Inverno,Chegada,Transferência,First team,Diego Gómez,wiki:Diego_Gómez_(Paraguayan_footballer),CM,Paraguay,Inter Miami,False,,"£11,000,000",Pago,11000000.0,2024/25,Meio-campo,-11000000.0,True
+2024,2024-12-19,Fora da janela,Chegada,Transferência,Under-18s,Charlie Wilson-Papps,name:charlie-wilson-papps,GK,England,AFC Wimbledon,False,,Undisclosed,Não divulgado,,2024/25,Goleiro,,False
+2024,2025-01-07,Inverno,Chegada,Transferência,Under-21s,Sebastian Jensen,name:sebastian-jensen,GK,England,Stoke City,False,,Free,Grátis,0.0,2024/25,Goleiro,-0.0,False
+2024,2025-01-31,Inverno,Chegada,Transferência,First team,Eiran Cashin,wiki:Eiran_Cashin,CB,Republic of Ireland,Derby County,False,,Undisclosed,Não divulgado,,2024/25,Defensor,,True
+2024,2025-02-03,Inverno,Chegada,Transferência,First team,Stefanos Tzimas,wiki:Stefanos_Tzimas,CF,Greece,1. FC Nürnberg,False,,Undisclosed,Não divulgado,,2024/25,Atacante,,True
+2024,2024-07-19,Verão,Saída,Transferência,First team,Kacper Kozłowski,wiki:Kacper_Kozłowski_(footballer),CM,Poland,Gaziantep,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,True
+2024,2024-07-25,Verão,Saída,Transferência,Under-21s,Marc Leonard,wiki:Marc_Leonard,CM,Scotland,Birmingham City,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,False
+2024,2024-08-01,Verão,Saída,Transferência,First team,Pascal Groß,wiki:Pascal_Groß,CM,Germany,Borussia Dortmund,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,True
+2024,2024-08-09,Verão,Saída,Transferência,First team,Deniz Undav,wiki:Deniz_Undav,FW,Germany,VfB Stuttgart,False,,Undisclosed,Não divulgado,,2024/25,Atacante,,True
+2024,2024-08-29,Verão,Saída,Transferência,Under-21s,Jensen Weir,wiki:Jensen_Weir,CM,England,Wigan Athletic,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,False
+2024,2024-08-30,Verão,Saída,Transferência,First team,Mahmoud Dahoud,wiki:Mahmoud_Dahoud,CM,Syria,Eintracht Frankfurt,False,,Free transfer,Grátis,0.0,2024/25,Meio-campo,0.0,True
+2024,2024-08-30,Verão,Saída,Transferência,First team,Billy Gilmour,wiki:Billy_Gilmour,CM,Scotland,Napoli,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,True
+2024,2025-01-13,Inverno,Saída,Transferência,Under-21s,Imari Samuels,wiki:Imari_Samuels,LB,England,Dundee,False,,Undisclosed,Não divulgado,,2024/25,Defensor,,False
+2024,2025-01-20,Inverno,Saída,Transferência,First team,Jakub Moder,wiki:Jakub_Moder,CM,Poland,Feyenoord,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,True
+2024,2025-01-31,Inverno,Saída,Transferência,Under-21s,Cameron Peupion,wiki:Cameron_Peupion,AM,Australia,ADO Den Haag,False,,Undisclosed,Não divulgado,,2024/25,Meio-campo,,False
+2024,2025-02-03,Inverno,Saída,Transferência,Under-21s,Benicio Baker-Boaitey,wiki:Benicio_Baker-Boaitey,RW,England,Millwall,False,,Free transfer,Grátis,0.0,2024/25,Atacante,0.0,False
+2024,2025-02-03,Inverno,Saída,Transferência,Under-21s,Marcus Ifill,name:marcus-ifill,FW,England,Bromley,False,,Free transfer,Grátis,0.0,2024/25,Atacante,0.0,False
+2024,2025-02-03,Inverno,Saída,Transferência,Under-21s,Ruairi McConville,wiki:Ruairi_McConville,CB,Northern Ireland,Norwich City,False,,Undisclosed,Não divulgado,,2024/25,Defensor,,False
+2024,2025-02-03,Inverno,Saída,Transferência,Under-21s,Ed Turns,wiki:Ed_Turns,CB,Wales,Exeter City,False,,Undisclosed,Não divulgado,,2024/25,Defensor,,False
+2024,2024-07-02,Verão,Saída,Empréstimo,First team,Kjell Scherpen,wiki:Kjell_Scherpen,GK,Netherlands,Sturm Graz,False,End of season,Loan,Empréstimo,0.0,2024/25,Goleiro,0.0,True
+2024,2024-07-04,Verão,Saída,Empréstimo,Under-21s,James Beadle,wiki:James_Beadle,GK,England,Sheffield Wednesday,False,End of season,Loan,Empréstimo,0.0,2024/25,Goleiro,0.0,False
+2024,2024-07-08,Verão,Saída,Empréstimo,Under-21s,Ben Jackson,"wiki:Ben_Jackson_(footballer,_born_2003)",CB,England,Livingston,False,18 January 2025,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,False
+2024,2024-07-24,Verão,Saída,Empréstimo,First team,Tom McGill,wiki:Tom_McGill,GK,Canada,Milton Keynes Dons,False,3 February 2025,Loan,Empréstimo,0.0,2024/25,Goleiro,0.0,True
+2024,2024-08-06,Verão,Saída,Empréstimo,Under-21s,Luca Barrington,wiki:Luca_Barrington,LW,England,Grimsby Town,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,False
+2024,2024-08-07,Verão,Saída,Empréstimo,Under-21s,Benicio Baker-Boaitey,wiki:Benicio_Baker-Boaitey,RW,England,Port Vale,False,8 January 2025,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,False
+2024,2024-08-10,Verão,Saída,Empréstimo,First team,Facundo Buonanotte,wiki:Facundo_Buonanotte,AM,Argentina,Leicester City,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,True
+2024,2024-08-12,Verão,Saída,Empréstimo,Under-21s,Casper Nilsson,wiki:Casper_Nilsson,DF,Sweden,Partick Thistle,False,3 February 2025,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,False
+2024,2024-08-15,Verão,Saída,Empréstimo,First team,Ibrahim Osman,"wiki:Ibrahim_Osman_(footballer,_born_2004)",LW,Ghana,Feyenoord,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,True
+2024,2024-08-16,Verão,Saída,Empréstimo,Under-21s,Kamari Doyle,wiki:Kamari_Doyle,AM,England,Exeter City,False,27 January 2025,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-08-16,Verão,Saída,Empréstimo,Under-21s,Andrew Moran,wiki:Andrew_Moran,AM,Republic of Ireland,Stoke City,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-08-19,Verão,Saída,Empréstimo,Under-21s,Samy Chouchane,wiki:Samy_Chouchane,MF,Tunisia,Northampton Town,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-08-21,Verão,Saída,Empréstimo,First team,Abdallah Sima,wiki:Abdallah_Sima,RW,Senegal,Brest,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,True
+2024,2024-08-23,Verão,Saída,Empréstimo,First team,Valentín Barco,wiki:Valentín_Barco,LB,Argentina,Sevilla,False,2 February 2025,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,True
+2024,2024-08-28,Verão,Saída,Empréstimo,Under-21s,Mark O'Mahony,wiki:Mark_O'Mahony,CF,Republic of Ireland,Portsmouth,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,False
+2024,2024-08-29,Verão,Saída,Empréstimo,Under-21s,Malick Yalcouyé,wiki:Malick_Yalcouyé,CM,Ivory Coast,Sturm Graz,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-08-30,Verão,Saída,Empréstimo,Under-21s,Amario Cozier-Duberry,wiki:Amario_Cozier-Duberry,RW,England,Blackburn Rovers,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,False
+2024,2024-08-30,Verão,Saída,Empréstimo,Under-21s,Odeluga Offiah,wiki:Odeluga_Offiah,RB,England,Blackpool,False,End of season,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,False
+2024,2024-08-30,Verão,Saída,Empréstimo,First team,Carl Rushworth,wiki:Carl_Rushworth,GK,England,Hull City,False,22 January 2025,Loan,Empréstimo,0.0,2024/25,Goleiro,0.0,True
+2024,2024-08-30,Verão,Saída,Empréstimo,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,AM,Ecuador,Burnley,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,True
+2024,2025-01-13,Inverno,Saída,Empréstimo,Under-21s,Louis Flower,name:louis-flower,FW,England,Gateshead,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,False
+2024,2025-01-18,Inverno,Saída,Empréstimo,Under-21s,Ben Jackson,"wiki:Ben_Jackson_(footballer,_born_2003)",CB,England,Queen's Park,False,End of season,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,False
+2024,2025-01-23,Inverno,Saída,Empréstimo,First team,Julio Enciso,"wiki:Julio_Enciso_(footballer,_born_2004)",CF,Paraguay,Ipswich Town,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,True
+2024,2025-01-27,Inverno,Saída,Empréstimo,Under-21s,Kamari Doyle,wiki:Kamari_Doyle,AM,England,Crawley Town,False,End of season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2025-02-02,Inverno,Saída,Empréstimo,First team,Valentín Barco,wiki:Valentín_Barco,LB,Argentina,Strasbourg,False,End of Season,Loan,Empréstimo,0.0,2024/25,Defensor,0.0,True
+2024,2025-02-03,Inverno,Saída,Empréstimo,First team,Evan Ferguson,wiki:Evan_Ferguson,CF,Republic of Ireland,West Ham United,False,End of season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,True
+2024,2025-02-03,Inverno,Saída,Empréstimo,First team,Stefanos Tzimas,wiki:Stefanos_Tzimas,CF,Greece,1. FC Nürnberg,False,End of Season,Loan,Empréstimo,0.0,2024/25,Atacante,0.0,True
+2024,2025-02-03,Inverno,Saída,Empréstimo,Under-21s,Caylan Vickers,wiki:Caylan_Vickers,AM,England,Mansfield Town,False,End of Season,Loan,Empréstimo,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,First team,Adam Lallana,wiki:Adam_Lallana,AM,England,Southampton,False,,Released,Fim de contrato,0.0,2024/25,Meio-campo,0.0,True
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-21s,Brody Peart,name:brody-peart,RW,England,Wycombe Wanderers,False,,Released,Fim de contrato,0.0,2024/25,Atacante,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-21s,Leigh Kavanagh,wiki:Leigh_Kavanagh,DF,Republic of Ireland,Bohemians,False,,Released,Fim de contrato,0.0,2024/25,Defensor,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-18s,Jaydon Fuller,name:jaydon-fuller,MF,Wales,University of Delaware,False,,Released,Fim de contrato,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-21s,Jack Hinchy,wiki:Jack_Hinchy,MF,England,Notts County,False,,Released,Fim de contrato,0.0,2024/25,Meio-campo,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,First team,Steven Alzate,wiki:Steven_Alzate,CM,Colombia,Hull City,False,,Released,Fim de contrato,0.0,2024/25,Meio-campo,0.0,True
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-21s,Tommy Reid,name:tommy-reid,GK,England,Charlton Athletic,False,,Released,Fim de contrato,0.0,2024/25,Goleiro,0.0,False
+2024,2024-06-30,Verão,Saída,Fim de contrato,Under-21s,Bailey Smith,name:bailey-smith,MF,England,Worthing,False,,Released,Fim de contrato,0.0,2024/25,Meio-campo,0.0,False
+2024,2025-02-03,Inverno,Saída,Fim de contrato,Under-21s,Casper Nilsson,wiki:Casper_Nilsson,RB,Sweden,Ängelholms FF,False,,Released,Fim de contrato,0.0,2024/25,Defensor,0.0,False
+2025,2025-06-01,Verão,Chegada,Transferência,First team,Tom Watson,"wiki:Tom_Watson_(footballer,_born_2006)",LW,England,Sunderland,False,,"£10,000,000",Pago,10000000.0,2025/26,Atacante,-10000000.0,True
+2025,2025-06-17,Verão,Chegada,Transferência,First team,Diego Coppola,wiki:Diego_Coppola,CB,Italy,Hellas Verona,False,,"£9,500,000",Pago,9500000.0,2025/26,Defensor,-9500000.0,True
+2025,2025-07-01,Verão,Chegada,Transferência,First team,Yoon Do-young,wiki:Yoon_Do-young,RW,South Korea,Daejeon Hana Citizen,False,,"£2,000,000",Pago,2000000.0,2025/26,Atacante,-2000000.0,True
+2025,2025-07-01,Verão,Chegada,Transferência,First team,Charalampos Kostoulas,wiki:Charalampos_Kostoulas,FW,Greece,Olympiacos,False,,"£29,780,000",Pago,29780000.0,2025/26,Atacante,-29780000.0,True
+2025,2025-07-02,Verão,Chegada,Transferência,First team,Olivier Boscagli,wiki:Olivier_Boscagli,CB,France,PSV Eindhoven,False,,Free,Grátis,0.0,2025/26,Defensor,-0.0,True
+2025,2025-07-05,Verão,Chegada,Transferência,First team,Maxim De Cuyper,wiki:Maxim_De_Cuyper,LB,Belgium,Club Brugge,False,,"£17,500,000",Pago,17500000.0,2025/26,Defensor,-17500000.0,True
+2025,2026-01-02,Inverno,Chegada,Transferência,First team,Pascal Groß,wiki:Pascal_Groß,CM,Germany,Borussia Dortmund,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,True
+2025,2025-06-25,Verão,Chegada,Transferência,Academy,Michael Dike,name:michael-dike,GK,Republic of Ireland,Treaty United,False,,Undisclosed,Não divulgado,,2025/26,Goleiro,,False
+2025,2025-06-29,Verão,Chegada,Transferência,Academy,Nils Ramming,wiki:Nils_Ramming,GK,Sweden,Eintracht Frankfurt,False,,Undisclosed,Não divulgado,,2025/26,Goleiro,,False
+2025,2025-07-01,Verão,Chegada,Transferência,Academy,Ben Barclay,wiki:Ben_Barclay,CB,England,Carlisle United,False,,Free,Grátis,0.0,2025/26,Defensor,-0.0,False
+2025,2025-08-01,Verão,Chegada,Transferência,Academy,Sean Keogh,name:sean-keogh,LB,Republic of Ireland,Dundalk,False,,Undisclosed,Não divulgado,,2025/26,Defensor,,False
+2025,2025-08-01,Verão,Chegada,Transferência,Academy,Kofi Shaw,wiki:Kofi_Shaw,CAM,England,Bristol Rovers,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2025-10-15,Fora da janela,Chegada,Transferência,Academy,Anton Palmer,name:anton-palmer,MF,England,Middlesbrough,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2025-10-15,Fora da janela,Chegada,Transferência,Academy,Bailey Palmer,name:bailey-palmer,MF,England,Middlesbrough,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2025-07-02,Verão,Saída,Transferência,First team,Valentín Barco,wiki:Valentín_Barco,LB,Argentina,RC Strasbourg,False,,Undisclosed,Não divulgado,,2025/26,Defensor,,True
+2025,2025-07-02,Verão,Saída,Transferência,First team,João Pedro,"wiki:João_Pedro_(footballer,_born_2001)",CF,Brazil,Chelsea,False,,Undisclosed,Não divulgado,,2025/26,Atacante,,True
+2025,2025-07-10,Verão,Saída,Transferência,First team,Simon Adingra,wiki:Simon_Adingra,LW,Ivory Coast,Sunderland,False,,"£21,000,000+",Pago,21000000.0,2025/26,Atacante,21000000.0,True
+2025,2025-07-24,Verão,Saída,Transferência,First team,Pervis Estupiñán,wiki:Pervis_Estupiñán,LB,Ecuador,AC Milan,False,,"£17,000,000",Pago,17000000.0,2025/26,Defensor,17000000.0,True
+2025,2025-07-24,Verão,Saída,Transferência,First team,Kjell Scherpen,wiki:Kjell_Scherpen,GK,Netherlands,Royale Union Saint-Gilloise,False,,Undisclosed,Não divulgado,,2025/26,Goleiro,,True
+2025,2025-08-29,Verão,Saída,Transferência,First team,Abdallah Sima,wiki:Abdallah_Sima,RW,Senegal,Lens,False,,Undisclosed,Não divulgado,,2025/26,Atacante,,True
+2025,2025-09-01,Verão,Saída,Transferência,First team,Julio Enciso,"wiki:Julio_Enciso_(footballer,_born_2004)",CAM,Paraguay,Strasbourg,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,True
+2025,2025-09-01,Verão,Saída,Transferência,First team,Tariq Lamptey,wiki:Tariq_Lamptey,RB,Ghana,Fiorentina,False,,"£5,200,000",Pago,5200000.0,2025/26,Defensor,5200000.0,True
+2025,2025-07-05,Verão,Saída,Transferência,Academy,Odeluga Offiah,wiki:Odeluga_Offiah,RB,England,Preston North End,False,,"£1,000,000+",Pago,1000000.0,2025/26,Defensor,1000000.0,False
+2025,2025-07-15,Verão,Saída,Transferência,Academy,Jamie Mullins,wiki:Jamie_Mullins,MF,Republic of Ireland,Wycombe Wanderers,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2025-08-31,Verão,Saída,Transferência,Academy,Adrian Mazilu,wiki:Adrian_Mazilu,MF,Romania,Dinamo București,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2026-01-31,Inverno,Saída,Transferência,Academy,Joe Knight,name:joe-knight,CM,England,Stevenage,False,,Undisclosed,Não divulgado,,2025/26,Meio-campo,,False
+2025,2026-02-02,Inverno,Saída,Transferência,Academy,Andrew Moran,wiki:Andrew_Moran,CM,Republic of Ireland,Preston North End,False,,"£1,000,000",Pago,1000000.0,2025/26,Meio-campo,1000000.0,False
+2025,2025-07-08,Verão,Saída,Empréstimo,First team,Ibrahim Osman,"wiki:Ibrahim_Osman_(footballer,_born_2004)",LW,Ghana,Auxerre,False,19 January 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2025-07-16,Verão,Saída,Empréstimo,First team,Yoon Do-young,wiki:Yoon_Do-young,RW,South Korea,Excelsior,False,9 January 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2025-07-23,Verão,Saída,Empréstimo,First team,Evan Ferguson,wiki:Evan_Ferguson,CF,Republic of Ireland,Roma,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2025-07-25,Verão,Saída,Empréstimo,First team,Eiran Cashin,wiki:Eiran_Cashin,CB,Republic of Ireland,Birmingham City,False,6 January 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,True
+2025,2025-08-14,Verão,Saída,Empréstimo,First team,Malick Yalcouyé,wiki:Malick_Yalcouyé,CM,Ivory Coast,Swansea City,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2025-09-01,Verão,Saída,Empréstimo,First team,Facundo Buonanotte,wiki:Facundo_Buonanotte,CAM,Argentina,Chelsea,False,15 January 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2025-09-01,Verão,Saída,Empréstimo,First team,Igor,wiki:Igor_Julio,CB,Brazil,West Ham United,False,27 January 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,True
+2025,2025-09-01,Verão,Saída,Empréstimo,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,CAM,Ecuador,Cremonese,False,27 January 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2025-09-02,Verão,Saída,Empréstimo,First team,Matt O'Riley,wiki:Matt_O'Riley,CM,Denmark,Marseille,False,2 February 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2026-01-06,Inverno,Saída,Empréstimo,First team,Eiran Cashin,wiki:Eiran_Cashin,CB,Republic of Ireland,Blackburn Rovers,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,True
+2025,2026-01-09,Inverno,Saída,Empréstimo,First team,Yoon Do-young,wiki:Yoon_Do-young,RW,South Korea,Dordrecht,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2026-01-15,Inverno,Saída,Empréstimo,First team,Facundo Buonanotte,wiki:Facundo_Buonanotte,CAM,Argentina,Leeds United,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2026-01-19,Inverno,Saída,Empréstimo,First team,Ibrahim Osman,"wiki:Ibrahim_Osman_(footballer,_born_2004)",LW,Ghana,Birmingham City,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2026-01-27,Inverno,Saída,Empréstimo,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,CAM,Ecuador,Middlesbrough,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,True
+2025,2026-01-29,Inverno,Saída,Empréstimo,First team,Diego Coppola,wiki:Diego_Coppola,CB,Italy,Paris,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,True
+2025,2026-02-01,Inverno,Saída,Empréstimo,First team,Tom Watson,"wiki:Tom_Watson_(footballer,_born_2006)",LW,England,Millwall,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2026-02-02,Inverno,Saída,Empréstimo,First team,Brajan Gruda,wiki:Brajan_Gruda,RW,Germany,RB Leipzig,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,True
+2025,2025-07-21,Verão,Saída,Empréstimo,Academy,Caylan Vickers,wiki:Caylan_Vickers,FW,England,Barnsley,False,9 January 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,False
+2025,2025-07-24,Verão,Saída,Empréstimo,Academy,Carl Rushworth,wiki:Carl_Rushworth,GK,England,Coventry City,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Goleiro,0.0,False
+2025,2025-07-01,Verão,Saída,Empréstimo,Academy,James Beadle,wiki:James_Beadle,GK,England,Birmingham City,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Goleiro,0.0,False
+2025,2025-07-05,Verão,Saída,Empréstimo,Academy,Amario Cozier-Duberry,wiki:Amario_Cozier-Duberry,CAM,England,Bolton Wanderers,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-07-07,Verão,Saída,Empréstimo,Academy,Mark O'Mahony,wiki:Mark_O'Mahony,CF,Republic of Ireland,Reading,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,False
+2025,2025-08-04,Verão,Saída,Empréstimo,Academy,Kamari Doyle,wiki:Kamari_Doyle,CAM,England,Reading,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-08-21,Verão,Saída,Empréstimo,Academy,Andrew Moran,wiki:Andrew_Moran,CAM,Republic of Ireland,Los Angeles,False,31 December 2025,Loan,Empréstimo,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-09-01,Verão,Saída,Empréstimo,Academy,Charlie Penman,name:charlie-penman,CB,England,Aldershot Town,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,False
+2025,2025-09-01,Verão,Saída,Empréstimo,Academy,Jacob Slater,wiki:Jacob_Slater,LB,Republic of Ireland,Harrogate Town,False,31 May 2026,Loan,Empréstimo,0.0,2025/26,Defensor,0.0,False
+2025,2026-02-02,Inverno,Saída,Empréstimo,Academy,Caylan Vickers,wiki:Caylan_Vickers,FW,England,Wigan Athletic,False,30 June 2026,Loan,Empréstimo,0.0,2025/26,Atacante,0.0,False
+2025,2026-02-13,Inverno,Saída,Empréstimo,Academy,Michael Dike,name:michael-dike,GK,Republic of Ireland,Burgess Hill Town,False,25 April 2026,Loan,Empréstimo,0.0,2025/26,Goleiro,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Killian Cahill,wiki:Killian_Cahill,GK,Republic of Ireland,Leyton Orient,False,,Released,Fim de contrato,0.0,2025/26,Goleiro,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Louis Flower,wiki:Louis_Flower,FW,England,Crawley Town,False,,Released,Fim de contrato,0.0,2025/26,Atacante,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Remerio Moulton,name:remerio-moulton,MF,England,Watford,False,,Released,Fim de contrato,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Ben Jackson,"wiki:Ben_Jackson_(footballer,_born_2003)",CB,England,Aldershot Town,False,,Released,Fim de contrato,0.0,2025/26,Defensor,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Harry Lee,name:harry-lee,DF,England,Bromley,False,,Released,Fim de contrato,0.0,2025/26,Defensor,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Joshua Duffus,wiki:Joshua_Duffus,FW,Jamaica,Saint-Étienne,False,,Released,Fim de contrato,0.0,2025/26,Atacante,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Samy Chouchane,wiki:Samy_Chouchane,MF,Tunisia,Dijon,False,,Released,Fim de contrato,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Sahil Bashir,name:sahil-bashir,MF,Pakistan,Huddersfield Town,False,,Released,Fim de contrato,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Hugo Fisher,name:hugo-fisher,GK,England,Southampton,False,,Released,Fim de contrato,0.0,2025/26,Goleiro,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-21s,Luca Barrington,wiki:Luca_Barrington,AM,England,Boston United,False,,Released,Fim de contrato,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-18s,Ronnie Gorman,name:ronnie-gorman,MF,Republic of Ireland,Horsham,False,,Released,Fim de contrato,0.0,2025/26,Meio-campo,0.0,False
+2025,2025-06-30,Verão,Saída,Fim de contrato,Under-18s,Alfie Mansell,name:alfie-mansell,GK,England,Burgess Hill Town,False,,Released,Fim de contrato,0.0,2025/26,Goleiro,0.0,False
+2026,2026-06-15,Verão,Chegada,Transferência,First team,Costinha,"wiki:Costinha_(footballer,_born_2000)",RB,Portugal,Olympiacos,False,,"£11,000,000",Pago,11000000.0,2026/27,Defensor,-11000000.0,True
+2026,2026-06-15,Verão,Chegada,Transferência,First team,Zadok Yohanna,wiki:Zadok_Yohanna,RW,Nigeria,AIK,False,,"£21,500,000",Pago,21500000.0,2026/27,Atacante,-21500000.0,True
+2026,2026-06-30,Verão,Chegada,Transferência,First team,Pascal Struijk,wiki:Pascal_Struijk,CB,Netherlands,Leeds United,False,,"£15,000,000",Pago,15000000.0,2026/27,Defensor,-15000000.0,True
+2026,2026-07-01,Verão,Chegada,Transferência,First team,Rodrigo Rêgo,"wiki:Rodrigo_Rêgo_(footballer,_born_2005)",RW,Portugal,Benfica,False,,"£3,000,000",Pago,3000000.0,2026/27,Atacante,-3000000.0,True
+2026,2026-07-02,Verão,Chegada,Transferência,First team,Michael Svoboda,wiki:Michael_Svoboda,CB,Austria,Venezia,False,,"£4,300,000",Pago,4300000.0,2026/27,Defensor,-4300000.0,True
+2026,2026-07-14,Verão,Chegada,Transferência,First team,Luka Vušković,wiki:Luka_Vušković,CB,Croatia,Tottenham Hotspur,False,,"£46,000,000",Pago,46000000.0,2026/27,Defensor,-46000000.0,True
+2026,2026-08-25,Verão,Chegada,Transferência,First team,Jaouen Hadjam,wiki:Jaouen_Hadjam,LB,Algeria,Young Boys,False,,"£10,300,000",Pago,10300000.0,2026/27,Defensor,-10300000.0,True
+2026,2026-09-01,Verão,Chegada,Transferência,First team,Chema Andrés,wiki:Chema_Andrés,DM,Spain,VfB Stuttgart,False,,"£15,500,000",Pago,15500000.0,2026/27,Meio-campo,-15500000.0,True
+2026,2026-09-02,Verão,Chegada,Transferência,First team,Femi Azeez,wiki:Femi_Azeez,RW,Nigeria,Millwall,False,,"£12,500,000",Pago,12500000.0,2026/27,Atacante,-12500000.0,True
+2026,2026-06-19,Verão,Chegada,Transferência,Academy,George Munday,name:george-munday,CF,England,Cambridge United,False,,Undisclosed,Não divulgado,,2026/27,Atacante,,False
+2026,2026-07-04,Verão,Chegada,Transferência,Academy,Oliver Mayer,name:oliver-mayer,GK,England,Fulham,False,,Free,Grátis,0.0,2026/27,Goleiro,-0.0,False
+2026,2026-08-01,Verão,Chegada,Transferência,Academy,Valentin Joseph,name:valentin-joseph,CF,England,Blackburn Rovers,False,,Undisclosed,Não divulgado,,2026/27,Atacante,,False
+2026,2026-08-30,Verão,Chegada,Transferência,Academy,Matías Orozco,wiki:Matías_Orozco,DM,Colombia,Deportivo Cali,False,,"£3,500,000",Pago,3500000.0,2026/27,Meio-campo,-3500000.0,False
+2026,2026-06-15,Verão,Saída,Transferência,First team,Jeremy Sarmiento,wiki:Jeremy_Sarmiento,LW,Ecuador,Middlesbrough,False,,Undisclosed,Não divulgado,,2026/27,Atacante,,True
+2026,2026-06-18,Verão,Saída,Transferência,First team,Jan Paul van Hecke,wiki:Jan_Paul_van_Hecke,CB,Netherlands,Tottenham Hotspur,False,,"£52,000,000",Pago,52000000.0,2026/27,Defensor,52000000.0,True
+2026,2026-07-16,Verão,Saída,Transferência,First team,Diego Coppola,wiki:Diego_Coppola,CB,Italy,Paris FC,False,,"£16,500,000",Pago,16500000.0,2026/27,Defensor,16500000.0,True
+2026,2026-08-01,Verão,Saída,Transferência,First team,Danny Welbeck,wiki:Danny_Welbeck,CF,England,Chelsea,False,,"£5,000,000",Pago,5000000.0,2026/27,Atacante,5000000.0,True
+2026,2026-08-04,Verão,Saída,Transferência,First team,Carl Rushworth,wiki:Carl_Rushworth,GK,England,Coventry City,False,,"£22,500,000",Pago,22500000.0,2026/27,Goleiro,22500000.0,True
+2026,2026-08-25,Verão,Saída,Transferência,First team,Carlos Baleba,wiki:Carlos_Baleba,DM,Cameroon,Manchester United,False,,"£65,000,000",Pago,65000000.0,2026/27,Meio-campo,65000000.0,True
+2026,2026-09-01,Verão,Saída,Transferência,First team,Igor Julio,wiki:Igor_Julio,CB,Brazil,Burnley,False,,Undisclosed,Não divulgado,,2026/27,Defensor,,True
+2026,2026-09-01,Verão,Saída,Transferência,Academy,Caylan Vickers,wiki:Caylan_Vickers,LW,England,Burton Albion,False,,"£100,000",Pago,100000.0,2026/27,Atacante,100000.0,False
+2026,2026-08-18,Verão,Chegada,Empréstimo,First team,Promise David,wiki:Promise_David,CF,Canada,Union Saint-Gilloise,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,-0.0,True
+2026,2026-07-13,Verão,Saída,Empréstimo,First team,Brajan Gruda,wiki:Brajan_Gruda,CAM,Germany,RB Leipzig,False,End of Season,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,True
+2026,2026-07-18,Verão,Saída,Empréstimo,First team,Rodrigo Rêgo,"wiki:Rodrigo_Rêgo_(footballer,_born_2005)",RW,Portugal,Castellón,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,0.0,True
+2026,2026-08-01,Verão,Saída,Empréstimo,First team,Tommy Watson,"wiki:Tommy_Watson_(footballer,_born_2006)",LW,England,Leicester City,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,0.0,True
+2026,2026-08-07,Verão,Saída,Empréstimo,First team,Facundo Buonanotte,wiki:Facundo_Buonanotte,CAM,Argentina,Elche,False,End of Season,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,True
+2026,2026-09-01,Verão,Saída,Empréstimo,First team,Eiran Cashin,wiki:Eiran_Cashin,CB,Republic of Ireland,Derby County,False,End of Season,Loan,Empréstimo,0.0,2026/27,Defensor,0.0,True
+2026,2026-09-01,Verão,Saída,Empréstimo,First team,Amario Cozier-Duberry,wiki:Amario_Cozier-Duberry,RW,England,Middlesbrough,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,0.0,True
+2026,2026-07-05,Verão,Saída,Empréstimo,Academy,Yoon Do-young,wiki:Yoon_Do-young,RW,South Korea,1. FC Magdeburg,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,0.0,False
+2026,2026-07-17,Verão,Saída,Empréstimo,Academy,Nils Ramming,wiki:Nils_Ramming,GK,Sweden,Rochdale,False,End of Season,Loan,Empréstimo,0.0,2026/27,Goleiro,0.0,False
+2026,2026-07-17,Verão,Saída,Empréstimo,Academy,James Beadle,wiki:James_Beadle,GK,England,Birmingham City,False,End of Season,Loan,Empréstimo,0.0,2026/27,Goleiro,0.0,False
+2026,2026-08-13,Verão,Saída,Empréstimo,Academy,Harry Howell,wiki:Harry_Howell_(footballer),AM,England,Leicester City,False,End of Season,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-09-01,Verão,Saída,Empréstimo,Academy,Kamari Doyle,wiki:Kamari_Doyle,AM,England,Leicester City,False,End of Season,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-09-01,Verão,Saída,Empréstimo,Academy,Mark O'Mahony,wiki:Mark_O'Mahony,CF,Republic of Ireland,Burton Albion,False,End of Season,Loan,Empréstimo,0.0,2026/27,Atacante,0.0,False
+2026,2026-09-01,Verão,Saída,Empréstimo,Academy,Matías Orozco,wiki:Matías_Orozco,DM,Colombia,Castellón,False,End of Season,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-09-01,Verão,Saída,Empréstimo,Academy,Freddie Simmonds,wiki:Freddie_Simmonds,CB,England,AFC Wimbledon,False,End of Season,Loan,Empréstimo,0.0,2026/27,Defensor,0.0,False
+2026,2026-09-01,Verão,Saída,Empréstimo,Academy,Charlie Tasker,wiki:Charlie_Tasker,RB,England,Rochdale,False,End of Season,Loan,Empréstimo,0.0,2026/27,Defensor,0.0,False
+2026,2026-09-02,Verão,Saída,Empréstimo,Academy,Josh Robertson,name:josh-robertson,CM,England,Fleetwood Town,False,1 January 2027,Loan,Empréstimo,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-09-18,Verão,Saída,Empréstimo,Academy,Michael Dike,name:michael-dike,GK,Republic of Ireland,Horsham,False,Short Term,Loan,Empréstimo,0.0,2026/27,Goleiro,0.0,False
+2026,2026-09-24,Verão,Saída,Empréstimo,Academy,Sean Keogh,name:sean-keogh,LB,Republic of Ireland,Southend United,False,October 2026,Loan,Empréstimo,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-01,Verão,Saída,Fim de contrato,First team,James Milner,wiki:James_Milner,CM,England,,True,,Released,Fim de contrato,0.0,2026/27,Meio-campo,0.0,True
+2026,2026-06-30,Verão,Saída,Fim de contrato,First team,Joël Veltman,wiki:Joël_Veltman,RB,Netherlands,West Ham United,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,True
+2026,2026-06-30,Verão,Saída,Fim de contrato,First team,Solly March,wiki:Solly_March,RW,England,,False,,Released,Fim de contrato,0.0,2026/27,Atacante,0.0,True
+2026,2026-06-30,Verão,Saída,Fim de contrato,First team,Adam Webster,"wiki:Adam_Webster_(footballer,_born_1995)",CB,England,,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,True
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Zane Albarus,name:zane-albarus,CM,England,Gillingham,False,,Released,Fim de contrato,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Billy-Ray Cullinane,name:billy-ray-cullinane,LB,England,Coventry City,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Matthew Hayden,name:matthew-hayden,RB,England,Eastbourne Borough,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Charlie Penman,name:charlie-penman,CB,England,Hartlepool United,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Jacob Slater,wiki:Jacob_Slater,LB,Republic of Ireland,Tranmere Rovers,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Will Rutter,name:will-rutter,GK,England,West Bromwich Albion,False,,Released,Fim de contrato,0.0,2026/27,Goleiro,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Finley Taylor,name:finley-taylor,GK,England,Blackburn Rovers,False,,Released,Fim de contrato,0.0,2026/27,Goleiro,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Yussif Owusu,name:yussif-owusu,CDM,Ghana,Sabadell,False,,Released,Fim de contrato,0.0,2026/27,Meio-campo,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Harry Mills,name:harry-mills,LWB,Cyprus,Totton,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Noël Atom,wiki:Noël_Atom,CB,Germany,,False,,Released,Fim de contrato,0.0,2026/27,Defensor,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Joe Belmont,name:joe-belmont,CF,Wales,,False,,Released,Fim de contrato,0.0,2026/27,Atacante,0.0,False
+2026,2026-06-30,Verão,Saída,Fim de contrato,Academy,Sebastian Jensen,name:sebastian-jensen,GK,Denmark,,False,,Released,Fim de contrato,0.0,2026/27,Goleiro,0.0,False

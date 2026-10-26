@@ -1,0 +1,35 @@
+# Configuração do pipeline Brighton Dashboard
+# Temporadas usam o ANO DE INÍCIO (2026 = temporada 2026/27)
+
+seasons:
+  current: 2026
+  history: [2022, 2023, 2024, 2025]   # histórico recente para comparação
+
+team:
+  name: "Brighton & Hove Albion"      # nome canônico (sem "F.C.")
+  wikipedia_season_page: "{season}–{yy} Brighton & Hove Albion F.C. season"
+
+league:
+  openfootball_file: "en.1.json"      # Premier League no openfootball
+  wikipedia_season_page: "{season}–{yy} Premier League"
+  football_data_division: "E0"        # Premier League no football-data.co.uk
+
+sources:
+  # Estatísticas de chutes/escanteios/cartões por jogo. Desligado por padrão:
+  # leia os termos de uso de https://www.football-data.co.uk antes de ligar.
+  football_data: false
+
+http:
+  # A política de User-Agent da Wikimedia pede um identificador com contato.
+  # Troque SEU_EMAIL_AQUI pelo seu e-mail ou pela URL do repositório no GitHub.
+  user_agent: "BrightonDashboard/1.0 (projeto de portfolio; contato: https://github.com/Tokoyamizinho) python-requests"
+  min_delay_seconds: 3.0      # pausa mínima entre requisições ao mesmo domínio
+  max_retries: 4
+  timeout_seconds: 30
+  cache_hours: 12             # respostas em cache são reutilizadas por este período
+  respect_robots_txt: true
+
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  cache: "data/cache"

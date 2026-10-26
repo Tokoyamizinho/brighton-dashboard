@@ -1,0 +1,181 @@
+season,player_key,player_name,shirt_number,position,nationality,pl_apps,pl_starts,pl_subs,pl_goals,total_apps,total_goals,left_during_season,pl_assists,total_assists,pl_yellow,pl_second_yellow,pl_red,season_label,position_group,pl_goal_contributions
+2022,wiki:Robert_Sánchez,Robert Sánchez,1.0,GK,Spain,23.0,,,0.0,25.0,0.0,False,,,,,,2022/23,Goleiro,
+2022,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,15.0,,,0.0,21.0,0.0,False,,,,,,2022/23,Goleiro,
+2022,wiki:Tom_McGill,Tom McGill,38.0,GK,Canada,0.0,,,0.0,0.0,0.0,False,,,,,,2022/23,Goleiro,
+2022,wiki:Tariq_Lamptey,Tariq Lamptey,2.0,DF,Ghana,20.0,3.0,17.0,0.0,25.0,1.0,False,,,,,,2022/23,Defensor,
+2022,"wiki:Adam_Webster_(footballer,_born_1995)",Adam Webster,4.0,DF,England,27.0,23.0,4.0,0.0,32.0,0.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,36.0,,,1.0,42.0,2.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Levi_Colwill,Levi Colwill,6.0,DF,England,17.0,13.0,4.0,0.0,22.0,0.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Jan_Paul_van_Hecke,Jan Paul van Hecke,29.0,DF,Netherlands,8.0,3.0,5.0,0.0,13.0,0.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Pervis_Estupiñán,Pervis Estupiñán,30.0,DF,Ecuador,35.0,31.0,4.0,1.0,41.0,1.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Joël_Veltman,Joël Veltman,34.0,DF,Netherlands,31.0,25.0,6.0,1.0,35.0,1.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Odeluga_Offiah,Odeluga Offiah,42.0,DF,England,2.0,0.0,2.0,0.0,3.0,0.0,False,,,,,,2022/23,Defensor,
+2022,wiki:Solly_March,Solly March,7.0,MF,England,33.0,31.0,2.0,7.0,39.0,8.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Alexis_Mac_Allister,Alexis Mac Allister,10.0,MF,Argentina,35.0,31.0,4.0,10.0,40.0,12.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Pascal_Groß,Pascal Groß,13.0,MF,Germany,37.0,,,9.0,44.0,10.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Adam_Lallana,Adam Lallana,14.0,MF,England,16.0,12.0,4.0,2.0,18.0,3.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Jakub_Moder,Jakub Moder,15.0,MF,Poland,0.0,,,0.0,0.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Jeremy_Sarmiento,Jeremy Sarmiento,19.0,MF,Ecuador,9.0,1.0,8.0,0.0,12.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Kaoru_Mitoma,Kaoru Mitoma,22.0,MF,Japan,33.0,24.0,9.0,7.0,41.0,10.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Moisés_Caicedo,Moisés Caicedo,25.0,MF,Ecuador,37.0,34.0,3.0,1.0,43.0,1.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,3.0,1.0,2.0,0.0,4.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Billy_Gilmour,Billy Gilmour,27.0,MF,Scotland,13.0,6.0,7.0,0.0,16.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Facundo_Buonanotte,Facundo Buonanotte,40.0,MF,Argentina,13.0,6.0,7.0,1.0,14.0,1.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Andrew_Moran,Andrew Moran,49.0,MF,Republic of Ireland,1.0,0.0,1.0,0.0,2.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Cameron_Peupion,Cameron Peupion,51.0,MF,Australia,1.0,0.0,1.0,0.0,2.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Jack_Hinchy,Jack Hinchy,53.0,MF,England,0.0,,,0.0,1.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Jack_Hinshelwood,Jack Hinshelwood,71.0,MF,England,1.0,0.0,1.0,0.0,1.0,0.0,False,,,,,,2022/23,Meio-campo,
+2022,wiki:Danny_Welbeck,Danny Welbeck,18.0,FW,England,31.0,21.0,10.0,6.0,37.0,7.0,False,,,,,,2022/23,Atacante,
+2022,"wiki:Julio_Enciso_(footballer,_born_2004)",Julio Enciso,20.0,FW,Paraguay,20.0,8.0,12.0,4.0,26.0,4.0,False,,,,,,2022/23,Atacante,
+2022,wiki:Deniz_Undav,Deniz Undav,21.0,FW,Germany,22.0,6.0,16.0,5.0,30.0,8.0,False,,,,,,2022/23,Atacante,
+2022,wiki:Evan_Ferguson,Evan Ferguson,28.0,FW,Republic of Ireland,19.0,10.0,9.0,6.0,25.0,10.0,False,,,,,,2022/23,Atacante,
+2022,wiki:Enock_Mwepu,Enock Mwepu,8.0,MF,Zambia,6.0,2.0,4.0,0.0,6.0,0.0,True,,,,,,2022/23,Meio-campo,
+2022,wiki:Neal_Maupay,Neal Maupay,9.0,FW,France,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Atacante,
+2022,wiki:Leandro_Trossard,Leandro Trossard,11.0,FW,Belgium,16.0,,,7.0,17.0,7.0,True,,,,,,2022/23,Atacante,
+2022,wiki:Kjell_Scherpen,Kjell Scherpen,16.0,GK,Netherlands,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Goleiro,
+2022,wiki:Steven_Alzate,Steven Alzate,17.0,MF,Colombia,0.0,,,0.0,1.0,1.0,True,,,,,,2022/23,Meio-campo,
+2022,wiki:Shane_Duffy,Shane Duffy,24.0,DF,Republic of Ireland,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Defensor,
+2022,"wiki:Matthew_Clarke_(footballer,_born_1996)",Matt Clarke,26.0,DF,England,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Defensor,
+2022,wiki:Florin_Andone,Florin Andone,31.0,FW,Romania,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Atacante,
+2022,wiki:Jack_Spong_(footballer),Jack Spong,41.0,MF,England,0.0,,,0.0,1.0,0.0,True,,,,,,2022/23,Meio-campo,
+2022,wiki:Ed_Turns,Ed Turns,43.0,DF,Wales,0.0,,,0.0,1.0,0.0,True,,,,,,2022/23,Defensor,
+2022,wiki:Antef_Tsoungui,Antef Tsoungui,46.0,DF,Belgium,0.0,,,0.0,0.0,0.0,True,,,,,,2022/23,Defensor,
+2022,wiki:James_Furlong,James Furlong,47.0,DF,Republic of Ireland,0.0,,,0.0,1.0,0.0,True,,,,,,2022/23,Defensor,
+2023,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,21.0,,,0.0,27.0,0.0,False,,,,,,2023/24,Goleiro,
+2023,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,17.0,,,0.0,23.0,0.0,False,,,,,,2023/24,Goleiro,
+2023,wiki:Tom_McGill,Tom McGill,38.0,GK,Canada,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Goleiro,
+2023,wiki:Tariq_Lamptey,Tariq Lamptey,2.0,DF,Ghana,18.0,10.0,8.0,0.0,24.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Igor_Julio,Igor Julio,3.0,DF,Brazil,25.0,17.0,8.0,0.0,34.0,0.0,False,,,,,,2023/24,Defensor,
+2023,"wiki:Adam_Webster_(footballer,_born_1995)",Adam Webster,4.0,DF,England,15.0,13.0,2.0,0.0,18.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,33.0,,,3.0,43.0,4.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Valentín_Barco,Valentín Barco,19.0,DF,Argentina,6.0,3.0,3.0,0.0,7.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Jan_Paul_van_Hecke,Jan Paul van Hecke,29.0,DF,Netherlands,28.0,26.0,2.0,0.0,39.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Pervis_Estupiñán,Pervis Estupiñán,30.0,DF,Ecuador,19.0,15.0,4.0,2.0,27.0,3.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Joël_Veltman,Joël Veltman,34.0,DF,Netherlands,27.0,17.0,10.0,1.0,33.0,1.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Odeluga_Offiah,Odeluga Offiah,42.0,DF,England,4.0,1.0,3.0,0.0,4.0,0.0,False,,,,,,2023/24,Defensor,
+2023,name:ben-jackson,Ben Jackson,50.0,DF,England,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Leigh_Kavanagh,Leigh Kavanagh,52.0,DF,Republic of Ireland,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:Noël_Atom,Noël Atom,65.0,DF,Germany,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Defensor,
+2023,wiki:James_Milner,James Milner,6.0,MF,England,15.0,11.0,4.0,0.0,20.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Solly_March,Solly March,7.0,MF,England,7.0,,,3.0,10.0,3.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Billy_Gilmour,Billy Gilmour,11.0,MF,Scotland,30.0,24.0,6.0,0.0,41.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Pascal_Groß,Pascal Groß,13.0,MF,Germany,36.0,34.0,2.0,4.0,47.0,5.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Adam_Lallana,Adam Lallana,14.0,MF,England,25.0,13.0,12.0,0.0,30.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Jakub_Moder,Jakub Moder,15.0,MF,Poland,17.0,6.0,11.0,0.0,19.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Carlos_Baleba,Carlos Baleba,20.0,MF,Cameroon,27.0,15.0,12.0,0.0,37.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Kaoru_Mitoma,Kaoru Mitoma,22.0,MF,Japan,19.0,15.0,4.0,3.0,26.0,3.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Simon_Adingra,Simon Adingra,24.0,MF,Ivory Coast,31.0,25.0,6.0,6.0,40.0,7.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Ansu_Fati,Ansu Fati,31.0,MF,Spain,19.0,3.0,16.0,2.0,27.0,4.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Facundo_Buonanotte,Facundo Buonanotte,40.0,MF,Argentina,27.0,17.0,10.0,3.0,36.0,4.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Jack_Hinshelwood,Jack Hinshelwood,41.0,MF,England,12.0,8.0,4.0,3.0,17.0,3.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Cameron_Peupion,Cameron Peupion,44.0,MF,Australia,0.0,,,0.0,2.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Benicio_Baker-Boaitey,Benicio Baker-Boaitey,47.0,MF,England,5.0,0.0,5.0,0.0,6.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,name:samy-chouchane,Samy Chouchane,48.0,MF,Tunisia,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,wiki:Luca_Barrington,Luca Barrington,53.0,MF,England,0.0,,,0.0,0.0,0.0,False,,,,,,2023/24,Meio-campo,
+2023,"wiki:João_Pedro_(footballer,_born_2001)",João Pedro,9.0,FW,Brazil,31.0,19.0,12.0,9.0,40.0,20.0,False,,,,,,2023/24,Atacante,
+2023,"wiki:Julio_Enciso_(footballer,_born_2004)",Julio Enciso,10.0,FW,Paraguay,12.0,5.0,7.0,0.0,15.0,0.0,False,,,,,,2023/24,Atacante,
+2023,wiki:Danny_Welbeck,Danny Welbeck,18.0,FW,England,29.0,21.0,8.0,5.0,37.0,7.0,False,,,,,,2023/24,Atacante,
+2023,wiki:Evan_Ferguson,Evan Ferguson,28.0,FW,Republic of Ireland,27.0,15.0,12.0,6.0,36.0,6.0,False,,,,,,2023/24,Atacante,
+2023,wiki:Mark_O'Mahony,Mark O'Mahony,55.0,FW,Republic of Ireland,3.0,1.0,2.0,0.0,3.0,0.0,False,,,,,,2023/24,Atacante,
+2023,wiki:Joshua_Duffus,Joshua Duffus,56.0,FW,England,0.0,,,0.0,1.0,0.0,False,,,,,,2023/24,Atacante,
+2023,wiki:Mahmoud_Dahoud,Mahmoud Dahoud,8.0,MF,Germany,9.0,6.0,3.0,0.0,14.0,0.0,True,,,,,,2023/24,Meio-campo,
+2023,wiki:Jack_Hinchy,Jack Hinchy,45.0,MF,England,0.0,,,0.0,1.0,0.0,True,,,,,,2023/24,Meio-campo,
+2024,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,36.0,,,0.0,40.0,0.0,False,1,1,4,0,0,2024/25,Goleiro,1
+2024,wiki:Tariq_Lamptey,Tariq Lamptey,2.0,DF,Ghana,15.0,10.0,5.0,2.0,20.0,3.0,False,2,2,0,0,0,2024/25,Defensor,4
+2024,wiki:Igor_Julio,Igor Julio,3.0,DF,Brazil,12.0,9.0,3.0,0.0,15.0,0.0,False,0,0,4,0,0,2024/25,Defensor,0
+2024,"wiki:Adam_Webster_(footballer,_born_1995)",Adam Webster,4.0,DF,England,14.0,11.0,3.0,0.0,20.0,1.0,False,0,1,1,0,0,2024/25,Defensor,0
+2024,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,25.0,23.0,2.0,0.0,27.0,0.0,False,0,0,5,0,0,2024/25,Defensor,0
+2024,wiki:James_Milner,James Milner,6.0,MF,England,4.0,3.0,1.0,0.0,4.0,0.0,False,0,0,1,0,0,2024/25,Meio-campo,0
+2024,wiki:Solly_March,Solly March,7.0,MF,England,8.0,1.0,7.0,0.0,10.0,1.0,False,0,1,2,0,0,2024/25,Meio-campo,0
+2024,wiki:Brajan_Gruda,Brajan Gruda,8.0,MF,Germany,21.0,8.0,13.0,1.0,25.0,1.0,False,4,5,0,0,0,2024/25,Meio-campo,5
+2024,"wiki:João_Pedro_(footballer,_born_2001)",João Pedro,9.0,FW,Brazil,27.0,23.0,4.0,10.0,30.0,10.0,False,6,7,4,0,1,2024/25,Atacante,16
+2024,"wiki:Julio_Enciso_(footballer,_born_2004)",Julio Enciso,10.0,MF,Paraguay,12.0,2.0,10.0,0.0,16.0,1.0,False,0,1,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Simon_Adingra,Simon Adingra,11.0,MF,Ivory Coast,29.0,12.0,17.0,2.0,33.0,5.0,False,2,2,0,0,0,2024/25,Meio-campo,4
+2024,wiki:Georginio_Rutter,Georginio Rutter,14.0,FW,France,28.0,19.0,9.0,5.0,32.0,8.0,False,3,4,2,0,0,2024/25,Atacante,8
+2024,wiki:Eiran_Cashin,Eiran Cashin,16.0,DF,Republic of Ireland,2.0,0.0,2.0,0.0,2.0,0.0,False,0,0,0,0,0,2024/25,Defensor,0
+2024,wiki:Yankuba_Minteh,Yankuba Minteh,17.0,MF,The Gambia,32.0,20.0,12.0,6.0,37.0,7.0,False,4,5,6,0,0,2024/25,Meio-campo,10
+2024,wiki:Danny_Welbeck,Danny Welbeck,18.0,FW,England,30.0,24.0,6.0,10.0,36.0,11.0,False,4,4,5,0,0,2024/25,Atacante,14
+2024,wiki:Carlos_Baleba,Carlos Baleba,20.0,MF,Cameroon,34.0,31.0,3.0,3.0,40.0,4.0,False,1,2,8,1,0,2024/25,Meio-campo,4
+2024,wiki:Kaoru_Mitoma,Kaoru Mitoma,22.0,MF,Japan,36.0,28.0,8.0,10.0,41.0,11.0,False,4,4,1,0,0,2024/25,Meio-campo,14
+2024,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,2.0,,,0.0,5.0,0.0,False,0,0,0,0,0,2024/25,Goleiro,0
+2024,wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,24.0,DF,Turkey,6.0,5.0,1.0,1.0,8.0,2.0,False,0,0,1,0,0,2024/25,Defensor,1
+2024,wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,25.0,MF,Paraguay,16.0,4.0,12.0,1.0,19.0,1.0,False,0,0,0,0,0,2024/25,Meio-campo,1
+2024,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,34.0,22.0,12.0,2.0,39.0,2.0,False,1,1,3,0,0,2024/25,Meio-campo,3
+2024,wiki:Mats_Wieffer,Mats Wieffer,27.0,MF,Netherlands,25.0,10.0,15.0,1.0,28.0,1.0,False,4,4,6,0,0,2024/25,Meio-campo,5
+2024,wiki:Evan_Ferguson,Evan Ferguson,28.0,FW,Republic of Ireland,13.0,2.0,11.0,1.0,15.0,1.0,False,0,0,0,0,0,2024/25,Atacante,1
+2024,wiki:Jan_Paul_van_Hecke,Jan Paul van Hecke,29.0,DF,Netherlands,34.0,33.0,1.0,1.0,39.0,1.0,False,1,1,5,1,0,2024/25,Defensor,2
+2024,wiki:Pervis_Estupiñán,Pervis Estupiñán,30.0,DF,Ecuador,30.0,26.0,4.0,1.0,36.0,1.0,False,1,1,5,0,0,2024/25,Defensor,2
+2024,wiki:Matt_O'Riley,Matt O'Riley,33.0,MF,Denmark,21.0,11.0,10.0,2.0,23.0,2.0,False,2,2,1,0,0,2024/25,Meio-campo,4
+2024,wiki:Joël_Veltman,Joël Veltman,34.0,DF,Netherlands,21.0,19.0,2.0,0.0,24.0,0.0,False,0,2,5,0,0,2024/25,Defensor,0
+2024,wiki:Jack_Hinshelwood,Jack Hinshelwood,41.0,MF,England,26.0,22.0,4.0,5.0,31.0,5.0,False,2,2,5,0,0,2024/25,Meio-campo,7
+2024,wiki:Odel_Offiah,Odel Offiah,49.0,DF,England,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2024/25,Defensor,0
+2024,wiki:Mark_O'Mahony,Mark O'Mahony,51.0,FW,Republic of Ireland,0.0,,,0.0,1.0,1.0,False,0,0,0,0,0,2024/25,Atacante,0
+2024,wiki:Harry_Howell_(footballer),Harry Howell,72.0,MF,England,1.0,0.0,1.0,0.0,1.0,0.0,False,0,0,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Jeremy_Sarmiento,Jeremy Sarmiento,,MF,Ecuador,1.0,0.0,1.0,0.0,2.0,1.0,False,0,0,0,0,0,2024/25,Meio-campo,0
+2024,name:player-s-who-featured-but-departed-the-club-permanently-during-the-season,Player(s) who featured but departed the club permanently during the season:,,Player(s) who featured but departed the club permanently during the season:,,,,,,,,False,0,0,0,0,0,2024/25,,
+2024,wiki:Billy_Gilmour,Billy Gilmour,11.0,MF,Scotland,2.0,1.0,1.0,0.0,2.0,0.0,False,0,0,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Jakub_Moder,Jakub Moder,15.0,MF,Poland,4.0,0.0,4.0,0.0,7.0,0.0,False,0,0,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Cameron_Peupion,Cameron Peupion,32.0,MF,Australia,0.0,,,0.0,1.0,0.0,False,0,1,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Jensen_Weir,Jensen Weir,37.0,MF,England,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2024/25,Meio-campo,0
+2024,wiki:Ruairi_McConville,Ruairi McConville,44.0,DF,Northern Ireland,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2024/25,Defensor,0
+2024,wiki:Imari_Samuels,Imari Samuels,47.0,DF,England,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2024/25,Defensor,0
+2025,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,38.0,,,0.0,38.0,0.0,False,0,0,3,0,0,2025/26,Goleiro,0
+2025,wiki:Igor_Julio,Igor,3.0,DF,Brazil,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2025/26,Defensor,0
+2025,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,33.0,31.0,2.0,1.0,34.0,1.0,False,0,0,10,0,0,2025/26,Defensor,1
+2025,wiki:Jan_Paul_van_Hecke,Jan Paul van Hecke,6.0,DF,Netherlands,36.0,,,3.0,40.0,3.0,False,3,3,9,0,0,2025/26,Defensor,6
+2025,wiki:Solly_March,Solly March,7.0,MF,England,4.0,0.0,4.0,0.0,4.0,0.0,False,0,0,0,0,0,2025/26,Meio-campo,0
+2025,wiki:Stefanos_Tzimas,Stefanos Tzimas,9.0,FW,Greece,9.0,1.0,8.0,1.0,12.0,3.0,False,1,2,0,0,0,2025/26,Atacante,2
+2025,wiki:Georginio_Rutter,Georginio Rutter,10.0,FW,France,32.0,20.0,12.0,3.0,35.0,3.0,False,4,4,2,0,0,2025/26,Atacante,7
+2025,wiki:Yankuba_Minteh,Yankuba Minteh,11.0,MF,The Gambia,34.0,26.0,8.0,3.0,36.0,3.0,False,4,4,3,0,0,2025/26,Meio-campo,7
+2025,wiki:Jack_Hinshelwood,Jack Hinshelwood,13.0,MF,England,27.0,20.0,7.0,4.0,30.0,4.0,False,4,4,0,0,0,2025/26,Meio-campo,8
+2025,wiki:Carlos_Baleba,Carlos Baleba,17.0,MF,Cameroon,31.0,23.0,8.0,0.0,35.0,0.0,False,0,0,5,0,0,2025/26,Meio-campo,0
+2025,wiki:Danny_Welbeck,Danny Welbeck,18.0,FW,England,37.0,26.0,11.0,13.0,40.0,14.0,False,1,2,5,0,0,2025/26,Atacante,14
+2025,wiki:Charalampos_Kostoulas,Charalampos Kostoulas,19.0,FW,Greece,21.0,2.0,19.0,2.0,26.0,2.0,False,1,1,2,0,0,2025/26,Atacante,3
+2025,wiki:James_Milner,James Milner,20.0,MF,England,20.0,7.0,13.0,1.0,22.0,1.0,False,1,1,2,0,0,2025/26,Meio-campo,2
+2025,wiki:Olivier_Boscagli,Olivier Boscagli,21.0,DF,France,12.0,9.0,3.0,0.0,17.0,1.0,False,1,1,2,0,0,2025/26,Defensor,1
+2025,wiki:Kaoru_Mitoma,Kaoru Mitoma,22.0,MF,Japan,24.0,18.0,6.0,3.0,26.0,3.0,False,1,1,5,0,0,2025/26,Meio-campo,4
+2025,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,0.0,,,0.0,5.0,0.0,False,0,0,0,0,0,2025/26,Goleiro,0
+2025,wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,24.0,DF,Turkey,37.0,34.0,3.0,1.0,42.0,1.0,False,0,0,6,0,0,2025/26,Defensor,1
+2025,wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,25.0,MF,Paraguay,32.0,26.0,6.0,5.0,37.0,10.0,False,1,1,9,0,0,2025/26,Meio-campo,6
+2025,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,29.0,20.0,9.0,3.0,32.0,4.0,False,3,3,1,0,0,2025/26,Meio-campo,6
+2025,wiki:Mats_Wieffer,Mats Wieffer,27.0,MF,Netherlands,26.0,23.0,3.0,2.0,28.0,2.0,False,3,3,8,0,0,2025/26,Meio-campo,5
+2025,wiki:Maxim_De_Cuyper,Maxim De Cuyper,29.0,DF,Belgium,30.0,17.0,13.0,2.0,31.0,2.0,False,3,3,2,0,0,2025/26,Defensor,5
+2025,wiki:Pascal_Groß,Pascal Groß,30.0,MF,Germany,19.0,18.0,1.0,1.0,21.0,1.0,False,3,3,2,0,0,2025/26,Meio-campo,4
+2025,wiki:Matt_O'Riley,Matt O'Riley,33.0,MF,Denmark,6.0,2.0,4.0,1.0,6.0,1.0,False,0,0,0,0,0,2025/26,Meio-campo,1
+2025,wiki:Joël_Veltman,Joël Veltman,34.0,DF,Netherlands,24.0,9.0,15.0,1.0,28.0,1.0,False,0,1,5,0,0,2025/26,Defensor,1
+2025,wiki:Charlie_Tasker,Charlie Tasker,51.0,DF,England,0.0,,,0.0,2.0,0.0,False,0,0,0,0,0,2025/26,Defensor,0
+2025,wiki:Harry_Howell_(footballer),Harry Howell,53.0,MF,England,3.0,1.0,2.0,0.0,6.0,1.0,False,0,2,0,0,0,2025/26,Meio-campo,0
+2025,wiki:Nehemiah_Oriola,Nehemiah Oriola,58.0,MF,Nigeria,1.0,0.0,1.0,0.0,1.0,0.0,False,0,0,0,0,0,2025/26,Meio-campo,0
+2025,name:player-s-who-featured-but-departed-the-club-on-loan-during-the-season,Player(s) who featured but departed the club on loan during the season:,,Player(s) who featured but departed the club on loan during the season:,,,,,,,,False,0,0,0,0,0,2025/26,,
+2025,wiki:Brajan_Gruda,Brajan Gruda,8.0,MF,Germany,19.0,8.0,11.0,1.0,21.0,3.0,False,1,3,2,0,0,2025/26,Meio-campo,2
+2025,"wiki:Tom_Watson_(footballer,_born_2006)",Tom Watson,14.0,MF,England,6.0,0.0,6.0,0.0,10.0,1.0,False,0,3,1,0,0,2025/26,Meio-campo,0
+2025,wiki:Diego_Coppola,Diego Coppola,42.0,DF,Italy,5.0,2.0,3.0,0.0,9.0,0.0,False,0,2,2,0,0,2025/26,Defensor,0
+2025,name:player-who-featured-but-departed-the-club-permanently-during-the-season,Player who featured but departed the club permanently during the season:,,Player who featured but departed the club permanently during the season:,,,,,,,,False,0,0,0,0,0,2025/26,,
+2025,name:joe-knight,Joe Knight,49.0,MF,England,1.0,0.0,1.0,0.0,1.0,0.0,False,0,0,0,0,0,2025/26,Meio-campo,0
+2026,wiki:Bart_Verbruggen,Bart Verbruggen,1.0,GK,Netherlands,7.0,7.0,0.0,0.0,11.0,0.0,False,0,0,0,0,0,2026/27,Goleiro,0
+2026,wiki:Jaouen_Hadjam,Jaouen Hadjam,3.0,DF,Algeria,2.0,0.0,2.0,1.0,4.0,1.0,False,0,1,0,0,0,2026/27,Defensor,1
+2026,wiki:Pascal_Struijk,Pascal Struijk,4.0,DF,Netherlands,4.0,2.0,2.0,0.0,6.0,0.0,False,0,0,0,0,1,2026/27,Defensor,0
+2026,wiki:Lewis_Dunk,Lewis Dunk,5.0,DF,England,6.0,5.0,1.0,1.0,8.0,1.0,False,0,0,0,0,0,2026/27,Defensor,1
+2026,wiki:Jack_Hinshelwood,Jack Hinshelwood,8.0,MF,England,2.0,1.0,1.0,3.0,5.0,4.0,False,0,0,0,0,0,2026/27,Meio-campo,3
+2026,wiki:Georginio_Rutter,Georginio Rutter,10.0,FW,France,4.0,1.0,3.0,0.0,8.0,2.0,False,2,3,0,0,0,2026/27,Atacante,2
+2026,wiki:Promise_David,Promise David,12.0,FW,Canada,2.0,0.0,2.0,0.0,4.0,0.0,False,0,0,1,0,0,2026/27,Atacante,0
+2026,wiki:Pascal_Groß,Pascal Groß,13.0,MF,Germany,7.0,7.0,0.0,3.0,12.0,4.0,False,4,4,4,0,0,2026/27,Meio-campo,7
+2026,wiki:Chema_Andrés,Chema Andrés,14.0,MF,Spain,4.0,3.0,1.0,1.0,6.0,1.0,False,1,1,1,0,0,2026/27,Meio-campo,2
+2026,"wiki:Ibrahim_Osman_(footballer,_born_2004)",Ibrahim Osman,15.0,MF,Ghana,3.0,0.0,3.0,0.0,7.0,0.0,False,0,2,0,0,0,2026/27,Meio-campo,0
+2026,wiki:Charalampos_Kostoulas,Charalampos Kostoulas,19.0,FW,Greece,7.0,6.0,1.0,3.0,10.0,5.0,False,2,3,1,0,0,2026/27,Atacante,5
+2026,"wiki:Costinha_(footballer,_born_2000)",Costinha,20.0,DF,Portugal,6.0,0.0,6.0,0.0,10.0,0.0,False,0,0,1,0,0,2026/27,Defensor,0
+2026,wiki:Olivier_Boscagli,Olivier Boscagli,21.0,DF,France,7.0,7.0,0.0,0.0,12.0,1.0,False,1,1,2,0,0,2026/27,Defensor,1
+2026,wiki:Jason_Steele_(footballer),Jason Steele,23.0,GK,England,0.0,0.0,0.0,0.0,1.0,0.0,False,0,0,0,0,0,2026/27,Goleiro,0
+2026,wiki:Ferdi_Kadıoğlu,Ferdi Kadıoğlu,24.0,DF,Turkey,6.0,6.0,0.0,0.0,9.0,0.0,False,0,0,1,0,0,2026/27,Defensor,0
+2026,wiki:Diego_Gómez_(Paraguayan_footballer),Diego Gómez,25.0,MF,Paraguay,7.0,7.0,0.0,1.0,10.0,1.0,False,2,2,0,0,0,2026/27,Meio-campo,3
+2026,wiki:Yasin_Ayari,Yasin Ayari,26.0,MF,Sweden,6.0,6.0,0.0,2.0,11.0,2.0,False,0,0,1,0,0,2026/27,Meio-campo,2
+2026,wiki:Mats_Wieffer,Mats Wieffer,27.0,DF,Netherlands,2.0,2.0,0.0,0.0,4.0,1.0,False,0,0,0,0,0,2026/27,Defensor,0
+2026,wiki:Maxim_De_Cuyper,Maxim De Cuyper,29.0,DF,Belgium,7.0,7.0,0.0,2.0,11.0,4.0,False,2,3,2,0,0,2026/27,Defensor,4
+2026,wiki:Michael_Svoboda,Michael Svoboda,30.0,DF,Austria,2.0,0.0,2.0,0.0,4.0,0.0,False,0,0,0,0,0,2026/27,Defensor,0
+2026,wiki:Matt_O'Riley,Matt O'Riley,33.0,MF,Denmark,2.0,0.0,2.0,0.0,6.0,1.0,False,0,0,0,0,0,2026/27,Meio-campo,0
+2026,wiki:Malick_Yalcouyé,Malick Yalcouyé,35.0,MF,Ivory Coast,7.0,3.0,4.0,2.0,12.0,2.0,False,0,0,0,0,0,2026/27,Meio-campo,2
+2026,wiki:Zadok_Yohanna,Zadok Yohanna,36.0,MF,Nigeria,1.0,0.0,1.0,0.0,3.0,0.0,False,0,0,0,0,0,2026/27,Meio-campo,0
+2026,wiki:Luka_Vušković,Luka Vušković,44.0,DF,Croatia,7.0,7.0,0.0,1.0,12.0,1.0,False,0,1,0,0,0,2026/27,Defensor,1
+2026,wiki:Younes_Ibrahim,Younes Ibrahim,59.0,MF,Egypt,0.0,0.0,0.0,0.0,1.0,0.0,False,0,1,0,0,0,2026/27,Meio-campo,0
+2026,name:player-who-featured-but-departed-the-club-on-loan-during-the-season,Player who featured but departed the club on loan during the season:,,Player who featured but departed the club on loan during the season:,,,,,,,,False,0,0,0,0,0,2026/27,,
+2026,wiki:Amario_Cozier-Duberry,Amario Cozier-Duberry,22.0,MF,England,0.0,,,0.0,1.0,0.0,False,0,0,0,0,0,2026/27,Meio-campo,0
