@@ -1,9 +1,9 @@
 # ⚪🔵 Brighton & Hove Albion — Dashboard de Desempenho
 
-Pipeline de dados em Python que **coleta, trata e modela** dados do Brighton na Premier League
-a partir de **fontes abertas e de uso permitido**, alimentando um dashboard em **Power BI** com
+Pipeline de dados em Python que coleta, trata e modela dados do Brighton na Premier League
+a partir de fontes abertas e de uso permitido, alimentando um dashboard em Power BI com
 6 páginas: visão geral, tabela da liga, momento da temporada, jogadores, transferências e
-histórico. O projeto do Power BI (modelo e páginas) também é **gerado por código**.
+histórico.
 
 > Temporada em destaque: **2026/27**, com comparação às quatro temporadas anteriores.
 > Projeto pessoal de portfólio, sem fins comerciais e sem afiliação com o clube ou a Premier League.
@@ -16,47 +16,6 @@ histórico. O projeto do Power BI (modelo e páginas) também é **gerado por c�
 
 ---
 
-## O que este projeto demonstra
-
-| Competência | Onde |
-|---|---|
-| Web scraping de **HTML** com BeautifulSoup, robusto a mudanças de layout | `scrapers/wikitable.py`, `scrapers/wikipedia.py` |
-| Consumo de **dados abertos em JSON/CSV** | `scrapers/openfootball.py`, `scrapers/footballdata.py` |
-| **Coleta responsável**: robots.txt, User-Agent identificado, rate limit, retry com backoff, cache | `http.py` |
-| **Análise de legalidade das fontes** antes de coletar | seção [Fontes e licenças](#fontes-e-licenças) |
-| Integração de fontes: nomes de clubes padronizados e placares conciliados | `transform/teams.py`, `transform/model.py` |
-| Modelagem dimensional (**esquema estrela**) | `transform/model.py` |
-| Reconstrução da tabela rodada a rodada com critérios de desempate | `transform/standings.py` |
-| Testes automatizados com **dados reais**, sem internet | `tests/` (73 testes) |
-| **Modelo do Power BI como código**: tabelas, tipos, relacionamentos e ~90 medidas DAX em TMDL, gerados a partir de YAML | `pbip.py`, `tmdl.py`, `powerbi/medidas.yaml` |
-| **Relatório do Power BI como código**: páginas e visuais em PBIR, validados contra os esquemas oficiais da Microsoft | `report.py`, `dashboard.py` |
-| "Próximo jogo" calculado pela hora atual (Python e DAX com `NOW()`), sem depender de reprocessar | `transform/model.py`, medidas da pasta 4 |
-
-## Arquitetura
-
-```mermaid
-flowchart LR
-    subgraph Fontes abertas
-        O[openfootball<br/>JSON - domínio público]
-        W[Wikipedia<br/>HTML - CC BY-SA 4.0]
-        F[football-data.co.uk<br/>CSV - opcional]
-    end
-    subgraph Python
-        H[PoliteSession<br/>robots · rate limit · retry · cache]
-        R[(data/raw<br/>respostas brutas)]
-        M[ModelBuilder<br/>limpeza · conciliação · métricas]
-        P[(data/processed<br/>CSVs - esquema estrela)]
-    end
-    O & W & F --> H --> R --> M --> P
-    P --> PQ[Power Query] --> PBI[Dashboard Power BI]
-    Y[medidas.yaml] --> G[gerador] --> PQ
-    G --> DAX[Medidas DAX + relacionamentos]
-    DAX --> PBI
-```
-
-**Decisão de projeto:** coleta e transformação são etapas separadas. Os scrapers só gravam o
-dado bruto em `data/raw/`; a transformação lê do disco e nunca acessa a rede. Isso permite
-reprocessar à vontade, testar sem internet e não sobrecarregar os sites.
 
 ## Fontes e licenças
 
@@ -78,17 +37,6 @@ Fontes usadas:
 | [Wikipedia](https://en.wikipedia.org) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | HTML + BeautifulSoup | Transferências com valores, jogos/gols/assistências/cartões por jogador, placares recentes |
 | [football-data.co.uk](https://www.football-data.co.uk) *(opcional, desligado)* | Ver termos do site | CSV | Chutes, chutes no gol, escanteios, faltas, cartões e árbitro por jogo |
 
-Detalhes que mostram o cuidado com a coleta:
-- O `robots.txt` da Wikipedia bloqueia `/w/` (onde fica a API) para robôs genéricos e libera
-  `/wiki/`. Por isso o scraper lê a **página do artigo**, que vem do cache da Wikimedia.
-- O User-Agent identifica o projeto com um contato, como pede a política da Wikimedia.
-- O openfootball é mantido por voluntários e pode atrasar algumas rodadas na temporada atual;
-  os placares que faltam são completados pela matriz de resultados da Wikipedia, e o modelo
-  registra a origem de cada placar (`score_source`).
-- **Atribuição:** os dados processados levam a licença CC BY-SA 4.0 (ver
-  `data/processed/LICENSE-DATA.md`) e o dashboard mostra a fonte no rodapé.
-- **LGPD / minimização:** o projeto guarda só o necessário sobre os jogadores (nome, posição,
-  nacionalidade e números de jogo), sem data de nascimento, fotos ou dados pessoais extras.
 
 ## Como rodar
 
@@ -151,7 +99,7 @@ erDiagram
     dim_date ||--o{ fact_fixtures : date
 ```
 
-| Tabela | Grão |
+| Tabela |  
 |---|---|
 | `fact_team_match` | 1 linha por time por jogo (os 20 times), com placar final, intervalo e origem do placar |
 | `fact_standings` | classificação de cada time após cada rodada (pontos, saldo, posição) |
@@ -166,51 +114,9 @@ e 8º em 2025/26.
 **Chave dos jogadores:** o link do artigo da Wikipedia (`wiki:Kaoru_Mitoma`) identifica o
 mesmo jogador em todas as temporadas e tabelas. Jogadores sem artigo usam o nome normalizado.
 
-**Parser de tabelas da Wikipedia:** as páginas de temporada mudam de um ano para outro
-("Pos" / "Position", "To" / "Transferred to", cabeçalhos em duas linhas, células mescladas,
-linhas de agrupamento). O `wikitable.py` expande `rowspan`/`colspan` numa grade, junta os
-cabeçalhos ("Premier League|Apps") e localiza colunas por sinônimos; os testes usam trechos
-reais de 2022/23 e 2026/27.
 
-## Limitações conhecidas
 
-- Não há métricas de xG nem mapa de chutes: as fontes que tinham esses dados não permitem
-  coleta automatizada.
-- O placar do intervalo só existe nos jogos vindos do openfootball.
-- Valores de transferência em libras, como publicados na Wikipedia; negócios não divulgados
-  ficam fora das somas.
-- A qualidade dos dados de jogadores depende das páginas da Wikipedia estarem atualizadas.
 
-## Estrutura
-
-```
-brighton-dashboard/
-├── config.yaml                  # temporadas, time, fontes, ritmo da coleta
-├── src/brighton/
-│   ├── http.py                  # sessão com robots.txt, rate limit, retry e cache
-│   ├── scrapers/                # openfootball.py · wikipedia.py · wikitable.py · footballdata.py
-│   ├── transform/               # model.py · standings.py · teams.py · utils.py
-│   ├── powerbi.py               # gera M, DAX e script C# a partir do medidas.yaml
-│   ├── tmdl.py                  # lê e atualiza o modelo do Power BI em TMDL
-│   ├── pbip.py                  # gera o projeto .pbip completo (modelo + relatório)
-│   ├── report.py                # biblioteca de visuais PBIR (cartões, gráficos, tabelas, filtros)
-│   ├── dashboard.py             # as 6 páginas do dashboard
-│   └── pipeline.py              # CLI: scrape | transform | all | powerbi | pbip
-├── powerbi/
-│   ├── Brighton.pbip            # abre no Power BI Desktop (gerado por `python -m brighton pbip`)
-│   ├── Brighton.SemanticModel/  # modelo em TMDL
-│   ├── Brighton.Report/         # páginas em PBIR
-│   ├── medidas.yaml             # ~90 medidas DAX + relacionamentos (fonte da verdade)
-│   ├── power_query.pq           # consultas M geradas
-│   ├── medidas_dax_query_view.dax
-│   ├── criar_modelo_tabular_editor.csx
-│   ├── tema_brighton_claro.json # tema nas cores do clube (azul, branco e amarelo)
-│   ├── base/                    # tema base do Power BI usado pelo projeto
-│   └── GUIA_DASHBOARD.md        # layout e passo a passo de cada página
-├── data/{raw,cache,processed}/
-├── docs/img/                    # prints do dashboard
-└── tests/                       # 73 testes; fixtures reais (ver tests/fixtures/NOTICE.md)
-```
 
 ## Licença
 
